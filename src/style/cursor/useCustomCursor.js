@@ -93,7 +93,7 @@ export const useCustomCursor = () => {
         const handleMouseActive = () => {
             setIsMouseMoving(true);
             clearTimeout(timeoutId);
-            timeoutId = setTimeout(handleMouseIdle, 3000); // 2 segundos (2000)
+            timeoutId = setTimeout(handleMouseIdle, 3000); // 2 segundos (2000 miliseg)
         };
         document.addEventListener("mousemove", handleMouseActive);
         return () => {

@@ -1,8 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { CursorContext } from "../../style/cursor/CustomManager";
 export const Title = () => {
+  const { setSize } = useContext(CursorContext);
+
+  const handleMouseEnter = () => {
+    setSize("medium");
+  };
+  const handleMouseLeave = () => {
+    setSize("small");
+  };
   return (
     <>
-      <HOne>
+      <HOne onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Span>S</Span>
         <Span>e</Span>
         <Span>b</Span>
