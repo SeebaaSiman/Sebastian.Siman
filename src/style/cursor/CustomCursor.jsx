@@ -30,9 +30,9 @@ const SecondaryCursor = styled.div`
   position: fixed;
   background: white;
   mix-blend-mode: difference;
-  /* border: 3px solid black; OCULTO*/
+  border: 3px solid transparent;
   transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
-  /* transform-origin: center; */
+  transform-origin: center;
   &.small {
     /* width: calc(2.2em + 1.8vw); */
     width: 1.8rem;

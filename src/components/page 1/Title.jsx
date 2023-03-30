@@ -5,7 +5,7 @@ export const Title = () => {
   const { setSize } = useContext(CursorContext);
 
   const handleMouseEnter = () => {
-    setSize("medium");
+    setSize("regular");
   };
   const handleMouseLeave = () => {
     setSize("small");
