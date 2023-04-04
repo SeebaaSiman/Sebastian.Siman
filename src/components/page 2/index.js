@@ -1,1 +1,1 @@
-export * from './stylesPage2'; 
+export * from './page2Styles';

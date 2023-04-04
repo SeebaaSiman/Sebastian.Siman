@@ -4,21 +4,28 @@ export const Page3 = () => {
   return (
     <Container>
       <p>
-        3. Proyectos personales: si has trabajado en algún proyecto personal,
-        puedes hablar sobre ellos y compartir capturas de pantalla o enlaces
-        para que los visitantes de tu sitio puedan ver lo que has creado.
+        Mi experiencia se centra en lenguajes y frameworks como HTML, CSS,
+        JavaScript y React. Como desarrollador web, mi objetivo a corto plazo es
+        desafiarme a mí mismo y crear 1000 proyectos en los que pueda aplicar y
+        mejorar mis habilidades. <br />
+        <br /> ¿Te animas a ser parte de este reto y acompañarme en este camino
+        hacia el éxito?
       </p>
-      <p>
-        4. Metas: habla sobre tus metas como desarrollador, tanto a corto como a
-        largo plazo, y cómo planeas alcanzarlas.
-      </p>
-      <h2>Ayudame con mi meta de completar 1000 proyectos como developer!!</h2>
     </Container>
   );
 };
 const Container = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  color: white;
-  background-color: grey;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    margin: 2rem;
+    font-size: calc(1em + 1vw);
+  }
 `;
+//títulos 2rem

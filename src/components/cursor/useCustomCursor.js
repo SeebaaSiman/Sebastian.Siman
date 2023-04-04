@@ -101,8 +101,5 @@ export const useCustomCursor = () => {
 
         };
     }, []);
-
-
-
     return { isMouseMoving, secondaryCursor }
 }

@@ -1,18 +1,43 @@
-import styled from "styled-components";
-
-const Div = styled.div`
-  height: 100%;
-  width: 100%;
-  color: white;
-  position: relative;
-  overflow: hidden;
-`;
+import {
+  Oblique,
+  SkewBlockRepeat,
+  MainBlockOblique,
+  A,
+  ObliqueInner,
+  ImageWrapper,
+  MainImage,
+  Image,
+  ObliqueCaption,
+} from "../components/page 4/page4Styles";
+import img1 from "../assets/bg-1.jpg";
+import img2 from "../assets/bg-2.jpg";
 export const Page4 = () => {
+  const arr = [
+    { a: "", img: img1, text: "Facial", button: "Discover", buttonText: "Discover" },
+    { a: "", img: img2, text: "Cosmetics", button: "Discover", buttonText: "Discover" },
+  ];
   return (
-    <Div>
-      <div>Modal de proyectos</div>
-      <div>Modal de redes sociales</div>
-    </Div>
+    <Oblique className="oblique">
+      <MainBlockOblique className="main-block-oblique skew-block">
+        {arr.map((item) => (
+          <SkewBlockRepeat className="skew-block-repeat" key={item.text}>
+            <A href={item.a}>
+              <ObliqueInner className="oblique-inner">
+                <ImageWrapper className="image-wrapper">
+                  <MainImage className="main-image">
+                    <Image src={item.img} className="image-img" />
+                  </MainImage>
+                </ImageWrapper>
+              </ObliqueInner>
+              <ObliqueCaption className="oblique-caption caption-top">
+                <h2>{item.text}</h2>
+                <button href={item.button}>{item.buttonText}</button>
+              </ObliqueCaption>
+            </A>
+          </SkewBlockRepeat>
+        ))}
+      </MainBlockOblique>
+    </Oblique>
   );
 };
 //! se llega con scroll, de manera horizontal y hacia la izquierda.

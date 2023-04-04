@@ -1,26 +1,31 @@
 import { Page1, Page2, Page3, Page4 } from "./page";
 import { useRef } from "react";
-import { ContainerHorizontal, Layout, Panel } from "./style/sectionsStyle";
+import {
+  ContainerHorizontal,
+  ContainerNavbar,
+  Layout,
+  Panel,
+} from "./style/sectionsStyle";
 import useScrollHorizontal from "./hook/useScrollHorizontal";
+
 export const Sections = () => {
   const component = useRef();
   const slider = useRef();
   const panelCount = 2;
-
   useScrollHorizontal(slider, panelCount);
 
   return (
     <>
       <Page1 />
       <Page2 />
+      <Page4 />
+      <ContainerNavbar>{/* <NavBar2 /> */}</ContainerNavbar>
       <Layout ref={component}>
         <ContainerHorizontal ref={slider}>
           <Panel className="panel">
             <Page3 />
           </Panel>
-          <Panel className="panel">
-            <Page4 />
-          </Panel>
+          <Panel className="panel"></Panel>
         </ContainerHorizontal>
       </Layout>
     </>

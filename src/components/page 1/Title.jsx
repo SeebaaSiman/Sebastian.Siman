@@ -1,34 +1,59 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import { CursorContext } from "../../style/cursor/CustomManager";
+import { useContext } from "react";
+import { CursorContext } from "../cursor/CustomManager";
 export const Title = () => {
-  const { setSize } = useContext(CursorContext);
+  const { handleMouseLeave, handleMouseEnter } = useContext(CursorContext);
 
-  const handleMouseEnter = () => {
-    setSize("regular");
-  };
-  const handleMouseLeave = () => {
-    setSize("small");
-  };
   return (
     <>
-      <HOne onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Span>S</Span>
-        <Span>e</Span>
-        <Span>b</Span>
-        <Span>a</Span>
-        <Span>s</Span>
-        <Span>t</Span>
-        <Span>i</Span>
-        <Span>á</Span>
-        <Span>n</Span>
-        <Span> </Span>
-        <Span>S</Span>
-        <Span>i</Span>
-        <Span>m</Span>
-        <Span>a</Span>
-        <Span>n</Span>
-      </HOne>
+      <HomePage>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          S
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          e
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          b
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          a
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          s
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          t
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          i
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          á
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          n
+        </Span>
+        <Span
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        ></Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          S
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          i
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          m
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          a
+        </Span>
+        <Span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          n
+        </Span>
+      </HomePage>
     </>
   );
 };
@@ -49,4 +74,4 @@ const Span = styled.span`
     margin-left: 0.3em;
   }
 `;
-const HOne = styled.h1``;
+const HomePage = styled.h1``;

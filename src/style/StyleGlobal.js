@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { Poppins } from "google-fonts";
+
 export const StyleGlobal = createGlobalStyle`
 /* *{
     margin: 0;
@@ -12,11 +14,15 @@ export const StyleGlobal = createGlobalStyle`
     box-sizing: border-box;
     cursor: none;
     user-select:none;
+    overflow-x: hidden;
 }
-body{
+html{
+    background-color: #0a0a0a;
+    color: rgb(223, 223, 223);
     background-color: black;
 }
 body::-webkit-scrollbar {
     width: 0;
   }
 `
+//  #b3ff00

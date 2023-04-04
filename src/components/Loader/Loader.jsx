@@ -9,11 +9,22 @@ export const Loader = () => {
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
-  return visible ? (
-    <LoaderContent>
-      <Img src={"/src/assets/ss.png"} />
-    </LoaderContent>
-  ) : null;
+  if (visible) {
+    return (
+      <LoaderContent>
+        <Img src={"/src/assets/ss.png"} />
+      </LoaderContent>
+    );
+  }
+  if (!visible) {
+    return null;
+  }
+
+  // return visible ? (
+  //   <LoaderContent>
+  //     <Img src={"/src/assets/ss.png"} />
+  //   </LoaderContent>
+  // ) : null;
 };
 
 const rotate = keyframes`
