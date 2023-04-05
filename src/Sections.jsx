@@ -18,14 +18,15 @@ export const Sections = () => {
     <>
       <Page1 />
       <Page2 />
-      <Page4 />
       <ContainerNavbar>{/* <NavBar2 /> */}</ContainerNavbar>
       <Layout ref={component}>
         <ContainerHorizontal ref={slider}>
           <Panel className="panel">
             <Page3 />
           </Panel>
-          <Panel className="panel"></Panel>
+          <Panel className="panel">
+            <Page4 />
+          </Panel>
         </ContainerHorizontal>
       </Layout>
     </>
