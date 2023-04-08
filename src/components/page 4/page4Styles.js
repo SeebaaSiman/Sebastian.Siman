@@ -6,6 +6,7 @@ export const Container = styled.div`
   overflow: hidden;
   /* width: 100%; */
   height: 100vh;
+  //Corrección para que no se vean triángulos del fondo, compenza la inclinación
   &:first-child {
     margin-left: -70px;
   }
@@ -26,7 +27,7 @@ const bounceIn = keyframes`
     transform: scale(1);
   }
   `;
-export const ImagenWrapper = styled.div`
+export const ImageWrapper = styled.div`
   overflow: hidden;
   flex-grow: 1;
   position: relative;
@@ -36,6 +37,12 @@ export const ImagenWrapper = styled.div`
   transition: transform 0.2s ease-out;
   transform: skew(-8deg);
   img {
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  video {
     object-fit: cover;
     position: absolute;
     height: 100%;
@@ -59,7 +66,7 @@ export const ImagenWrapper = styled.div`
   }
 `;
 
-export const ObliqueCaption = styled.div`
+export const ContentWrapper = styled.div`
   position: absolute;
   /* bottom: 50%; */
   color: #fff;
@@ -90,7 +97,7 @@ export const ObliqueCaption = styled.div`
     color: #fff;
     border: 2px solid #fff;
     padding: 0.8rem 4rem;
-    margin-top: 1rem;
+    margin: 1rem;
     opacity: 0.5;
     cursor: none;
     -webkit-transition: all 800ms;

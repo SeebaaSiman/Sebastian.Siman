@@ -74,4 +74,6 @@ const Span = styled.span`
     margin-left: 0.3em;
   }
 `;
-const HomePage = styled.h1``;
+const HomePage = styled.h1`
+  height: 8rem;
+`;

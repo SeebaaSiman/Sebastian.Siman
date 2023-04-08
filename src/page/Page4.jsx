@@ -1,25 +1,29 @@
 import {
   Container,
-  ImagenWrapper,
-  ObliqueCaption,
-} from "../components/page 4/page4Styles";
+  ImageWrapper,
+  ContentWrapper,
+  HoverImage,
+} from "../components/page 4/";
 import img1 from "../assets/bg-1.jpg";
 import img2 from "../assets/bg-2.jpg";
+import video1 from "../assets/code.mp4";
+import video2 from "../assets/social-media.mp4";
+// import { HoverImage } from "../components/page 4/HoverImage";
 export const Page4 = () => {
   const arr = [
-    { img: img1, h2: "text1", button: "button1" },
-    { img: img2, h2: "text2", button: "button2" },
+    { img: img1, video: video1, h2: "Projects", button: "button1" },
+    { img: img2, video: video2, h2: "Contact", button: "button2" },
   ];
   return (
     <Container>
       {arr.map((item) => (
-        <ImagenWrapper key={item.h2}>
-          <img src={item.img} />
-          <ObliqueCaption>
+        <ImageWrapper key={item.h2}>
+          <HoverImage video={item.video} image={item.img} />
+          <ContentWrapper>
             <h2>{item.h2}</h2>
             <button>{item.button}</button>
-          </ObliqueCaption>
-        </ImagenWrapper>
+          </ContentWrapper>
+        </ImageWrapper>
       ))}
     </Container>
   );
