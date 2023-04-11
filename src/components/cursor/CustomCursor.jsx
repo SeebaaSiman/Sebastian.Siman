@@ -1,7 +1,10 @@
 import { useContext } from "react";
-import { CursorWrapper, SecondaryCursor } from "./CustomCursorStyle";
-import { CursorContext } from "./CustomManager";
-import { useCustomCursor } from "./useCustomCursor";
+import {
+  CursorContext,
+  CursorWrapper,
+  SecondaryCursor,
+  useCustomCursor,
+} from "./";
 
 export const CustomCursor = () => {
   const { size } = useContext(CursorContext);

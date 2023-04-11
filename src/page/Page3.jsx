@@ -1,12 +1,8 @@
 import styled from "styled-components";
-import { PruebaModal } from "../components/page 4/modal/PruebaModal";
 
 export const Page3 = () => {
   return (
     <Container>
-      <Modal>
-        <PruebaModal />
-      </Modal>
       <p>
         Mi experiencia se centra en lenguajes y frameworks como HTML, CSS,
         JavaScript y React. Como desarrollador web, mi objetivo a corto plazo es
@@ -33,8 +29,3 @@ const Container = styled.div`
   }
 `;
 //títulos 2rem
-const Modal = styled.div`
-  display: absolute;
-  top: 0;
-  left: 0;
-`;

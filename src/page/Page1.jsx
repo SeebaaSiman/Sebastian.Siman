@@ -17,7 +17,8 @@ export const Page1 = () => {
       {/* <TitleTyping /> */}
       {/* <TitleStyle /> */}
       {/*
-      <ContainerMouse>{loading ? <MouseScrolling /> : null}</ContainerMouse> */}
+      */}
+      <ContainerMouse>{loading ? <MouseScrolling /> : null}</ContainerMouse>
     </Home>
   );
 };

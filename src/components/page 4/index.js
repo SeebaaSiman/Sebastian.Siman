@@ -1,3 +1,4 @@
 export * from './HoverImage';
-export * from './modal';
+export * from './modal contact';
+export * from './modal projects';
 export * from './page4Styles';

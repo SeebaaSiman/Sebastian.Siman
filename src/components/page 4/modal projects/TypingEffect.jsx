@@ -1,10 +1,8 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 
 export const TypingEffect = () => {
   const typingg = "Aquí va el texto que recibe el componente";
   const stepss = typingg.length;
-  console.log(stepss);
   return (
     <Wrapper>
       <Effect>{typingg}</Effect>

@@ -26,8 +26,8 @@ export const Subtitle = styled.p`
     font-size: calc(2em + 1vw);
     /* margin: 0.5rem; */
     /* float: left; */
-    shape-outside: circle(50%);
-  } */
+    /* shape-outside: circle(50%); */
+
 `;
 
 

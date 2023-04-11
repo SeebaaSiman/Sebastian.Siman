@@ -8,7 +8,7 @@ export const Loading = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 0);
+    }, 3000);
   }, []);
 
   if (!Loaded) {
@@ -22,7 +22,6 @@ export const Loading = () => {
       </>
     );
   }
-
   // return (
   //   <>
   //     {!Loaded ? (
