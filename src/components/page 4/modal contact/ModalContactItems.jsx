@@ -6,7 +6,7 @@ export const ModalContactItems = () => {
   const { onOpenModal, showModal, onCloseModal } = useModal();
   return (
     <>
-      <button onClick={onOpenModal}>Abrir modal 3</button>
+      <button onClick={onOpenModal}>contactarte</button>
       <ModalContact showModal={showModal} onCloseModal={onCloseModal}>
         <MouseScrolling />
         <MouseScrolling />

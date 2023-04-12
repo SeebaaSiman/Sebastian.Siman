@@ -7,7 +7,7 @@ export const ModalProjectItems = () => {
   const { onOpenModal, showModal, onCloseModal } = useModal();
   return (
     <>
-      <button onClick={onOpenModal}>Abrir modal</button>
+      <button onClick={onOpenModal}>IR</button>
       <ModalProject showModal={showModal} onCloseModal={onCloseModal}>
         <TypingEffect />
         <Title />

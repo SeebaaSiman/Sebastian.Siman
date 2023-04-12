@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+
 export const ModalContainer = styled.div`
   z-index: 999;
   position: fixed;
@@ -16,10 +17,7 @@ export const Button = styled.button`
   top:0;
   margin: 0.5rem;
   `
-
-
-const slideOutLeft = keyframes`
-from {
+const slideOutLeft = keyframes`   from {
       transform: translateX(0%);
     }
     to {
@@ -27,11 +25,12 @@ from {
     }
       `;
 const slideInLeft = keyframes` from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }`;
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0%);
+}
+  `;
 export const ModalLeft = styled.div`
   width: 50%;
   height: 100%;
@@ -41,8 +40,6 @@ export const ModalLeft = styled.div`
     animation: ${slideOutLeft} 0.5s ease;
   }
 `;
-
-
 const slideOutRight = keyframes`  from {
   transform: translateX(0%);
 }
@@ -51,11 +48,11 @@ to {
 }
 `;
 const slideInRight = keyframes`  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+  transform: translateX(100%);
+}
+to {
+  transform: translateX(0%);
+}
   `;
 export const ModalRight = styled.div`
   width: 50%;

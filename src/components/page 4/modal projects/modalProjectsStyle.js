@@ -18,10 +18,10 @@ export const Button = styled.button`
   margin: 0.5rem;
   `
 const slideOutLeft = keyframes`   from {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
   to {
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
       `;
 const slideInLeft = keyframes` from {
@@ -43,10 +43,10 @@ export const ModalLeft = styled.div`
 
 
 const slideOutRight = keyframes`  from {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
   to {
-    transform: translateX(100%);
+    transform: translateY(100%);
   }
   `;
 const slideInRight = keyframes`  from {

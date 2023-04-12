@@ -48,6 +48,7 @@ export const ImageWrapper = styled.div`
     height: 100%;
     width: 100%;
   }
+
   &:hover {
     width: 40%;
     opacity: 1;

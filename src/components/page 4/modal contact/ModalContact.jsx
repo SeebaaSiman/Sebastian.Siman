@@ -1,11 +1,11 @@
 import ReactDOM from "react-dom";
+import { useModal } from "../../../hook/useModal";
 import {
   Button,
   ModalContainer,
   ModalLeft,
   ModalRight,
-} from "../modal projects/modalProjectsStyle";
-import { useModal } from "../../../hook/useModal";
+} from "./modalContactsStyle";
 
 export const ModalContact = ({ children, showModal, onCloseModal }) => {
   const { modalClass, showOut } = useModal();
@@ -25,7 +25,7 @@ export const ModalContact = ({ children, showModal, onCloseModal }) => {
       {showModal &&
         ReactDOM.createPortal(
           <ModalContainer>
-            <Button onClick={onClose}>Cerrar modal </Button>
+            <Button onClick={onClose}>Cerrar modal contact</Button>
             <ModalLeft className={modalClass}>{children1}</ModalLeft>
             <ModalRight className={modalClass}>{children2}</ModalRight>
           </ModalContainer>,

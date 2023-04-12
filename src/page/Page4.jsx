@@ -2,28 +2,22 @@ import {
   Container,
   ImageWrapper,
   ContentWrapper,
-  HoverImage,
+  HoverVideo,
   ModalProjectItems,
   ModalContactItems,
 } from "../components/page 4/";
-import img1 from "../assets/bg-1.jpg";
-import img2 from "../assets/bg-2.jpg";
 import video1 from "../assets/code.mp4";
 import video2 from "../assets/social-media.mp4";
 export const Page4 = () => {
   const dataBase = [
     {
-      backgroundImage: img1,
       backgroundVideo: video1,
       description: "Projects",
-      button: "button1",
       modal: <ModalProjectItems />,
     },
     {
-      backgroundImage: img2,
       backgroundVideo: video2,
       description: "Contact",
-      button: "button2",
       modal: <ModalContactItems />,
     },
   ];
@@ -31,13 +25,9 @@ export const Page4 = () => {
     <Container>
       {dataBase.map((item, index) => (
         <ImageWrapper key={index}>
-          <HoverImage
-            video={item.backgroundVideo}
-            image={item.backgroundImage}
-          />
+          <HoverVideo src={item.backgroundVideo} />
           <ContentWrapper>
             <h2>{item.description}</h2>
-            {/* <button onClick={onOpenModal}>{item.button}</button> */}
             {item.modal}
           </ContentWrapper>
         </ImageWrapper>
