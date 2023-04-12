@@ -3,11 +3,11 @@ import { useModal } from "../../../hook/useModal";
 import { ModalContact } from "./ModalContact";
 
 export const ModalContactItems = () => {
-  const { onOpenModal, showModal, onCloseModal } = useModal();
+  const { toggleModal, showModal } = useModal();
   return (
     <>
-      <button onClick={onOpenModal}>contactarte</button>
-      <ModalContact showModal={showModal} onCloseModal={onCloseModal}>
+      <button onClick={toggleModal}>contactarte</button>
+      <ModalContact showModal={showModal} toggleModal={toggleModal}>
         <MouseScrolling />
         <MouseScrolling />
       </ModalContact>

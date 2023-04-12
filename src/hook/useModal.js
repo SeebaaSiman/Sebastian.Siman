@@ -5,21 +5,9 @@ export const useModal = () => {
   const [clousing, setClousing] = useState(false);
 
   const modalClass = clousing ? "close-modal" : "";
-  
-  const onOpenModal = () => {
-    setShowModal(true);
-    setClousing(false);
-  };
-
-  const onCloseModal = () => setShowModal(false)
-
+  const toggleModal = () => setShowModal(!showModal)
   const showOut = () => setClousing(true);
+  const resetClousing = () => setClousing(false)
 
-  return { onOpenModal, showOut, showModal, onCloseModal, modalClass, clousing }
+  return { showOut, showModal, modalClass, toggleModal, resetClousing }
 }
-
-// const showOut = async () => {
-//   setClousing(true);
-//   await new Promise(resolve => setTimeout(resolve, 3000));
-//   onCloseModal();
-// };

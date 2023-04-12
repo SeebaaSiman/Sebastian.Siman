@@ -7,18 +7,17 @@ import {
   ModalRight,
 } from "./modalContactsStyle";
 
-export const ModalContact = ({ children, showModal, onCloseModal }) => {
-  const { modalClass, showOut } = useModal();
+export const ModalContact = ({ children, showModal, toggleModal }) => {
+  const { modalClass, showOut, resetClousing } = useModal();
   const onClose = () => {
     showOut();
     setTimeout(() => {
-      onCloseModal();
+      toggleModal();
+      resetClousing();
     }, 500);
   };
   const children1 = children[0];
   const children2 = children[1];
-  //   {variable !== null && <... >}
-  //   {variable == null && <... >}
 
   return (
     <>
@@ -34,3 +33,5 @@ export const ModalContact = ({ children, showModal, onCloseModal }) => {
     </>
   );
 };
+//   {variable !== null && <... >}
+//   {variable == null && <... >}

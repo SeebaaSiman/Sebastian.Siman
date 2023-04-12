@@ -7,12 +7,14 @@ import {
   ModalRight,
 } from "./modalProjectsStyle";
 
-export const ModalProject = ({ children, showModal, onCloseModal }) => {
-  const { modalClass, showOut } = useModal();
+export const ModalProject = ({ children, showModal, toggleModal }) => {
+  const { modalClass, showOut, resetClousing } = useModal();
+
   const onClose = () => {
     showOut();
     setTimeout(() => {
-      onCloseModal();
+      toggleModal();
+      resetClousing();
     }, 550);
   };
 

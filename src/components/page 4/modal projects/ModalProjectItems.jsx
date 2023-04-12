@@ -4,11 +4,11 @@ import { TypingEffect } from "./TypingEffect";
 import { useModal } from "../../../hook/useModal";
 
 export const ModalProjectItems = () => {
-  const { onOpenModal, showModal, onCloseModal } = useModal();
+  const { showModal, toggleModal } = useModal();
   return (
     <>
-      <button onClick={onOpenModal}>IR</button>
-      <ModalProject showModal={showModal} onCloseModal={onCloseModal}>
+      <button onClick={toggleModal}>IR</button>
+      <ModalProject showModal={showModal} toggleModal={toggleModal}>
         <TypingEffect />
         <Title />
       </ModalProject>
