@@ -8,7 +8,7 @@ export const MouseScrolling = () => {
 };
 const Mouse = styled.div`
   position: relative;
-  margin: 2em;
+  /* margin: 2em; */
   width: 2em;
   height: 4em;
   border: 0.3em solid #fff;

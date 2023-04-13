@@ -23,16 +23,16 @@ export const Page1 = () => {
   );
 };
 const Home = styled.div`
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   margin: 3rem;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 `;
 const ContainerMouse = styled.div`
   position: absolute;
-  bottom: 10%;
+  bottom: 2%;
   left: 50%;
   z-index: 5;
   /* display: flex;

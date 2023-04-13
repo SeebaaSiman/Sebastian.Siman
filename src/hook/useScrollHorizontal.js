@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useScrollHorizontal = (sliderRef, panelCount) => {
+export const useScrollHorizontal = (sliderRef, panelCount) => {
 
     useEffect(() => {
         let ctx = gsap.context(() => {
@@ -24,9 +24,6 @@ const useScrollHorizontal = (sliderRef, panelCount) => {
         return () => ctx.revert();
     }, [sliderRef, panelCount]);
 };
-
-export default useScrollHorizontal;
-
 // const component = useRef();
 // const slider = useRef();
 // const panelCount = 2;

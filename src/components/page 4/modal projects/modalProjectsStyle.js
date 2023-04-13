@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const ModalContainer = styled.div`
-  z-index: 999;
+  z-index: 22;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ const slideInLeft = keyframes` from {
 export const ModalLeft = styled.div`
   width: 50%;
   height: 100%;
-  background-color: #0e1197;
+  background-color: #fff;
   animation: ${slideInLeft} 0.8s ease;
   &.close-modal {
     animation: ${slideOutLeft} 0.5s ease;
@@ -59,7 +59,7 @@ const slideInRight = keyframes`  from {
 export const ModalRight = styled.div`
   width: 50%;
   height: 100%;
-  background-color: #245f8f;
+  background-color: #fff;
   animation: ${slideInRight} 0.8s ease;
   &.close-modal {
     animation: ${slideOutRight} 0.5s ease;

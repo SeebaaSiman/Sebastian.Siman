@@ -75,5 +75,5 @@ const Span = styled.span`
   }
 `;
 const HomePage = styled.h1`
-  height: 8rem;
+  height: 18rem;
 `;

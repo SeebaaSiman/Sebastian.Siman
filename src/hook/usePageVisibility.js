@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-function usePageVisibility(message) {
+export const usePageVisibility = (message) => {
     const [previousTitle, setPreviousTitle] = useState(document.title);
 
     useEffect(() => {
@@ -23,8 +23,6 @@ function usePageVisibility(message) {
 
     return { previousTitle };
 }
-
-export default usePageVisibility;
 
 // export const App = () => {
 

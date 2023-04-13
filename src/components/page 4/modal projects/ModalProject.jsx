@@ -17,35 +17,21 @@ export const ModalProject = ({ children, showModal, toggleModal }) => {
       resetClousing();
     }, 550);
   };
-
-  const children1 = children[0];
-  const children2 = children[1];
-  //   {variable !== null && <... >}
-  //   {variable == null && <... >}
   return (
     <>
       {showModal &&
         ReactDOM.createPortal(
           <ModalContainer>
             <Button onClick={onClose}>Cerrar </Button>
-            <ModalLeft className={modalClass}>{children1}</ModalLeft>
-            <ModalRight className={modalClass}>{children2}</ModalRight>
+            <ModalLeft className={modalClass}>{children}</ModalLeft>
+            <ModalRight className={modalClass}></ModalRight>
           </ModalContainer>,
           document.querySelector("#portal")
         )}
     </>
   );
 };
-
-// const Modal = ({ modalOpen, handleCloseModal, children }) => {
-//     return (
-//       <div className="modal" ref={modalRef}>
-
-//         <div className="modal-content">{children}</div>
-
-//         <button className="modal-close" onClick={handleCloseModal}>
-//           X
-//         </button>
-//       </div>
-//     );
-//   };
+// const children1 = children[0];
+// const children2 = children[1];
+//   {variable !== null && <... >}
+//   {variable == null && <... >}

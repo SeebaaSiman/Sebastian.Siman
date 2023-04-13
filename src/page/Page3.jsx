@@ -1,31 +1,34 @@
-import styled from "styled-components";
+import { useRef } from "react";
+import useIntersectionObserver from "../hook/useIntersectionObserver";
+import {
+  TypingEffect,
+  Container,
+  TypingContainer,
+  text,
+  text2,
+} from "../components/page 3";
 
 export const Page3 = () => {
+  const ref = useRef();
+  const ref2 = useRef();
+  const ref3 = useRef();
+  const options = {
+    threshold: 0.5,
+  };
+  const isIntersecting = useIntersectionObserver(ref, options);
+  const isIntersecting2 = useIntersectionObserver(ref2, options);
+  const isIntersecting3 = useIntersectionObserver(ref2, options);
   return (
     <Container>
-      <p>
-        Mi experiencia se centra en lenguajes y frameworks como HTML, CSS,
-        JavaScript y React. Como desarrollador web, mi objetivo a corto plazo es
-        desafiarme a mí mismo y crear 1000 proyectos en los que pueda aplicar y
-        mejorar mis habilidades. <br />
-        <br /> ¿Te animas a ser parte de este reto y acompañarme en este camino
-        hacia el éxito?
-      </p>
+      <TypingContainer ref={ref}>
+        {isIntersecting && <TypingEffect text={text} />}
+      </TypingContainer>
+      <h1 ref={ref2} className={`${isIntersecting2 ? "visible" : ""}`}>
+        Logo de html css js react
+      </h1>
+      <TypingContainer ref={ref3}>
+        {isIntersecting3 && <TypingEffect text={text2} />}
+      </TypingContainer>
     </Container>
   );
 };
-const Container = styled.div`
-  height: 100vh;
-  width: 100%;
-  color: black;
-  background-color: white;
-  p {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    font-size: calc(1em + 1vw);
-  }
-`;
-//títulos 2rem

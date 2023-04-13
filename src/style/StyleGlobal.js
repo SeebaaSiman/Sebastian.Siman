@@ -15,14 +15,16 @@ export const StyleGlobal = createGlobalStyle`
     cursor: none;
     user-select:none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 html{
     background-color: #0a0a0a;
     color: rgb(223, 223, 223);
     background-color: black;
 }
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 0;
+    display: none;
   }
 `
 //  #b3ff00
