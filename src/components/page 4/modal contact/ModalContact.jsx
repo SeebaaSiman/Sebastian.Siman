@@ -14,10 +14,8 @@ export const ModalContact = ({ children, showModal, toggleModal }) => {
     setTimeout(() => {
       toggleModal();
       resetClousing();
-    }, 500);
+    }, 700);
   };
-  const children1 = children[0];
-  const children2 = children[1];
 
   return (
     <>
@@ -25,8 +23,8 @@ export const ModalContact = ({ children, showModal, toggleModal }) => {
         ReactDOM.createPortal(
           <ModalContainer>
             <Button onClick={onClose}>Cerrar modal contact</Button>
-            <ModalLeft className={modalClass}>{children1}</ModalLeft>
-            <ModalRight className={modalClass}>{children2}</ModalRight>
+            <ModalLeft className={modalClass}>{children}</ModalLeft>
+            <ModalRight className={modalClass}></ModalRight>
           </ModalContainer>,
           document.querySelector("#portal")
         )}

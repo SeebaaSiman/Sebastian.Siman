@@ -15,7 +15,7 @@ export const ModalProject = ({ children, showModal, toggleModal }) => {
     setTimeout(() => {
       toggleModal();
       resetClousing();
-    }, 550);
+    }, 700);
   };
   return (
     <>

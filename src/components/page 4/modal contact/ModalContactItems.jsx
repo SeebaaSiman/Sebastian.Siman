@@ -10,9 +10,9 @@ export const ModalContactItems = () => {
   return (
     <>
       <button
+        onClick={toggleModal}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={toggleModal}
       >
         contactarte
       </button>

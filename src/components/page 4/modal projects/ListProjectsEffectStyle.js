@@ -1,4 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+const showInLeft = keyframes`
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0%);
+  }
+`
+const showScale = keyframes`
+from {
+  transform: scale(0);
+
+}
+to {
+  transform: scale(1);
+  }
+  `
 export const ContainerProject = styled.div`
   margin-top: 3rem;
   width: 100%;
@@ -6,6 +23,7 @@ export const ContainerProject = styled.div`
   position: relative;
   display: block;
   z-index: 60;
+  animation: ${showInLeft} 0.8s ease-in-out;
 `;
 export const ContainerImage = styled.div`
   position: absolute;
@@ -18,6 +36,7 @@ export const ContainerImage = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 40;
+  animation: ${showScale} 0.8s ease-in-out;
   img {
     position: absolute;
     height: 60vh;

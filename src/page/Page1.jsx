@@ -14,6 +14,7 @@ export const Page1 = () => {
       setLoading(true);
     }, 3000);
   }, []);
+
   return (
     <Home>
       <ContainerBanner>
@@ -24,6 +25,3 @@ export const Page1 = () => {
     </Home>
   );
 };
-
-//! Título con buen efecto hover, fondo negro con un video con rayos o algo así, al hacer scroll el título se va hacia adelante (scale) y abajo, haciendo efecto parallax
-//! Crear un grid layout para móvil o pc responsive, El fondo un video bien oscuro con relámpagos, un título con efecto hover, y la animación del mouse scroll

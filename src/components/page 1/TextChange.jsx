@@ -1,17 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useTextChange } from "../../hook/useTextChange";
 
 export const TextChange = () => {
   const { prefix, suffix } = useTextChange();
   return (
-    <div>
+    <Container>
       <Prefix>{prefix}</Prefix>
       <Suffix>{suffix}</Suffix>
-    </div>
+    </Container>
   );
 };
+const showInLeft = keyframes`
+from {
+  transform: translateX(-100%);
+
+}
+to {
+  transform: translateX(0%);
+  }
+    `;
 const Container = styled.div`
-  width: 100%;
+  animation: ${showInLeft} 0.8s ease-in-out;
 `;
 const Prefix = styled.span`
   color: #ffffff;

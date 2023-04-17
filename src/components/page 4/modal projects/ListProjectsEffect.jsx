@@ -28,7 +28,7 @@ export const ListProjectsEffect = () => {
 
   return (
     <>
-      <ContainerProject className="listProject">
+      <ContainerProject >
         {dataProjects.map(({ title }, index) => (
           <ListProjects
             key={index}
@@ -39,7 +39,7 @@ export const ListProjectsEffect = () => {
           />
         ))}
       </ContainerProject>
-      <ContainerImage className="imageProject">
+      <ContainerImage >
         {dataProjects.map(({ url }, index) => (
           <ImageProjects
             key={index}

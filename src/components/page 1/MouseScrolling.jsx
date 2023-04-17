@@ -6,6 +6,15 @@ export const MouseScrolling = () => {
     </Mouse>
   );
 };
+const showIn = keyframes`
+    from {
+      transform: translateY(100%);
+
+    }
+    to {
+      transform: translateY(0%);
+      }
+        `;
 const Mouse = styled.div`
   position: relative;
   /* margin: 2em; */
@@ -13,6 +22,7 @@ const Mouse = styled.div`
   height: 4em;
   border: 0.3em solid #fff;
   border-radius: 2em;
+  animation: ${showIn} 1s ease-in-out forwards;
 `;
 const show = keyframes`
 0% {

@@ -1,8 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 export const Home = styled.div`
   height: 110vh;
   width: 100vw;
 `;
+const showInRight = keyframes`
+from {
+  transform: translateX(100%);
+
+}
+to {
+  transform: translateX(0%);
+  }
+    `;
 export const ContainerBanner = styled.div`
   display: flex;
   flex-direction: row;
@@ -15,6 +24,7 @@ export const ContainerBanner = styled.div`
     height: calc(5.5rem +1vw);
     object-fit: cover;
     border-radius: 50%;
+    animation: ${showInRight} 0.8s ease-in-out;
   }
 `;
 export const ContainerMouse = styled.div`

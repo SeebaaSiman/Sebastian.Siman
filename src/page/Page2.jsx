@@ -37,6 +37,3 @@ export const Page2 = () => {
     </AboutContainer>
   );
 };
-
-//! En este punto aparece el navbar para ir al home, about me o proyectos y contacto. Aparece desde arriba, con la curvatura como el modal
-//! un toggle que cambie el idioma inglés / español
