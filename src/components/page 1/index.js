@@ -1,3 +1,3 @@
 export * from './MouseScrolling';
-export * from './MouseScrollingStyles';
-export * from './Title';
+export * from './page1Styles';
+export * from './TextChange';

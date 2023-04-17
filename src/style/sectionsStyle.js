@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-export const Layout = styled.div``;
 export const ContainerHorizontal = styled.div`
   width: 200vw;
   height: 100vh;

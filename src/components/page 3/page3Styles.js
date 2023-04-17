@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 //títulos 2rem
 export const TypingContainer = styled.div`
-  margin: 2rem;
+  margin: 3rem;
 `;
 
 export const text =

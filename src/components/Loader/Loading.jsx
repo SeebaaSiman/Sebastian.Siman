@@ -11,27 +11,27 @@ export const Loading = () => {
     }, 3000);
   }, []);
 
-  if (!Loaded) {
-    return <Loader />;
-  }
-  if (Loaded) {
-    return (
-      <>
-        <CustomCursor />
-        <Sections />
-      </>
-    );
-  }
-  // return (
-  //   <>
-  //     {!Loaded ? (
-  //       <Loader />
-  //     ) : (
-  //       <>
-  //         <CustomCursor />
-  //         <Sections />
-  //       </>
-  //     )}
-  //   </>
-  // );
+  return (
+    <>
+      {!Loaded ? (
+        <Loader />
+      ) : (
+        <>
+          <CustomCursor />
+          <Sections />
+        </>
+      )}
+    </>
+  );
+  // if (!Loaded) {
+  //   return <Loader />;
+  // }
+  // if (Loaded) {
+  //   return (
+  //     <>
+  //       <CustomCursor />
+  //       <Sections />
+  //     </>
+  //   );
+  // }
 };

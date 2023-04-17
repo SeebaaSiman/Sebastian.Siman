@@ -1,10 +1,7 @@
 import styled, { keyframes } from "styled-components";
 export const Container = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
-  /* position: relative; // (?) */
   overflow: hidden;
-  /* width: 100%; */
   height: 100vh;
   //Corrección para que no se vean triángulos del fondo, compenza la inclinación
   &:first-child {
@@ -31,17 +28,10 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
   flex-grow: 1;
   position: relative;
-  /* width: 100%; */
   height: 100vh;
   opacity: 0.5;
   transition: transform 0.2s ease-out;
   transform: skew(-8deg);
-  /* img {
-    object-fit: cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  } */
   video {
     object-fit: cover;
     position: absolute;
@@ -69,7 +59,6 @@ export const ImageWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   position: absolute;
-  /* bottom: 50%; */
   color: #fff;
   z-index: 1;
   width: 100%;
@@ -81,8 +70,9 @@ export const ContentWrapper = styled.div`
 
   h2 {
     font-family: "poppins", sans-serif;
-    font-size: 4rem;
-    color: #fff;
+    font-size: calc(3rem + 2vw);
+    color: #ffff;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     /* margin: 0;
     padding: 0; */
     text-transform: uppercase;

@@ -9,7 +9,7 @@ export const CursorContext = createContext({
 export default function CursorManager(props) {
   const [size, setSize] = useState("small");
   const handleMouseEnter = () => {
-    setSize("regular");
+    setSize("medium");
   };
   const handleMouseLeave = () => {
     setSize("small");

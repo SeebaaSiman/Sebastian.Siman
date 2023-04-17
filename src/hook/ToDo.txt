@@ -1,2 +1,0 @@
-use Smoth  para que en el navbar al hacer click vaya a esa sección en modo smoothi
-
