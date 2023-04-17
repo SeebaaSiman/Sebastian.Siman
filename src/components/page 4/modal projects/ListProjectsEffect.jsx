@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   dataProjects,
-  ListProjects,
+  Projects,
   ImageProjects,
   ContainerImage,
   ContainerProject,
@@ -28,9 +28,9 @@ export const ListProjectsEffect = () => {
 
   return (
     <>
-      <ContainerProject >
+      <ContainerProject>
         {dataProjects.map(({ title }, index) => (
-          <ListProjects
+          <Projects
             key={index}
             title={title}
             index={index}
@@ -39,7 +39,7 @@ export const ListProjectsEffect = () => {
           />
         ))}
       </ContainerProject>
-      <ContainerImage >
+      <ContainerImage>
         {dataProjects.map(({ url }, index) => (
           <ImageProjects
             key={index}

@@ -1,10 +1,9 @@
-import { MouseScrolling } from "../../page 1/MouseScrolling";
-import { useModal } from "../../../hook/useModal";
-import { ModalContact } from "./ModalContact";
 import { useContext } from "react";
 import { CursorContext } from "../../cursor/CustomManager";
+import { useModal } from "../../../hook/useModal";
+import { Modal } from "./Modal";
 
-export const ModalContactItems = () => {
+export const OpenModal = ({ children, text, toggleClass }) => {
   const { handleMouseLeave, handleMouseEnter } = useContext(CursorContext);
   const { toggleModal, showModal } = useModal();
   return (
@@ -14,12 +13,15 @@ export const ModalContactItems = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        contactarte
+        {text}
       </button>
-      <ModalContact showModal={showModal} toggleModal={toggleModal}>
-        <MouseScrolling />
-        <MouseScrolling />
-      </ModalContact>
+      <Modal
+        showModal={showModal}
+        toggleModal={toggleModal}
+        toggleClass={toggleClass}
+      >
+        {children}
+      </Modal>
     </>
   );
 };

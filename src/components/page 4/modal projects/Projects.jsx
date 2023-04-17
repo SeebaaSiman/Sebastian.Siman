@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ListProjects = ({ title, index, setRotation, setIndex }) => {
+export const Projects = ({ title, index, setRotation, setIndex }) => {
   return (
     <Clone
       onMouseEnter={() => setRotation(index)}
