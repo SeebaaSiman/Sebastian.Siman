@@ -1,8 +1,8 @@
-import { useContext, useEffect, useRef, forwardRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import useIntersectionObserver from "../../hook/useIntersectionObserver";
 import { AboutContainer, NavBarContext, Text, Title } from "../../components";
 
-export const Page2 = forwardRef((props, ref) => {
+export const Page2 = () => {
   //Creo referencias a los textos para usar el hook observer, al ser observados cambian su class css y hacen animación
   const refText = useRef();
   const refText2 = useRef();
@@ -15,7 +15,8 @@ export const Page2 = forwardRef((props, ref) => {
   const isIntersecting3 = useIntersectionObserver(refText3, options);
 
   //Hago visible la segunda porción del navbar con una fx inNavBar desde el context. Llamo a esa fx al ser visible en el viewport el refText3 (reutilizo la useRef) y uso el useEffect para llamar la fx
-  const { inNavBar } = useContext(NavBarContext);
+  //Traigo del contexto la referencia aboutRef para usarla con el navbar y navegar
+  const { inNavBar, aboutRef } = useContext(NavBarContext);
   const isIntersecting4 = useIntersectionObserver(refText3, { threshold: 1 });
   useEffect(() => {
     if (isIntersecting4) {
@@ -23,10 +24,8 @@ export const Page2 = forwardRef((props, ref) => {
     }
   }, [isIntersecting4]);
 
-  //Con forwardsRef traje la ref desde el componente Abuelo totalSections, la uso en el AboutContainer
-
   return (
-    <AboutContainer ref={ref}>
+    <AboutContainer ref={aboutRef}>
       <Title ref={refText} className={`${isIntersecting && "visible"}`}>
         Mi nombre es Sebastián y soy desarrollador web. Desde que descubrí la
         programación, me enamoré de ella y no he parado de aprender y mejorar
@@ -48,4 +47,4 @@ export const Page2 = forwardRef((props, ref) => {
       </Text>
     </AboutContainer>
   );
-});
+};

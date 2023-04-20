@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState, forwardRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import avatar from "../../assets/perfil.jpg";
 import {
   ContainerBanner,
@@ -10,7 +10,7 @@ import {
 } from "../../components";
 import useIntersectionObserver from "../../hook/useIntersectionObserver";
 
-export const Page1 = forwardRef((props, ref) => {
+export const Page1 = () => {
   //Estado para que aparezca el mouseScrolling
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -19,7 +19,8 @@ export const Page1 = forwardRef((props, ref) => {
     }, 3000);
   }, []);
   //Del contexto busco outNavBar para esconder la sección del navbar al estar en el viewport la sección container
-  const { outNavBar } = useContext(NavBarContext);
+  //También traigo del contexto la referencia page1Ref para usarla con el navbar
+  const { outNavBar, page1Ref } = useContext(NavBarContext);
   const HomeRef = useRef();
   const inView = useIntersectionObserver(HomeRef, { threshold: 0 });
   useEffect(() => {
@@ -27,11 +28,9 @@ export const Page1 = forwardRef((props, ref) => {
       outNavBar();
     }
   }, [inView]);
-  //Doy a homeContainer la referencias traida por forwardsRef desde el componente abuelo totalSections para darle smoothScroll desde el navbar
-
   return (
     <>
-      <HomeContainer ref={ref}>
+      <HomeContainer ref={page1Ref}>
         <ContainerBanner ref={HomeRef}>
           <TextChange />
           <img src={avatar} />
@@ -40,4 +39,4 @@ export const Page1 = forwardRef((props, ref) => {
       </HomeContainer>
     </>
   );
-});
+};

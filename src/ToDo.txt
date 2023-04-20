@@ -3,6 +3,6 @@
 // Instalar react router
 // Crear el cv y subirlo para descargar en contact
 // Cambiar fuentes y color
-
+// Al cerrar el modal, desde button, hay que usar scrollToSection con useRef para que quede en la sección de los modales 
 
 // Loading 3000

@@ -35,5 +35,3 @@ export const Modal = ({ children, showModal, toggleModal, toggleClass }) => {
     </>
   );
 };
-
-//! Button va a ser un componente que es una flecha, al hacer hover hace efecto y al hacer click se cierra el modal

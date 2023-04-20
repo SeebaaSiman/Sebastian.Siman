@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   ContainerPage4,
   ImageWrapper,
@@ -6,10 +7,13 @@ import {
   ListProjectsEffect,
   IconsEffect,
   OpenModal,
+  NavBarContext,
 } from "../../components";
 import video1 from "../../assets/code.mp4";
 import video2 from "../../assets/social-media.mp4";
+
 export const Page4 = () => {
+  const { page4Ref } = useContext(NavBarContext);
   const dataPage4 = [
     {
       backgroundVideo: video1,
@@ -26,7 +30,7 @@ export const Page4 = () => {
   ];
 
   return (
-    <ContainerPage4>
+    <ContainerPage4 ref={page4Ref}>
       {dataPage4.map((item, index) => (
         <ImageWrapper key={index}>
           <HoverVideo src={item.backgroundVideo} />
