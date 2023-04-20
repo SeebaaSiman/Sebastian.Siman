@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-export const Container = styled.div`
+export const ContainerPage4 = styled.div`
   display: flex;
   overflow: hidden;
   height: 100vh;

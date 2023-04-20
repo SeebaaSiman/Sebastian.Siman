@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-export const Home = styled.div`
+export const HomeContainer = styled.div`
   height: 110vh;
   width: 100vw;
 `;
@@ -18,7 +18,7 @@ export const ContainerBanner = styled.div`
   flex-wrap: wrap-reverse;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
   img {
     width: calc(5.5rem +1vw);
     height: calc(5.5rem +1vw);

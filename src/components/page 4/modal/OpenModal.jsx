@@ -4,14 +4,14 @@ import { useModal } from "../../../hook/useModal";
 import { Modal } from "./Modal";
 
 export const OpenModal = ({ children, text, toggleClass }) => {
-  const { handleMouseLeave, handleMouseEnter } = useContext(CursorContext);
+  const { handleCursorRegular, handleCursorSmall } = useContext(CursorContext);
   const { toggleModal, showModal } = useModal();
   return (
     <>
       <button
         onClick={toggleModal}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleCursorRegular}
+        onMouseLeave={handleCursorSmall}
       >
         {text}
       </button>

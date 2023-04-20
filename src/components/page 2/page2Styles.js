@@ -1,10 +1,9 @@
 import styled, { keyframes } from "styled-components";
 
 export const AboutContainer = styled.section`
-  height: 100vh;
-  width: 100vw;
-  /* color:black; */
-  background-color:white;
+  height: 120vh;
+  width: 100%;
+  background-color:black;
   display: flex;
   flex-wrap: wrap;
   text-align: left;
@@ -21,7 +20,7 @@ const scaleUpTopLeft = keyframes`
 100% { transform: translateX(0); animation-timing-function: ease-out; opacity: 1; }`;
 export const Text = styled.p`
 color: #444444;
-background: #FFFFFF;
+/* background: #FFFFFF; */
 text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
   margin: 0.3rem 4rem;
   font-size: calc(1em + 1vw);

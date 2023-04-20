@@ -5,7 +5,6 @@ import { StyleGlobal } from "./style/StyleGlobal";
 
 export const App = () => {
   usePageVisibility("¡No te vayas! ¡Vuelve!");
-
   return (
     <CursorManager>
       <StyleGlobal />

@@ -1,16 +1,16 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../hook/useIntersectionObserver";
+import * as Unicons from "@iconscout/react-unicons";
+import useIntersectionObserver from "../../hook/useIntersectionObserver";
 import {
   TypingEffect,
-  Container,
+  ContainerPage3,
   TypingContainer,
   IconContainer,
   text,
   text2,
   styleIcon,
   iconSize,
-} from "../components/page 3";
-import * as Unicons from "@iconscout/react-unicons";
+} from "../../components";
 
 export const Page3 = () => {
   const ref = useRef();
@@ -30,7 +30,7 @@ export const Page3 = () => {
   const isIntersecting6 = useIntersectionObserver(ref6, options);
 
   return (
-    <Container>
+    <ContainerPage3>
       <TypingContainer ref={ref}>
         {isIntersecting && <TypingEffect text={text} />}
       </TypingContainer>
@@ -60,6 +60,6 @@ export const Page3 = () => {
       <TypingContainer ref={ref6}>
         {isIntersecting6 && <TypingEffect text={text2} />}
       </TypingContainer>
-    </Container>
+    </ContainerPage3>
   );
 };

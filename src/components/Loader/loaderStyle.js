@@ -38,6 +38,7 @@ export const LoaderContent = styled.div`
   z-index: 100;
   animation: ${sweep} 3s linear forwards;
 `;
+export const Title = styled.h1``
 export const Img = styled.img`
   animation: ${rotate} 2s ease-in-out;
   animation-iteration-count: 1;

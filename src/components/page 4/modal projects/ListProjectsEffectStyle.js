@@ -20,17 +20,14 @@ export const ContainerProject = styled.div`
   margin-top: 3rem;
   width: 100%;
   height: 100%;
-  /* position: relative; */
   display: block;
   z-index: 60;
   animation: ${showInLeft} 0.8s ease-in-out;
 `;
 export const ContainerImage = styled.div`
   position: absolute;
-  overflow: visible;
-  /* isolation: isolate; */
   top: 50%;
-  left: 100%;
+  left: 70%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;

@@ -29,6 +29,10 @@ export const SecondaryCursor = styled.div`
     width: 12rem;
     height: 12rem;
   }
+  &.xs {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
   /* @media screen {
 display:none;
   } */

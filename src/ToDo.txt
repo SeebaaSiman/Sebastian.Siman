@@ -1,0 +1,8 @@
+// Comprimir imágenes y video
+// EN el loader pasar el svg en vez de la imágen
+// Instalar react router
+// Crear el cv y subirlo para descargar en contact
+// Cambiar fuentes y color
+
+
+// Loading 3000

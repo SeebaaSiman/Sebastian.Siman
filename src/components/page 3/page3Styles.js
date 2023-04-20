@@ -3,11 +3,11 @@ const bounceLeft = keyframes`
 0%{transform:scale(.5);opacity:1;transform-origin:top left}
 100%{transform:scale(1);opacity:1;transform-origin:top left}`;
 
-export const Container = styled.div`
+export const ContainerPage3 = styled.div`
   height: 100vh;
   width: 100%;
   color: black;
-  background-color: white;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;

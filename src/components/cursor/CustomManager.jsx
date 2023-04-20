@@ -3,20 +3,37 @@ import { createContext, useState } from "react";
 export const CursorContext = createContext({
   size: "small",
   setSize: () => {},
-  handleMouseEnter: () => {},
-  handleMouseLeave: () => {},
+  handleCursorMedium: () => {},
+  handleCursorRegular: () => {},
+  handleCursorSmall: () => {},
+  handleCursorXs: () => {},
 });
-export default function CursorManager(props) {
+export default function CursorManager({ children }) {
   const [size, setSize] = useState("small");
-  const handleMouseEnter = () => {
+  const handleCursorMedium = () => {
     setSize("medium");
   };
-  const handleMouseLeave = () => {
+  const handleCursorSmall = () => {
     setSize("small");
   };
+  const handleCursorRegular = () => {
+    setSize("regular");
+  };
+  const handleCursorXs = () => {
+    setSize("xs");
+  };
   return (
-    <CursorContext.Provider value={{ size, setSize ,handleMouseLeave,handleMouseEnter}}>
-      {props.children}
+    <CursorContext.Provider
+      value={{
+        size,
+        setSize,
+        handleCursorRegular,
+        handleCursorMedium,
+        handleCursorSmall,
+        handleCursorXs,
+      }}
+    >
+      {children}
     </CursorContext.Provider>
   );
 }
@@ -24,4 +41,4 @@ export default function CursorManager(props) {
 //Importar en la parte más alta de la app. Es un provider
 
 // Importar fx y efectos
-// const { handleMouseLeave, handleMouseEnter } = useContext(CursorContext);
+// const { handleCursorRegular, handleCursorMedium } = useContext(CursorContext);

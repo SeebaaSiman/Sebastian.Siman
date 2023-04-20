@@ -1,11 +1,19 @@
+import { useContext } from "react";
+import { CursorContext } from "../../cursor/CustomManager";
 import styled from "styled-components";
 
 export const Projects = ({ title, index, setRotation, setIndex }) => {
+  const { handleCursorMedium, handleCursorSmall } = useContext(CursorContext);
+  const mouseEnter = () => {
+    setRotation(index);
+    handleCursorMedium();
+  };
+  const mouseLeave = () => {
+    setIndex(-1);
+    handleCursorSmall();
+  };
   return (
-    <Clone
-      onMouseEnter={() => setRotation(index)}
-      onMouseLeave={() => setIndex(-1)}
-    >
+    <Clone onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
       <h1 className="menu-title">{title}</h1>
       <h1 className="menu-title clone">{title}</h1>
     </Clone>
@@ -45,3 +53,5 @@ const Clone = styled.div`
     }
   }
 `;
+// onMouseEnter={() => setRotation(index)}
+// onMouseLeave={() => setIndex(-1)}

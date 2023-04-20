@@ -1,12 +1,17 @@
 import ReactDOM from "react-dom";
 import { useModal } from "../../../hook/useModal";
-import { Button, ModalContainer, ModalLeft, ModalRight } from "./modalStyle";
+import { ModalContainer } from "./modalStyle";
+import { ButtonModal } from "../ButtonModal";
+import { useContext } from "react";
+import { CursorContext } from "../../cursor/CustomManager";
 
 export const Modal = ({ children, showModal, toggleModal, toggleClass }) => {
+  const { handleCursorSmall } = useContext(CursorContext);
   const { modalClass, showOut, resetClousing } = useModal();
 
   const onClose = () => {
     showOut();
+    handleCursorSmall();
     setTimeout(() => {
       toggleModal();
       resetClousing();
@@ -18,15 +23,12 @@ export const Modal = ({ children, showModal, toggleModal, toggleClass }) => {
     <>
       {showModal &&
         ReactDOM.createPortal(
-          <ModalContainer className={toggleClass}>
-            <Button onClick={onClose}>Cerrar </Button>
-            <ModalLeft className={modalClass} variant={classStyle}>
-              {children}
-            </ModalLeft>
-            <ModalRight
-              className={modalClass}
-              variant={classStyle}
-            ></ModalRight>
+          <ModalContainer
+            className={`${toggleClass} ${modalClass}`}
+            variant={classStyle}
+          >
+            <ButtonModal onClose={onClose}></ButtonModal>
+            {children}
           </ModalContainer>,
           document.querySelector("#portal")
         )}

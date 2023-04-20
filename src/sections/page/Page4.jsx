@@ -1,14 +1,14 @@
 import {
-  Container,
+  ContainerPage4,
   ImageWrapper,
   ContentWrapper,
   HoverVideo,
   ListProjectsEffect,
-} from "../components/page 4/";
-import video1 from "../assets/code.mp4";
-import video2 from "../assets/social-media.mp4";
-import { OpenModal } from "../components/page 4/modal/OpenModal";
-import { TextChange } from "../components/page 1/TextChange";
+  IconsEffect,
+  OpenModal,
+} from "../../components";
+import video1 from "../../assets/code.mp4";
+import video2 from "../../assets/social-media.mp4";
 export const Page4 = () => {
   const dataPage4 = [
     {
@@ -20,13 +20,13 @@ export const Page4 = () => {
     {
       backgroundVideo: video2,
       description: "Contact",
-      children: <TextChange />,
+      children: <IconsEffect />,
       modalText: "Contactame",
     },
   ];
 
   return (
-    <Container>
+    <ContainerPage4>
       {dataPage4.map((item, index) => (
         <ImageWrapper key={index}>
           <HoverVideo src={item.backgroundVideo} />
@@ -40,6 +40,6 @@ export const Page4 = () => {
           </ContentWrapper>
         </ImageWrapper>
       ))}
-    </Container>
+    </ContainerPage4>
   );
 };

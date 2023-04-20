@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { Sections } from "../../Sections";
 import { Loader } from "./Loader";
-import { CustomCursor } from "../cursor/CustomCursor";
-
+import { CustomCursor } from "../cursor";
+import { TotalSections } from "../../sections/TotalSections";
 export const Loading = () => {
   const [Loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -10,6 +9,7 @@ export const Loading = () => {
       setLoaded(true);
     }, 3000);
   }, []);
+  //3000
 
   return (
     <>
@@ -18,20 +18,9 @@ export const Loading = () => {
       ) : (
         <>
           <CustomCursor />
-          <Sections />
+          <TotalSections />
         </>
       )}
     </>
   );
-  // if (!Loaded) {
-  //   return <Loader />;
-  // }
-  // if (Loaded) {
-  //   return (
-  //     <>
-  //       <CustomCursor />
-  //       <Sections />
-  //     </>
-  //   );
-  // }
 };

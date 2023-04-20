@@ -12,6 +12,7 @@ export const Loader = () => {
   if (visible) {
     return (
       <LoaderContent>
+        SEBASTIÁN SIMAN | PORTFOLIO ©2023
         <Img src={"/src/assets/ss.png"} />
       </LoaderContent>
     );
