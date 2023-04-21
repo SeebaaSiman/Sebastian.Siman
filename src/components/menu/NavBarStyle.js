@@ -29,7 +29,7 @@ export const NavContainer = styled.nav`
   li {
     position: relative;
     /* display: inline-block; */
-    color: white;
+    color: #000;
     transition: color 0.8s;
     animation: ${showIn} 0.5s ease-in-out forwards;
     &::before {
@@ -39,14 +39,14 @@ export const NavContainer = styled.nav`
       bottom: 0;
       width: 100%;
       height: 2px;
-      background-color: #ffff;
+      background-color: #000;
       border-radius: 4px;
       scale: 0.1;
       transform-origin: left;
       transition: scale 0.8s;
     }
     &:hover {
-      color: #ffeb;
+      color: #0005;
     }
     &:hover::before {
       scale: 1;

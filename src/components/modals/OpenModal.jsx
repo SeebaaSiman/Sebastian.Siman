@@ -1,27 +1,26 @@
 import { useContext } from "react";
-import { CursorContext } from "../../cursor/CustomManager";
-import { useModal } from "../../../hook/useModal";
+import { CursorContext } from "../cursor/CustomManager";
 import { Modal } from "./Modal";
+import { ModalContext } from "./ModalManager";
 
 export const OpenModal = ({ children, text, toggleClass }) => {
   const { handleCursorRegular, handleCursorSmall } = useContext(CursorContext);
-  const { toggleModal, showModal } = useModal();
+
+  const { openModal } = useContext(ModalContext);
+
+  const handleOpenModal = () => {
+    openModal(children, toggleClass);
+  };
   return (
     <>
       <button
-        onClick={toggleModal}
+        onClick={handleOpenModal}
         onMouseEnter={handleCursorRegular}
         onMouseLeave={handleCursorSmall}
       >
         {text}
       </button>
-      <Modal
-        showModal={showModal}
-        toggleModal={toggleModal}
-        toggleClass={toggleClass}
-      >
-        {children}
-      </Modal>
+      <Modal />
     </>
   );
 };

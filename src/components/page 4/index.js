@@ -1,6 +1,5 @@
 export * from './ButtonModal';
 export * from './HoverVideo';
-export * from './modal contact';
-export * from './modal projects';
-export * from './modal';
+export * from './contact';
+export * from './projects';
 export * from './page4Styles';

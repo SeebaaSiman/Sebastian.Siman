@@ -6,8 +6,6 @@ const bounceLeft = keyframes`
 export const ContainerPage3 = styled.div`
   height: 100vh;
   width: 100%;
-  color: black;
-  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;

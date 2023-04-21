@@ -43,7 +43,7 @@ export const ModalContainer = styled.div`
   background-color:${props => props.variant === 'Projects' ? '#ffff' : '#515151'};
   animation: ${props => props.variant === 'Projects' ? projectInLeft : contactInRight} 0.8s ease-in-out forwards;
 
-  &.close-modal {
+  &.close{
 animation: ${props => props.variant === 'Projects' ? projectOutLeft : contactOutLeft} 0.8s ease-in-out forwards;
 }
   `;

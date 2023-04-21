@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Img, LoaderContent } from "./loaderStyle";
+import { LoaderContent } from "./loaderStyle";
 export const Loader = () => {
   const [visible, setVisible] = useState(true);
 
@@ -13,7 +13,7 @@ export const Loader = () => {
     return (
       <LoaderContent>
         SEBASTIÁN SIMAN | PORTFOLIO ©2023
-        <Img src={"/src/assets/ss.png"} />
+        <img src={"/src/assets/s-s.svg"} />
       </LoaderContent>
     );
   }

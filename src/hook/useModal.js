@@ -11,3 +11,20 @@ export const useModal = () => {
 
   return { showOut, showModal, modalClass, toggleModal, resetClousing }
 }
+
+
+// const Page4 = () => {
+//   const handleOpenModal = (item, nameClass) => {
+//     setModalContent({
+//       content: item,
+//       className: nameClass,
+//     });
+//     toggleModal();
+//   };
+//   const { showModal, toggleModal, setModalContent } = useContext(ModalContext);
+
+//   const item = <ListProjectsEffect />
+//   const nameClass = "Projects"
+//   handleOpenModal(item, nameClass)
+//   // rest of the component code
+// };

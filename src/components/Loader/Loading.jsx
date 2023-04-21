@@ -7,9 +7,8 @@ export const Loading = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 3000);
+    }, 3000); //3000
   }, []);
-  //3000
 
   return (
     <>

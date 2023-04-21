@@ -10,10 +10,11 @@ import {
   NavBarContext,
 } from "../../components";
 import video1 from "../../assets/code.mp4";
-import video2 from "../../assets/social-media.mp4";
+import video2 from "../../assets/contact.mp4";
 
 export const Page4 = () => {
   const { page4Ref } = useContext(NavBarContext);
+
   const dataPage4 = [
     {
       backgroundVideo: video1,

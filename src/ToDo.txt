@@ -1,8 +1,5 @@
 // Comprimir imágenes y video
 // EN el loader pasar el svg en vez de la imágen
-// Instalar react router
 // Crear el cv y subirlo para descargar en contact
 // Cambiar fuentes y color
-// Al cerrar el modal, desde button, hay que usar scrollToSection con useRef para que quede en la sección de los modales 
-
-// Loading 3000
+// La parte de page3 cambiar a grid para tener un diseño diferente en pantallas chicas

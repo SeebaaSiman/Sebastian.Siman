@@ -2,18 +2,27 @@ import { useContext } from "react";
 import { NavBarContext } from "./NavBarManager";
 import { CursorContext } from "../cursor/CustomManager";
 import { NavContainer } from "./NavBarStyle";
-import { useModal } from "../../hook/useModal";
-import { ListProjectsEffect } from "../page 4";
+import { ModalContext } from "../modals";
+import { IconsEffect, ListProjectsEffect } from "../page 4";
 
 export const NavBar = () => {
+  
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
   const { showNavBar, scrollToSection, page1Ref, aboutRef, page4Ref } =
     useContext(NavBarContext);
-  // const { toggleModal } = useModal();
-
-  // const handleOpenProjectsModal = () => {
-  //   toggleModal(<ListProjectsEffect />);
-  // };
+  const { openModal } = useContext(ModalContext);
+  const handleProjectModal = () => {
+    const item = <ListProjectsEffect />;
+    const description = "Project";
+    openModal(item, description);
+    scrollToSection(page1Ref);
+  };
+  const handleContactModal = () => {
+    const item = <IconsEffect />;
+    const description = "Contact";
+    openModal(item, description);
+    scrollToSection(page1Ref);
+  };
   return (
     <NavContainer>
       <ul>
@@ -37,14 +46,14 @@ export const NavBar = () => {
           <li
             onMouseEnter={handleCursorXs}
             onMouseLeave={handleCursorSmall}
-            onClick={() => scrollToSection(page4Ref)}
+            onClick={handleProjectModal}
           >
             Projects
           </li>
           <li
             onMouseEnter={handleCursorXs}
             onMouseLeave={handleCursorSmall}
-            onClick={() => scrollToSection(page4Ref)}
+            onClick={handleContactModal}
           >
             Contact
           </li>
