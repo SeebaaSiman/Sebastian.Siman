@@ -40,17 +40,10 @@ export const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:${props => props.variant === 'Projects' ? '#ffff' : '#515151'};
+  background-color:${props => props.variant === 'Projects' ? '#ffff' : '#1e1e1e'};
   animation: ${props => props.variant === 'Projects' ? projectInLeft : contactInRight} 0.8s ease-in-out forwards;
 
   &.close{
 animation: ${props => props.variant === 'Projects' ? projectOutLeft : contactOutLeft} 0.8s ease-in-out forwards;
 }
   `;
-export const Button = styled.button`
-  position:absolute;
-  left: 0;
-  top:0;
-  margin: 0.5rem;
-  z-index: 900;
-  `

@@ -41,10 +41,7 @@ span{
   }
 }
 `
-export const text =
-  "Mi experiencia se centra en lenguajes y frameworks como HTML, CSS,JavaScript y React. Como desarrollador web, mi objetivo a corto plazo es desafiarme a mí mismo y crear 1000 proyectos en los que pueda aplicar y mejorar mis habilidades.";
-export const text2 =
-  "¿Te animas a ser parte de este reto y acompañarme en este camino hacia el éxito?";
+
 export const styleIcon = {
   filter: " drop-shadow(5px 5px 5px #222)",
 };

@@ -1,0 +1,3 @@
+export const speech4 =
+    "Mi experiencia se centra en lenguajes y frameworks como HTML, CSS,JavaScript y React. Como desarrollador web, mi objetivo a corto plazo es desafiarme a mí mismo y crear 1000 proyectos en los que pueda aplicar y mejorar mis habilidades.";
+export const speech5 = "Para mí, cada proyecto es una oportunidad para adquirir nuevos conocimientos en diversos campos, desde las artes y las matemáticas hasta la física. Me apasiona aprender y expandir mis habilidades mientras trabajo en soluciones creativas para problemas complejos."

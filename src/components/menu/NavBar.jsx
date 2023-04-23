@@ -6,23 +6,24 @@ import { ModalContext } from "../modals";
 import { IconsEffect, ListProjectsEffect } from "../page 4";
 
 export const NavBar = () => {
-  
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
   const { showNavBar, scrollToSection, page1Ref, aboutRef, page4Ref } =
     useContext(NavBarContext);
+
   const { openModal } = useContext(ModalContext);
   const handleProjectModal = () => {
     const item = <ListProjectsEffect />;
-    const description = "Project";
-    openModal(item, description);
+    const description = "Projects";
+    openModal(item, String(description));
     scrollToSection(page1Ref);
   };
   const handleContactModal = () => {
     const item = <IconsEffect />;
     const description = "Contact";
-    openModal(item, description);
+    openModal(item, String(description));
     scrollToSection(page1Ref);
   };
+
   return (
     <NavContainer>
       <ul>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export const useTextChange = () => {
-    const prefix = "I'm";
+    const prefix = "Soy";
     const options = ["Sebastián Siman", "web developer"];
 
     //Este estado será el index que se usará para options

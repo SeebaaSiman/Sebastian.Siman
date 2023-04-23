@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import { Poppins } from "google-fonts";
 
 export const StyleGlobal = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen&display=swap');
   /* *{
     margin: 0;
     padding: 0;
@@ -21,7 +20,7 @@ export const StyleGlobal = createGlobalStyle`
 html{
     background-color: #e2dfdd;
     color: #000;
-    font-family: 'Bebas Neue',"Oxygen" ,sans-serif;
+    font-family: "Oxygen" ,'Bebas Neue',sans-serif;
 }
 ::-webkit-scrollbar {
     width: 0;

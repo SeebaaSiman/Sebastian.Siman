@@ -6,8 +6,8 @@ import {
   ContainerPage3,
   TypingContainer,
   IconContainer,
-  text,
-  text2,
+  speech4,
+  speech5,
   styleIcon,
   iconSize,
 } from "../../components";
@@ -32,7 +32,7 @@ export const Page3 = () => {
   return (
     <ContainerPage3>
       <TypingContainer ref={ref}>
-        {isIntersecting && <TypingEffect text={text} />}
+        {isIntersecting && <TypingEffect text={speech4} />}
       </TypingContainer>
       <IconContainer>
         <span ref={ref2} className={`${isIntersecting2 && "visible"}`}>
@@ -58,7 +58,7 @@ export const Page3 = () => {
       </IconContainer>
 
       <TypingContainer ref={ref6}>
-        {isIntersecting6 && <TypingEffect text={text2} />}
+        {isIntersecting6 && <TypingEffect text={speech5} />}
       </TypingContainer>
     </ContainerPage3>
   );

@@ -9,6 +9,7 @@ import {
   TextChange,
 } from "../../components";
 import useIntersectionObserver from "../../hook/useIntersectionObserver";
+import { ScrollArrowIndicator } from "../../components/page 1/ScrollArrowIndicator";
 
 export const Page1 = () => {
   //Estado para que aparezca el mouseScrolling
@@ -16,7 +17,7 @@ export const Page1 = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 3000);
+    }, 3000); //3000
   }, []);
   //Del contexto busco outNavBar para esconder la sección del navbar al estar en el viewport la sección container
   //También traigo del contexto la referencia page1Ref para usarla con el navbar
@@ -35,7 +36,15 @@ export const Page1 = () => {
           <TextChange />
           <img src={avatar} />
         </ContainerBanner>
-        <ContainerMouse>{loading ? <MouseScrolling /> : null}</ContainerMouse>
+        <ContainerMouse>
+          {loading ? (
+            <>
+              <ScrollArrowIndicator />
+              <MouseScrolling />
+              <ScrollArrowIndicator />
+            </>
+          ) : null}
+        </ContainerMouse>
       </HomeContainer>
     </>
   );

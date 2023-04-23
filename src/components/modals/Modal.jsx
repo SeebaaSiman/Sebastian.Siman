@@ -9,7 +9,6 @@ export const Modal = () => {
 
   const { modalItem, modalClass, clousing, showModal, closeModal } =
     useContext(ModalContext);
-
   const onClose = () => {
     handleCursorSmall();
     closeModal();
@@ -22,7 +21,10 @@ export const Modal = () => {
             className={`${modalClass} ${clousing}`}
             variant={modalClass}
           >
-            <ButtonModal onClose={onClose}></ButtonModal>
+            <ButtonModal
+              onClose={onClose}
+              modalClass={`${modalClass}`}
+            ></ButtonModal>
             {modalItem}
           </ModalContainer>,
           document.querySelector("#portal")

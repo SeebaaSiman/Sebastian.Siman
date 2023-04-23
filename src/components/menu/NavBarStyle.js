@@ -27,7 +27,10 @@ export const NavContainer = styled.nav`
   }
 
   li {
+    /* mix-blend-mode: difference; */
     position: relative;
+    font-family: 'Bebas Neue';
+    /* font-family: "Oxygen"; */
     /* display: inline-block; */
     color: #000;
     transition: color 0.8s;

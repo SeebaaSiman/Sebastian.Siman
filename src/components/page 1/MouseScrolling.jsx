@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
 export const MouseScrolling = () => {
   return (
-    <Mouse className="scroll-icon ex-2">
-      <Wheel className="wheel"></Wheel>
+    <Mouse>
+      <Wheel></Wheel>
     </Mouse>
   );
 };
@@ -17,10 +17,9 @@ const showIn = keyframes`
         `;
 const Mouse = styled.div`
   position: relative;
-  /* margin: 2em; */
   width: 2em;
   height: 4em;
-  border: 0.2em solid #000;
+  border: 0.15em solid #000;
   border-radius: 2em;
   animation: ${showIn} 1s ease-in-out forwards;
 `;

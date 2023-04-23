@@ -1,5 +1,0 @@
-// Comprimir imágenes y video
-// EN el loader pasar el svg en vez de la imágen
-// Crear el cv y subirlo para descargar en contact
-// Cambiar fuentes y color
-// La parte de page3 cambiar a grid para tener un diseño diferente en pantallas chicas

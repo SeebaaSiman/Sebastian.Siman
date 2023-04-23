@@ -34,7 +34,7 @@ const Text = styled.span`
   background: transparent;
   font-size: calc(1em + 1vw);
   /* font-family: monospace; */
-  font-family: "Bebas Neue";
-  /* font-family: "Oxygen"; */
+  /* font-family: "Bebas Neue"; */
+  font-family: "Oxygen";
   animation: ${show} 1s ease-in-out forwards;
 `;
