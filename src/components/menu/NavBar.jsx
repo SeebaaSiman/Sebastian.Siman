@@ -7,7 +7,7 @@ import { IconsEffect, ListProjectsEffect } from "../page 4";
 
 export const NavBar = () => {
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
-  const { showNavBar, scrollToSection, page1Ref, aboutRef, page4Ref } =
+  const { showNavBar, scrollToSection, page1Ref, aboutRef } =
     useContext(NavBarContext);
 
   const { openModal } = useContext(ModalContext);
@@ -15,13 +15,19 @@ export const NavBar = () => {
     const item = <ListProjectsEffect />;
     const description = "Projects";
     openModal(item, String(description));
-    scrollToSection(page1Ref);
+    setTimeout(() => {
+      handleCursorSmall();
+      scrollToSection(page1Ref);
+    }, 500);
   };
   const handleContactModal = () => {
     const item = <IconsEffect />;
     const description = "Contact";
     openModal(item, String(description));
-    scrollToSection(page1Ref);
+    setTimeout(() => {
+      handleCursorSmall();
+      scrollToSection(page1Ref);
+    }, 500);
   };
 
   return (

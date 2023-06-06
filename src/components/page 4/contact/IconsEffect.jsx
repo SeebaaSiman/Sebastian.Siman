@@ -8,17 +8,17 @@ export const IconsEffect = () => {
   const iconSize = "calc(2rem + 2vw)";
   const info = [
     {
-      to: "",
+      to: "mailto:seebaasiman@",
       icon: <Unicons.UilAt color="#f1d222" size={iconSize} />,
       text: "seebaasiman@",
     },
     {
-      to: "",
+      to: "https://www.linkedin.com/in/sebasti%C3%A1nsiman/",
       icon: <Unicons.UilLinkedinAlt color="#0e76a8" size={iconSize} />,
-      text: "in/seebaasiman",
+      text: "sebastiansiman",
     },
     {
-      to: "",
+      to: "https://github.com/SeebaaSiman",
       icon: <Unicons.UilGithubAlt color="#333" size={iconSize} />,
       text: "seebaasiman",
     },
@@ -30,8 +30,11 @@ export const IconsEffect = () => {
           key={index}
           onMouseEnter={handleCursorXs}
           onMouseLeave={handleCursorSmall}
+          href={item.to}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <a href={item.to}>{item.icon}</a>
+          <div>{item.icon}</div>
           <span>{item.text}</span>
         </SocialBtn>
       ))}

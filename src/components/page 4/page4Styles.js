@@ -30,7 +30,7 @@ export const ImageWrapper = styled.div`
   position: relative;
   height: 100vh;
   opacity: 0.5;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.3s ease-in-out;
   transform: skew(-8deg);
   video {
     object-fit: cover;

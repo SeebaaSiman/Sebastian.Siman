@@ -1,9 +1,11 @@
 import code from "../../assets/code.jpg"
 import setup from "../../assets/setup.jpg"
 import styled, { keyframes } from "styled-components";
+import { device } from "../../style/StyleGlobal";
 
 export const AboutContainer = styled.section`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: left;
@@ -19,50 +21,66 @@ const scaleUpTopLeft = keyframes`
 93% { transform: translateX(-4px); animation-timing-function: ease-in; } 25%, 55%, 75%, 87%, 98% { transform: translateX(0); animation-timing-function: ease-out; }
 100% { transform: translateX(0); animation-timing-function: ease-out; opacity: 1; }`;
 export const Text = styled.p`
-  font-size: calc(1em + 1vw);
-  opacity: 0;
-  width: 65%;
-  /* text-shadow: 1px 1px 1px #474747; */
-  /* transform: translateY(-50%) scale(0);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out,
-  scale 0.5s ease-in-out; */
-  &.visible {
-    /* opacity: 1;
-    transform: translateY(0%) scale(1); */
-    animation: ${scaleUpTopLeft} .9s linear forwards;
-  }
-`;
-
-export const Title = styled(Text)`
-margin-bottom:2rem;
-width:90%;
-&:first-letter {
-  font-size: calc(2em + 1vw);
-}
- `;
-export const VideoParallax = styled.div`
+opacity: 0;
 width: 100%;
-height: 300px;
-background-image: url(${code});
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-`
-
-export const Row = styled.div`
 margin-top:1rem;
-width:100%;
-height: 480px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-`
+margin-left:0.5rem;
+font-size: 2rem;
+ /* font-family: "Bebas Neue"; */
+  font-family: "Oxygen",sans-serif;
+  /* font-family: "Poppins"; */
+&:first-letter {
+  font-weight:bold;
+}
+@media ${device.md} {
+  font-size: 2.3rem;
+
+}
+@media ${device.lg} {
+font-size: 2.8rem;
+
+}
+&.visible {
+  animation: ${scaleUpTopLeft} .9s linear forwards;
+}
+`;
+export const Title = styled(Text)`
+margin-top:0;
+  width:65%;
+  /* font-size: 2rem; */
+  @media ${device.md} {
+    font-size: 2.3rem;
+  }
+  @media ${device.lg} {
+  font-size: 2.8rem;
+  }
+  @media ${device.xl} {
+  font-size: 3.2rem;
+  }
+   `
+export const VideoParallax = styled.div`
+margin-top: 2rem;
+  width: 100%;
+  height: 25vh;
+  background-image: url(${code});
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  `
+export const Row = styled.div`
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  `
 export const VideoParallax2 = styled.div`
-width: 35%;
-height: 100%;
-/* border-radius: 5%; */
+width: 33%;
+height: 22rem;
+/* height: 50vh; */
+border-radius: 5%;
 background-image: url(${setup});
 background-position: left;
 background-attachment: fixed;

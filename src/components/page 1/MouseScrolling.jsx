@@ -19,7 +19,8 @@ const Mouse = styled.div`
   position: relative;
   width: 2em;
   height: 4em;
-  border: 0.15em solid #000;
+  color: #222;
+  border: 0.15em solid #222;
   border-radius: 2em;
   animation: ${showIn} 1s ease-in-out forwards;
 `;

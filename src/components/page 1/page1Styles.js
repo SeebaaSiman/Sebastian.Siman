@@ -1,8 +1,9 @@
 import styled, { keyframes } from "styled-components";
+import { device } from "../../style/StyleGlobal";
 
 export const HomeContainer = styled.div`
-  height: 110vh;
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
 `;
 const showInRight = keyframes`
 from {
@@ -14,18 +15,18 @@ to {
   }
     `;
 export const ContainerBanner = styled.div`
-width:100%;
+  width:100%;
+  height: 75vh;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-direction:column-reverse;
   justify-content: space-around;
   align-items: center;
-  margin: 2rem 1rem 1rem 1rem;
+  @media ${device.lg}{
+    flex-direction: row;
+  }
   img {
     width: calc(5rem +1vw);
     height: calc(5rem +1vw);
-    /* width:50vw;
-    height: 50vh; */
     object-fit: cover;
     border-radius: 50%;
     animation: ${showInRight} 0.8s ease-in-out;
@@ -34,11 +35,8 @@ width:100%;
 export const ContainerMouse = styled.div`
   position: absolute;
   width:100%;
-  height: 8rem;
+  height: 25vh;
   bottom:2%;
-  /* top: 90%; */
-  /* bottom: 2%;
-  left: 50%; */
   z-index: 5;
   display: flex;
   flex-direction: row;

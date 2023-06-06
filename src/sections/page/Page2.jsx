@@ -21,7 +21,6 @@ export const Page2 = () => {
   };
   const isIntersecting = useIntersectionObserver(refText, options);
   const isIntersecting2 = useIntersectionObserver(refText2, options);
-  const isIntersecting3 = useIntersectionObserver(refText3, options);
 
   //Hago visible la segunda porción del navbar con una fx inNavBar desde el context. Llamo a esa fx al ser visible en el viewport el refText3 (reutilizo la useRef) y uso el useEffect para llamar la fx
   //Traigo del contexto la referencia aboutRef para usarla con el navbar y navegar
@@ -36,16 +35,18 @@ export const Page2 = () => {
 
   return (
     <AboutContainer ref={aboutRef}>
+      
+      <Row ref={img1Ref}>
       <Title ref={refText} className={`${isIntersecting && "visible"}`}>
         {speech}
       </Title>
-      <VideoParallax ref={img1Ref} />
-      <Row>
+        <VideoParallax2 />
+      </Row>
+
         <Text ref={refText2} className={`${isIntersecting2 && "visible"}`}>
           {speech2}
         </Text>
-        <VideoParallax2 />
-      </Row>
+      <VideoParallax  />
     </AboutContainer>
   );
 };

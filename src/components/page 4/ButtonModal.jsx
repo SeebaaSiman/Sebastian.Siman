@@ -19,7 +19,7 @@ export const ButtonModal = ({ onClose, modalClass }) => {
   );
 };
 
-const Back = styled.div`
+const Back = styled.p`
   position: absolute;
   left: 0;
   top: 0;
@@ -33,6 +33,7 @@ const Back = styled.div`
   text-decoration: none;
   transition: 0.2s ease-in-out;
   color: ${(props) => (props.variantt === "Contact" ? "#fff" : "#000")};
+
   &::before {
     content: "";
     position: absolute;

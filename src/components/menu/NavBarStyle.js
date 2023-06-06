@@ -21,18 +21,17 @@ export const NavContainer = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    font-size: calc(0.8em + 1vw);
     gap: 0.8rem;
-    /* mix-blend-mode: difference; */
+    font-size: calc(1em + 1vw);
   }
 
   li {
-    /* mix-blend-mode: difference; */
     position: relative;
     font-family: 'Bebas Neue';
     /* font-family: "Oxygen"; */
     /* display: inline-block; */
     color: #000;
+    filter:drop-shadow(1px 1px 1px #e2dfdd);
     transition: color 0.8s;
     animation: ${showIn} 0.5s ease-in-out forwards;
     &::before {

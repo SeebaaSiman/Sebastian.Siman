@@ -1,5 +1,5 @@
 import CursorManager from "./components/cursor/CustomManager";
-import { Loading } from "./components/loader/Loading";
+import { Loading } from "./Loading";
 import { usePageVisibility } from "./hook/usePageVisibility";
 import { StyleGlobal } from "./style/StyleGlobal";
 

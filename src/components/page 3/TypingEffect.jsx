@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
+import { device } from "../../style/StyleGlobal";
 
-export const TypingEffect = ({ text, delay = 50 }) => {
+export const TypingEffect = ({ text, delay = 40 }) => {
   //typingText es el texto que se va a mostrar en el efecto de escribir
   const [typingText, setTypingText] = useState("");
   //currentIndex es la posición actual del cursor en el texto original.
@@ -35,6 +36,18 @@ const Text = styled.span`
   font-size: calc(1em + 1vw);
   /* font-family: monospace; */
   /* font-family: "Bebas Neue"; */
-  font-family: "Oxygen";
+  /* font-family: "Oxygen"; */
+  /* font-family: "Poppins"; */
+  font-family: "Oxygen", sans-serif;
   animation: ${show} 1s ease-in-out forwards;
+  &:first-letter {
+    font-weight: bold;
+  }
+
+  @media ${device.md} {
+    font-size: 2.3rem;
+  }
+  @media ${device.lg} {
+    font-size: 2.8rem;
+  }
 `;

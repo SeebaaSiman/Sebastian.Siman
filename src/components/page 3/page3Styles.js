@@ -8,18 +8,21 @@ export const ContainerPage3 = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+
   `;
 //títulos 2rem
 export const TypingContainer = styled.div`
-  margin: 1rem 3rem;
+  margin: 1rem ;
   `;
 export const IconContainer = styled.div`
 display:flex;
+flex-direction: row;
+justify-content: center;
 span{
-  margin:0.3rem;
+  margin:0.1rem;
   opacity: 0;
   }
   span.visible{

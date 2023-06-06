@@ -1,13 +1,14 @@
 import styled, { keyframes } from "styled-components";
 import { useTextChange } from "../../hook/useTextChange";
+import { device } from "../../style/StyleGlobal";
 
 export const TextChange = () => {
   const { prefix, suffix } = useTextChange();
   return (
-    <Container>
+    <ContainerText>
       <Prefix>{prefix}</Prefix>
       <Suffix>{suffix}</Suffix>
-    </Container>
+    </ContainerText>
   );
 };
 const showInLeft = keyframes`
@@ -19,8 +20,10 @@ to {
   transform: translateX(0%);
   }
     `;
-const Container = styled.div`
-  /* flex: 1;   */
+const ContainerText = styled.div`
+  @media ${device.md} {
+    margin-top: 0;
+  }
   animation: ${showInLeft} 0.8s ease-in-out;
 `;
 const Prefix = styled.span`
@@ -28,8 +31,18 @@ const Prefix = styled.span`
   text-shadow: 1px 2px 1px #474747;
   display: inline-block;
   margin-right: 0.2rem;
-  font-size: calc(2.8rem + 40%);
   font-weight: 400;
+  font-size: 4rem;
+
+  /* @media ${device.md} {
+    font-size: 2.8rem;
+  } */
+  @media ${device.lg} {
+    font-size:4.5rem;
+  }
+  @media ${device.xl} {
+    font-size:8rem;
+  }
 `;
 
 const Suffix = styled(Prefix)`

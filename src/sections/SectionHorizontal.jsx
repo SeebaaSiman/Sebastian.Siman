@@ -8,6 +8,7 @@ export const SectionHorizontal = () => {
   const slider = useRef();
   const panelCount = 2;
   useScrollHorizontal(slider, panelCount);
+
   return (
     <ContainerHorizontal ref={slider}>
       <Panel className="panel">
