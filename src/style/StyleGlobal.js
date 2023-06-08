@@ -19,10 +19,11 @@ export const StyleGlobal = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
+    /* cursor: none; */
     user-select:none;
     overflow-x: hidden;
     scroll-behavior: smooth;
+
 }
 html{
     background-color: #e2dfdd;
@@ -34,4 +35,11 @@ html{
     width: 0;
     display: none;
   }
+
+
+  ${props => props.deviceType === "desktop" && `
+    * {
+      cursor: none;
+    }
+    `}
 `
