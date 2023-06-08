@@ -532,9 +532,9 @@ const $3=Mw`
     padding: 0;
     box-sizing: border-box;
     /* cursor: none; */
-    user-select:none;
+    /* user-select:none; */
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 
 }
 html{
@@ -552,6 +552,7 @@ html{
   ${t=>t.deviceType==="desktop"&&`
     * {
       cursor: none;
+      user-select:none;
     }
     `}
 `,F3=ge.div`
