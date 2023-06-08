@@ -54,6 +54,7 @@ export const ImageWrapper = styled.div`
     opacity: 0.8;
     background: #fff;
     color: #000;
+   
   }
 `;
 

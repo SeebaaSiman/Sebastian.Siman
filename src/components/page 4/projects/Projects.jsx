@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CursorContext } from "../../cursor/CustomManager";
 import styled from "styled-components";
 
-export const Projects = ({ title, index, setRotation, setIndex }) => {
+export const Projects = ({ url, title, index, setRotation, setIndex }) => {
   const { handleCursorMedium, handleCursorSmall } = useContext(CursorContext);
   const mouseEnter = () => {
     setRotation(index);
@@ -14,8 +14,10 @@ export const Projects = ({ title, index, setRotation, setIndex }) => {
   };
   return (
     <Clone onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-      <h1 className="menu-title">{title}</h1>
-      <h1 className="menu-title clone">{title}</h1>
+      <a href={url} target="_blank">
+        <h1 className="menu-title">{title}</h1>
+        <h1 className="menu-title clone">{title}</h1>
+      </a>
     </Clone>
   );
 };
@@ -23,6 +25,9 @@ const Clone = styled.div`
   margin-top: 2rem;
   margin-left: 2rem;
   position: relative;
+  a {
+    color: transparent;
+  }
   h1 {
     font-size: 10vw;
     transition: transform color 0.1s ease-in-out;

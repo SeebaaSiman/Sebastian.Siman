@@ -29,21 +29,23 @@ export const ListProjectsEffect = () => {
   return (
     <>
       <ContainerProject>
-        {dataProjects.map(({ title }, index) => (
+        {dataProjects.map(({ title, url }, index) => (
           <Projects
             key={index}
             title={title}
+            url={url}
             index={index}
             setRotation={handleSetRotation}
             setIndex={setActiveIndex}
           />
         ))}
       </ContainerProject>
+
       <ContainerImage>
-        {dataProjects.map(({ url }, index) => (
+        {dataProjects.map(({ img }, index) => (
           <ImageProjects
             key={index}
-            url={url}
+            img={img}
             active={activeIndex === index}
             rotationPosition={rotationPosition[index]}
           />

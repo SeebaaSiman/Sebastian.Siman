@@ -1,4 +1,4 @@
-export const ImageProjects = ({ url, active, rotationPosition }) => {
+export const ImageProjects = ({ img, active, rotationPosition }) => {
   return (
     <img
       className={`${active && "active"}`}
@@ -7,7 +7,7 @@ export const ImageProjects = ({ url, active, rotationPosition }) => {
           ? `scale(1.1) rotate(${rotationPosition}deg)`
           : `rotate(${rotationPosition}deg)`,
       }}
-      src={url}
+      src={img}
     />
   );
 };

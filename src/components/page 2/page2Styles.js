@@ -61,7 +61,7 @@ margin-top:0;
 export const VideoParallax = styled.div`
 margin-top: 2rem;
   width: 100%;
-  height: 25vh;
+  height: 20rem;
   background-image: url(${code});
   background-attachment: fixed;
   background-position: center;

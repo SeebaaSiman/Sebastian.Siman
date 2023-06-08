@@ -40,8 +40,9 @@ export const ContainerImage = styled.div`
     position: absolute;
     height: 60vh;
     width: auto;
+    border-radius: 25px;
     transition: transform 0.1s ease-in-out;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
     z-index: 98;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04),
       0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),

@@ -26,7 +26,7 @@ export const Page4 = () => {
       backgroundVideo: video2,
       description: "Contact",
       children: <IconsEffect />,
-      modalText: "Contactame",
+      modalText: "Contact me",
     },
   ];
 
