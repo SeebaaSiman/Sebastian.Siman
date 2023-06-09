@@ -627,6 +627,7 @@ to {
     }
   }
   img {
+    margin:1rem;
     width: calc(5rem +1vw);
     height: calc(5rem +1vw);
     object-fit: cover;
