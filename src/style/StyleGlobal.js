@@ -20,9 +20,9 @@ export const StyleGlobal = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     /* cursor: none; */
-    user-select:none;
+    /* user-select:none; */
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 
 }
 html{
@@ -40,6 +40,7 @@ html{
   ${props => props.deviceType === "desktop" && `
     * {
       cursor: none;
+      user-select:none;
     }
     `}
 `

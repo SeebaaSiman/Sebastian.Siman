@@ -21,9 +21,8 @@ to {
   }
     `;
 const ContainerText = styled.div`
-  @media ${device.md} {
-    margin-top: 0;
-  }
+  width: 98%;
+  height: 90%;
   animation: ${showInLeft} 0.8s ease-in-out;
 `;
 const Prefix = styled.span`
@@ -34,14 +33,11 @@ const Prefix = styled.span`
   font-weight: 400;
   font-size: 4rem;
 
-  /* @media ${device.md} {
-    font-size: 2.8rem;
-  } */
   @media ${device.lg} {
-    font-size:4.5rem;
+    font-size: 4.5rem;
   }
   @media ${device.xl} {
-    font-size:8rem;
+    font-size: 6rem;
   }
 `;
 

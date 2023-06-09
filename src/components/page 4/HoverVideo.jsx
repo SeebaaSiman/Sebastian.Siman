@@ -1,7 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import useDeviceType from "../../hook/useDeviceType";
 
 export const HoverVideo = ({ src }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const deviceType = useDeviceType();
+
   const videoRef = useRef(null);
   function handleMouseEnter() {
     setIsPlaying(true);
@@ -12,6 +15,11 @@ export const HoverVideo = ({ src }) => {
     setIsPlaying(false);
     videoRef.current.pause();
   }
+  useEffect(() => {
+    if (deviceType === "desktop") {
+      handleMouseEnter();
+    }
+  }, []);
 
   return (
     <video
