@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import {
   ContainerPage4,
-  ImageWrapper,
+  ImageWrapperDesktop,
+  ImageWrapperMobile,
   ContentWrapper,
   HoverVideo,
   ListProjectsEffect,
@@ -32,20 +33,25 @@ export const Page4 = () => {
   ];
 
   return (
-    <ContainerPage4 ref={page4Ref} deviceType={deviceType}>
-      {dataPage4.map((item, index) => (
-        <ImageWrapper key={index} >
-          <HoverVideo src={item.backgroundVideo} />
-          <ContentWrapper>
-            <h2>{item.description}</h2>
-            <OpenModal
-              children={item.children}
-              text={item.modalText}
-              toggleClass={item.description}
-            />
-          </ContentWrapper>
-        </ImageWrapper>
-      ))}
+    <ContainerPage4 ref={page4Ref}>
+      {dataPage4.map((item, index) => {
+        const ImageWrapperComponent =
+          deviceType === "desktop" ? ImageWrapperDesktop : ImageWrapperMobile;
+
+        return (
+          <ImageWrapperComponent key={index}>
+            <HoverVideo src={item.backgroundVideo} />
+            <ContentWrapper>
+              <h2>{item.description}</h2>
+              <OpenModal
+                children={item.children}
+                text={item.modalText}
+                toggleClass={item.description}
+              />
+            </ContentWrapper>
+          </ImageWrapperComponent>
+        );
+      })}
     </ContainerPage4>
   );
 };

@@ -26,9 +26,7 @@ width: 100%;
 margin-top:1rem;
 margin-left:0.5rem;
 font-size: 2rem;
- /* font-family: "Bebas Neue"; */
   font-family: "Oxygen",sans-serif;
-  /* font-family: "Poppins"; */
 &:first-letter {
   font-weight:bold;
 }
@@ -61,7 +59,7 @@ margin-top:0;
 export const VideoParallax = styled.div`
 margin-top: 2rem;
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   background-image: url(${code});
   background-attachment: fixed;
   background-position: center;

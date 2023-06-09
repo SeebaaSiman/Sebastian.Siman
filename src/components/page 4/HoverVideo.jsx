@@ -15,11 +15,6 @@ export const HoverVideo = ({ src }) => {
     setIsPlaying(false);
     videoRef.current.pause();
   }
-  useEffect(() => {
-    if (deviceType === "desktop") {
-      handleMouseEnter();
-    }
-  }, []);
 
   return (
     <video
@@ -27,7 +22,7 @@ export const HoverVideo = ({ src }) => {
       src={src}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      autoPlay={isPlaying}
+      autoPlay={deviceType === "desktop" ? isPlaying : true}
       loop
       muted
     />

@@ -31,13 +31,8 @@ const show = keyframes`
       }
 `;
 const Text = styled.span`
-  /* white-space: nowrap; */
   background: transparent;
   font-size: calc(1em + 1vw);
-  /* font-family: monospace; */
-  /* font-family: "Bebas Neue"; */
-  /* font-family: "Oxygen"; */
-  /* font-family: "Poppins"; */
   font-family: "Oxygen", sans-serif;
   animation: ${show} 1s ease-in-out forwards;
   &:first-letter {

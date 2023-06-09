@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import { device } from "../../style/StyleGlobal";
+import { BoxStyle, device } from "../../style/StyleGlobal";
 export const ContainerPage4 = styled.div`
   height: 100vh;
   display: flex;
@@ -30,13 +30,13 @@ const bounceIn = keyframes`
     transform: scale(1);
   }
   `;
-export const ImageWrapper = styled.div`
+export const ImageWrapperDesktop = styled.div`
   overflow: hidden;
   flex-grow: 1;
   position: relative;
   height: 50vh;
-  opacity: 0.4;
   transform: none;
+  opacity: 0.4;
 
   @media ${device.md} {
     height: 100vh;
@@ -49,81 +49,32 @@ export const ImageWrapper = styled.div`
     height: 100%;
     width: 100%;
   }
-
-
-  ${props =>
-    props.deviceType !== "desktop" &&
-    css`
     &:hover {
       opacity: 1;
       width: 100%;
       filter: contrast(120%);
       @media ${device.md} {
         width: 40%;
-        /* height: 100%; */
       }
     }
-
-    &:hover h2 {
-      animation: ${bounceIn} 1200ms;
-      color: white;
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    &:hover button {
-      opacity: 0.8;
-      background: #fff;
-      color: #000;
-
-    }
-
-  `}
-  ${props =>
-    props.deviceType === "desktop" &&
-    css`
-      opacity: 1;
-      width: 100%;
-      filter: contrast(120%);
-      @media ${device.md} {
-        width: 40%;
-      }
 
     h2 {
-      animation: ${bounceIn} 1200ms;
-      color: white;
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    button {
-      opacity: 0.8;
-      background: #fff;
-      color: #000;
-
-    }
-
-  `}
-`;
-
-export const ContentWrapper = styled.div`
-  position: absolute;
-  color: #fff;
-  width: 100%;
-  bottom: auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  text-align: center;
-  h2 {
     font-family: "poppins", sans-serif;
     font-size: calc(3rem + 2vw);
-    color: #ffff;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     text-transform: uppercase;
     transform: scale(0.5);
     opacity: 0.5;
     color: black;
   }
-  button {
+    &:hover h2 {
+      animation: ${bounceIn} 1200ms;
+      transform: scale(1.1);
+      color: #fff;
+      opacity: 1;
+    }
+
+    button {
     font-family: "poppins", sans-serif;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -141,5 +92,70 @@ export const ContentWrapper = styled.div`
     transition: all 800ms;
 
   }
+    &:hover button {
+      animation: ${bounceIn} 1200ms;
+      transform: scale(1.1);
+      opacity: 0.8;
+      background: #fff;
+      color: #000;
+
+    }
+
+`;
+export const ImageWrapperMobile = styled.div`
+overflow: hidden;
+  flex-grow: 1;
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  opacity: 1;
+
+  video {
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  h2 {
+    font-family: "poppins", sans-serif;
+    font-size: calc(3rem + 2vw);
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 1;
+
+    animation: ${bounceIn} 1200ms;
+    transform: scale(1.1);
+  }
+
+  button {
+    font-family: "poppins", sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.8rem 4rem;
+    margin: 1rem;
+    opacity: 0.8;
+    cursor: none;
+    -webkit-transition: all 800ms;
+    -moz-transition: all 800ms;
+    -ms-transition: all 800ms;
+    -o-transition: all 800ms;
+    transition: all 800ms;
+    animation: ${bounceIn} 1200ms;
+    transform: scale(1);
+
+  }
+  `
+export const ContentWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
 
 `;

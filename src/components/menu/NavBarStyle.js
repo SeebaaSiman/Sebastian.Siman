@@ -28,8 +28,6 @@ export const NavContainer = styled.nav`
   li {
     position: relative;
     font-family: 'Bebas Neue';
-    /* font-family: "Oxygen"; */
-    /* display: inline-block; */
     color: #000;
     filter:drop-shadow(1px 1px 1px #e2dfdd);
     transition: color 0.8s;

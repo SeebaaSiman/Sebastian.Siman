@@ -27,7 +27,7 @@ const Back = styled.p`
   z-index: 900;
   border: none;
   background-color: transparent;
-  /* font-family: 'Bebas Neue'; */
+  font-family: "poppins", sans-serif;
   font-size: calc(1rem + 1vw);
   /* font-weight: bold; */
   text-decoration: none;
