@@ -37,6 +37,7 @@ export const ListProjectsEffect = () => {
             index={index}
             setRotation={handleSetRotation}
             setIndex={setActiveIndex}
+            activeIndex={activeIndex}
           />
         ))}
       </ContainerProject>

@@ -1,8 +1,16 @@
-import { useContext } from "react";
-import { CursorContext } from "../../cursor/CustomManager";
+import { useContext, useState } from "react";
 import styled from "styled-components";
-
-export const Projects = ({ url, title, index, setRotation, setIndex }) => {
+import { CursorContext } from "../../cursor/CustomManager";
+import useDeviceType from "../../../hook/useDeviceType";
+import tab from "./../../../assets/newtab.png";
+export const Projects = ({
+  url,
+  title,
+  index,
+  setRotation,
+  setIndex,
+  activeIndex,
+}) => {
   const { handleCursorMedium, handleCursorSmall } = useContext(CursorContext);
   const mouseEnter = () => {
     setRotation(index);
@@ -12,19 +20,40 @@ export const Projects = ({ url, title, index, setRotation, setIndex }) => {
     setIndex(-1);
     handleCursorSmall();
   };
+  const deviceType = useDeviceType();
+  const [isCloneActive, setIsCloneActive] = useState(false);
+  const handleCloneClick = () => {
+    setIsCloneActive(true);
+    setRotation(index);
+  };
   return (
-    <Clone onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-      <a href={url} target="_blank">
-        <h1 className="menu-title">{title}</h1>
-        <h1 className="menu-title clone">{title}</h1>
-      </a>
-    </Clone>
+    <>
+      {deviceType === "desktop" ? (
+        <Clone onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+          <a href={url} target="_blank">
+            <h1 className="menu-title">{title}</h1>
+            <h1 className="menu-title clone">{title}</h1>
+          </a>
+        </Clone>
+      ) : (
+        <Clone onClick={handleCloneClick} isCloneActive={isCloneActive}>
+          <h1 className="menu-title">{title}</h1>
+          <h1 className="menu-title clone">{title}</h1>
+          {isCloneActive && activeIndex === index && (
+            <a href={url} target="_blank">
+              <img src={tab} alt="New Tab" />
+            </a>
+          )}
+        </Clone>
+      )}
+    </>
   );
 };
 const Clone = styled.div`
+  position: relative;
   margin-top: 2rem;
   margin-left: 2rem;
-  position: relative;
+  display: flex;
   a {
     color: transparent;
   }
@@ -35,6 +64,16 @@ const Clone = styled.div`
   &:hover h1 {
     ~ .clone {
       clip-path: inset(0 0 0 0);
+    }
+  }
+  img {
+    margin-left: 5px;
+    height: 8vw;
+  }
+  h1 {
+    ~ .clone {
+      clip-path: ${(props) =>
+        props.isCloneActive ? "inset(0 0 0 0)" : "initial"};
     }
   }
   .menu-title {
