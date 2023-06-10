@@ -34,7 +34,8 @@ export const Page4 = () => {
 
   return (
     <ContainerPage4 ref={page4Ref}>
-      {dataPage4.map((item, index) => {
+      {
+      dataPage4.map((item, index) => {
         const ImageWrapperComponent =
           deviceType === "desktop" ? ImageWrapperDesktop : ImageWrapperMobile;
 
@@ -51,7 +52,10 @@ export const Page4 = () => {
             </ContentWrapper>
           </ImageWrapperComponent>
         );
-      })}
+        
+      })
+
+      }
     </ContainerPage4>
   );
 };

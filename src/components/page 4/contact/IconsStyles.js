@@ -5,7 +5,7 @@ export const ContainerIcon = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const SocialBtn = styled.a`
+export const SocialBtnDesktop = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,6 @@ export const SocialBtn = styled.a`
   z-index: 20;
   &:hover {
     width: calc(14rem + 1vw);
-    border-radius: 1rem;
     justify-content: space-around;
     span {
     opacity: 1;
@@ -42,3 +41,44 @@ export const SocialBtn = styled.a`
     z-index: 20;
   }
 `;
+
+export const SocialBtnMobile = styled.div`
+
+display: flex;
+  justify-content:${(props) =>
+    props.isActive ? "space-around" : " center"};
+  align-items: center;
+   width: ${(props) =>
+    props.isActive ? "calc(14rem + 1vw)" : " calc(5rem + 2vw)"};
+  height: calc(5.2rem + 2vw);
+  border-radius: 1rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  margin: 0.8rem;
+  color: #444444;
+  background: #FFFFFF;
+  transition: 0.4s ease-in-out;
+  z-index: 20;
+
+
+
+  span {
+    opacity: F${(props) =>
+    props.isActive ? "1" : " 0"};
+    transform:  ${(props) => props.isActive ? "scale(1)" : "scale(0.2)"};
+    width: ${(props) =>
+    props.isActive ? "calc(6em + 1vw)" : " 0px"};
+    background-color: transparent;
+    font-family: 'Bebas Neue',sans-serif;
+    font-size: calc(1.4em + 2vw);
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s ease-in-out ;
+    z-index: 20;
+    a{
+      list-style: none;
+      outline-style:none;
+      font-style:none;
+      text-decoration-style:none;
+    }
+  }
+`

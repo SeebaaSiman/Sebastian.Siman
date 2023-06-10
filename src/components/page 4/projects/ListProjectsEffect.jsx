@@ -25,7 +25,6 @@ export const ListProjectsEffect = () => {
     setRotation(tempState);
     setActiveIndex(itemIndex);
   };
-
   return (
     <>
       <ContainerProject>

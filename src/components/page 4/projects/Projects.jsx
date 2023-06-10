@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
+import * as Unicons from "@iconscout/react-unicons";
 import styled from "styled-components";
+
 import { CursorContext } from "../../cursor/CustomManager";
 import useDeviceType from "../../../hook/useDeviceType";
-import tab from "./../../../assets/newtab.png";
 export const Projects = ({
   url,
   title,
@@ -26,6 +27,13 @@ export const Projects = ({
     setIsCloneActive(true);
     setRotation(index);
   };
+
+  const styleIcon = {
+    filter: " drop-shadow(5px 5px 5px #222)",
+    color: "white",
+    marginLeft: "8px",
+  };
+  const iconSize = "8vw";
   return (
     <>
       {deviceType === "desktop" ? (
@@ -41,7 +49,7 @@ export const Projects = ({
           <h1 className="menu-title clone">{title}</h1>
           {isCloneActive && activeIndex === index && (
             <a href={url} target="_blank">
-              <img src={tab} alt="New Tab" />
+              <Unicons.UilExternalLinkAlt style={styleIcon} size={iconSize} />
             </a>
           )}
         </Clone>
@@ -65,10 +73,6 @@ const Clone = styled.div`
     ~ .clone {
       clip-path: inset(0 0 0 0);
     }
-  }
-  img {
-    margin-left: 5px;
-    height: 8vw;
   }
   h1 {
     ~ .clone {
