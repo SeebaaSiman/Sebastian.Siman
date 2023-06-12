@@ -42,7 +42,7 @@ const Back = styled.p`
     width: 100%;
     height: 1.2px;
     background-color: ${(props) =>
-      props.variantt === "Contact" ? "#e2dfdd" : "#515151"};
+      props.variantt === "Contact" ? "#d1d0cf" : "#515151"};
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.2s ease-in-out;

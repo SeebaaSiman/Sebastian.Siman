@@ -4,6 +4,12 @@ const useIntersectionObserver = (ref, options = {}) => {
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
+        Promise.resolve(
+            typeof IntersectionObserver !== "undefined" ? IntersectionObserver : import("intersection-observer")
+        )
+    }, [])
+
+    useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIntersecting(true);

@@ -6,6 +6,7 @@ import {
   ContainerImage,
   ContainerProject,
 } from "./";
+import useDeviceType from "../../../hook/useDeviceType";
 
 export const ListProjectsEffect = () => {
   //El useState será un array con una longitud igual a la cantidad de elementos en la variable "dataProjects" y con fill todos los elementos se inicializan en 0
@@ -25,6 +26,8 @@ export const ListProjectsEffect = () => {
     setRotation(tempState);
     setActiveIndex(itemIndex);
   };
+  const deviceType = useDeviceType();
+
   return (
     <>
       <ContainerProject>
@@ -41,7 +44,7 @@ export const ListProjectsEffect = () => {
         ))}
       </ContainerProject>
 
-      <ContainerImage>
+      <ContainerImage deviceType={deviceType}>
         {dataProjects.map(({ img }, index) => (
           <ImageProjects
             key={index}
