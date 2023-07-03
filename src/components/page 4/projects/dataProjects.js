@@ -1,6 +1,7 @@
 import calculatorimg from "./../../../assets/calculator.jpg"
 import f1img from "./../../../assets/f1.jpg"
 import expensesimg from "./../../../assets/expenses.jpg"
+import HeroesApp from "./../../../assets/HeroesApp.jpg"
 export const dataProjects = [
   {
     img: calculatorimg,
@@ -15,6 +16,11 @@ export const dataProjects = [
   {
     img: expensesimg,
     title: "Expenses calculate",
+    url: "https://seebaasiman.github.io/Expenses-App/"
+  },
+  {
+    img: HeroesApp,
+    title: "Heroes App",
     url: "https://seebaasiman.github.io/Expenses-App/"
   },
 
