@@ -8,13 +8,13 @@ import {
 import { CursorContext } from "../../cursor/CustomManager";
 import useDeviceType from "../../../hook/useDeviceType";
 import { useState } from "react";
-
+import cv from "./../../../assets/sebastian siman cv.pdf";
 export const IconsEffect = () => {
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
   const iconSize = "calc(2rem + 2vw)";
   const info = [
     {
-      to: "mailto:seebaasiman@",
+      to: "mailto:seebaasiman@gmail.com",
       icon: <Unicons.UilAt color="#f1d222" size={iconSize} />,
       text: "seebaasiman@",
     },
@@ -27,6 +27,11 @@ export const IconsEffect = () => {
       to: "https://github.com/SeebaaSiman",
       icon: <Unicons.UilGithubAlt color="#333" size={iconSize} />,
       text: "seebaasiman",
+    },
+    {
+      to: cv,
+      icon: <Unicons.UilFileDownload color="#24aa24" size={iconSize} />,
+      text: "Sebastián Siman cv",
     },
   ];
   const deviceType = useDeviceType();
@@ -63,15 +68,14 @@ export const IconsEffect = () => {
             href={item.to}
             target="_blank"
             rel="noopener noreferrer"
+            download
           >
             <div>{item.icon}</div>
             <span>
               {deviceType === "desktop" ? (
                 `${item.text}`
               ) : (
-                <a href={item.to} target="_blank" rel="noopener noreferrer">
-                  {item.text}{" "}
-                </a>
+                <a href={item.to}>{item.text} </a>
               )}
             </span>
           </SocialBtn>
