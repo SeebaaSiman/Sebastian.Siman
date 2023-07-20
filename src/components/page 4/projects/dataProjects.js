@@ -2,7 +2,7 @@ import calculatorimg from "./../../../assets/calculator.jpg"
 import f1img from "./../../../assets/f1.jpg"
 import expensesimg from "./../../../assets/expenses.jpg"
 import HeroesApp from "./../../../assets/HeroesApp.jpg"
-import CelesteChronicle from "./../../../assets/celestial-chronicle.jpg"
+import CelestialChronicle from "./../../../assets/celestial-chronicle.jpg"
 export const dataProjects = [
   {
     img: calculatorimg,
@@ -24,10 +24,10 @@ export const dataProjects = [
     title: "Heroes App",
     url: "https://heroes-app-beige.vercel.app"
   },
-  // {
-  //   img: CelesteChronicle,
-  //   title: "Celeste Chronicle",
-  //   url: "https://celestial-chronicle.vercel.app/"
-  // },
+  {
+    img: CelestialChronicle,
+    title: "celestial Chronicle",
+    url: "https://celestial-chronicle.vercel.app/"
+  },
 
 ];
