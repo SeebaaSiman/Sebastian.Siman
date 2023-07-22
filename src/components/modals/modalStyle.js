@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { BoxStyle } from "../../style/StyleGlobal";
 const projectOutLeft = keyframes`
 from {
     transform: translateY(0%);
@@ -40,6 +41,8 @@ export const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: ${BoxStyle.boxShadow};
+
   background-color:${props => props.variant === 'Projects' ? '#ffff' : '#1e1e1e'};
   animation: ${props => props.variant === 'Projects' ? projectInLeft : contactInRight} 0.8s ease-in-out forwards;
 

@@ -45,7 +45,7 @@ export const ContainerImage = styled.div`
     border-radius: 25px;
     transition: transform 0.1s ease-in-out;
     z-index: 98;
-    box-shadow: ${BoxStyle};
+    box-shadow: ${BoxStyle.boxShadow};
     &.active {
       z-index: 99;
     }

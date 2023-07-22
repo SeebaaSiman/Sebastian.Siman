@@ -22,6 +22,7 @@ const Mouse = styled.div`
   color: #222;
   border: 0.15em solid #222;
   border-radius: 2em;
+
   animation: ${showIn} 1s ease-in-out forwards;
 `;
 const show = keyframes`
