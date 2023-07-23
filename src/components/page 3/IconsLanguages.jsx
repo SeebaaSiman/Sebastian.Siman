@@ -1,6 +1,6 @@
 import * as Unicons from "@iconscout/react-unicons";
-import { IconContainer, iconSize, styleIcon } from "./page3Styles";
 import { useRef } from "react";
+import { IconContainer, iconSize, styleIcon } from "./page3Styles";
 import useIntersectionObserver from "../../hook/useIntersectionObserver";
 
 export const IconsLanguages = () => {
@@ -9,7 +9,7 @@ export const IconsLanguages = () => {
   const ref4 = useRef();
   const ref5 = useRef();
   const options = {
-    threshold: 0.5,
+    threshold: 0.8,
   };
   const isIntersecting2 = useIntersectionObserver(ref2, options);
   const isIntersecting3 = useIntersectionObserver(ref3, options);

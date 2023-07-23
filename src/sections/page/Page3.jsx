@@ -3,6 +3,7 @@ import useIntersectionObserver from "../../hook/useIntersectionObserver";
 import {
   ContainerPage3,
   IconsLanguages,
+  LeftContainer,
   speech4,
   speech5,
   TypingContainer,
@@ -21,13 +22,16 @@ export const Page3 = () => {
 
   return (
     <ContainerPage3>
-      <TypingContainer ref={ref}>
-        {isIntersecting && <TypingEffect text={speech4} />}
-      </TypingContainer>
+      <LeftContainer>
+        <TypingContainer ref={ref}>
+          {isIntersecting && <TypingEffect text={speech4} />}
+        </TypingContainer>
+        <TypingContainer ref={ref6}>
+          {isIntersecting6 && <TypingEffect text={speech5} />}
+        </TypingContainer>
+      </LeftContainer>
+
       <IconsLanguages />
-      <TypingContainer ref={ref6}>
-        {isIntersecting6 && <TypingEffect text={speech5} />}
-      </TypingContainer>
     </ContainerPage3>
   );
 };

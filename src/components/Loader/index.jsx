@@ -13,7 +13,7 @@ export const Loader = () => {
   if (visible) {
     return (
       <LoaderContent>
-        SEBASTIÁN SIMAN | PORTFOLIO ©2023
+        SEBASTIÁN SIMAN | PORTFOLIO &copy;{new Date().getFullYear()}
         <img src={logo} />
       </LoaderContent>
     );

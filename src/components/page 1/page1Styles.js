@@ -56,10 +56,9 @@ margin-top:0;
 `;
 export const ContainerMouse = styled.div`
   position:absolute;
-  bottom:3%;
+  bottom:0%;
   width:100%;
   height: 4.5rem;
-
   z-index: 5;
   display: flex;
   flex-direction: row;

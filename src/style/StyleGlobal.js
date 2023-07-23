@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { Poppins } from "google-fonts";
 
 export const device = {
   sm: `(min-width: 480px)`,
@@ -33,7 +32,7 @@ export const StyleGlobal = createGlobalStyle`
 html{
     background-color: #e2dfdd;
     color: #000;
-    font-family: "Oxygen" ,'Bebas Neue',"poppins",sans-serif;
+    font-family: "Oxygen" ,'Bebas Neue',sans-serif;
 }
 
 ::-webkit-scrollbar {

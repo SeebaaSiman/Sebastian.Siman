@@ -25,18 +25,19 @@ opacity: 0;
 width: 100%;
 margin-top:1rem;
 margin-left:0.5rem;
-font-size: 2rem;
+font-size: 1.2rem;
   font-family: "Oxygen",sans-serif;
 &:first-letter {
   font-weight:bold;
 }
+@media ${device.sm} {
+  font-size: 1.6rem;
+}
 @media ${device.md} {
-  font-size: 2.3rem;
-
+  font-size: 2rem;
 }
 @media ${device.lg} {
-font-size: 2.8rem;
-
+font-size: 2.3rem;
 }
 &.visible {
   animation: ${scaleUpTopLeft} .9s linear forwards;
@@ -45,16 +46,6 @@ font-size: 2.8rem;
 export const Title = styled(Text)`
 margin-top:0;
   width:65%;
-  /* font-size: 2rem; */
-  @media ${device.md} {
-    font-size: 2.3rem;
-  }
-  @media ${device.lg} {
-  font-size: 2.8rem;
-  }
-  @media ${device.xl} {
-  font-size: 3.2rem;
-  }
    `
 export const VideoParallax = styled.div`
 margin-top: 2rem;

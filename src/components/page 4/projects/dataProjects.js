@@ -32,7 +32,7 @@ export const dataProjects = [
   },
   {
     img: chatNonContact,
-    title: "Chat-non-contact-whatsapp/",
+    title: "Chat-non-contact-whatsapp",
     url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/"
   },
 

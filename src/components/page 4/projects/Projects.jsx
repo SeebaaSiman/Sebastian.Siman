@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { CursorContext } from "../../cursor/CustomManager";
 import useDeviceType from "../../../hook/useDeviceType";
+import { BoxStyle, device } from "../../../style/StyleGlobal";
 export const Projects = ({
   url,
   title,
@@ -29,39 +30,48 @@ export const Projects = ({
   };
 
   const styleIcon = {
-    filter: " drop-shadow(5px 5px 5px #222)",
-    color: "white",
-    marginLeft: "8px",
+    filter: " drop-shadow(1px 1px 1px #333)",
+    color: "#000",
+    marginLeft: "4px",
   };
-  const iconSize = "8vw";
+  const iconSize = "10vw";
   return (
     <>
       {deviceType === "desktop" ? (
         <Clone onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
           <a href={url} target="_blank">
-            <h1 className="menu-title">{title}</h1>
-            <h1 className="menu-title clone">{title}</h1>
+            <h1 className="menu-title">▪ {title}</h1>
+            <h1 className="menu-title clone">▪ {title}</h1>
           </a>
         </Clone>
       ) : (
         <Clone onClick={handleCloneClick} isCloneActive={isCloneActive}>
-          <h1 className="menu-title">{title}</h1>
-          <h1 className="menu-title clone">{title}</h1>
+          <h1 className="menu-title">▪ {title}</h1>
+          <h1 className="menu-title clone">▪ {title}</h1>
           {isCloneActive && activeIndex === index && (
-            <a href={url} target="_blank">
+            <Link href={url} target="_blank">
               <Unicons.UilExternalLinkAlt style={styleIcon} size={iconSize} />
-            </a>
+            </Link>
           )}
         </Clone>
       )}
     </>
   );
 };
+const Link = styled.a`
+  display: flex;
+  align-items: end;
+  z-index: 200;
+`;
 const Clone = styled.div`
   position: relative;
-  margin-top: 2rem;
-  margin-left: 2rem;
+  margin-top: 10px;
+  margin-left: 10px;
   display: flex;
+  @media ${device.sm} {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
   a {
     color: transparent;
   }
@@ -81,7 +91,7 @@ const Clone = styled.div`
     }
   }
   .menu-title {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Oxygen", sans-serif;
     font-size: 8.5vw;
     text-transform: lowercase;
     z-index: 100;

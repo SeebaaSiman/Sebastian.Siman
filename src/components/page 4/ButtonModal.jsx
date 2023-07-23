@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import { CursorContext } from "../cursor/CustomManager";
+import { device } from "../../style/StyleGlobal";
 
 export const ButtonModal = ({ onClose, modalClass }) => {
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
@@ -27,12 +28,19 @@ const Back = styled.p`
   z-index: 900;
   border: none;
   background-color: transparent;
-  font-family: "poppins", sans-serif;
-  font-size: calc(1rem + 1vw);
+  font-family: "bebas neue", sans-serif;
+  font-size: 1.1rem;
   /* font-weight: bold; */
   text-decoration: none;
   transition: 0.2s ease-in-out;
   color: ${(props) => (props.variantt === "Contact" ? "#fff" : "#000")};
+
+  @media ${device.sm} {
+    font-size: 1.3rem;
+  }
+  @media ${device.lg} {
+    font-size: 1.5rem;
+  }
 
   &::before {
     content: "";

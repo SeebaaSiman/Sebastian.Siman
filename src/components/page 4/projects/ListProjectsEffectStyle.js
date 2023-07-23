@@ -18,16 +18,17 @@ to {
   }
   `
 export const ContainerProject = styled.div`
-  margin-top: 3rem;
-  width: 100%;
+  margin-top: 2rem;
+  width: 90%;
   height: 100%;
   display: block;
   z-index: 60;
   animation: ${showInLeft} 0.8s ease-in-out;
+
 `;
 export const ContainerImage = styled.div`
   position: absolute;
-  top: ${(props) => props.deviceType === "desktop" ? "50%" : "70%"};
+  top: ${(props) => props.deviceType === "desktop" ? "50%" : "90%"};
   left:${(props) => props.deviceType === "desktop" ? "75%" : "50%"} ;
   transform: translate(-50%, -50%);
   display: flex;
@@ -38,13 +39,13 @@ export const ContainerImage = styled.div`
 
   z-index: 40;
   animation: ${showScale} 0.8s ease-in-out;
-  img {
-    position: absolute;
-    height: ${(props) => props.deviceType === "desktop" ? "70vh" : "50vh"};
-    width: auto;
-    border-radius: 25px;
-    transition: transform 0.1s ease-in-out;
-    z-index: 98;
+  img{
+      position: absolute;
+      height: ${(props) => props.deviceType === "desktop" ? "70vh" : "50vh"};
+      width: auto;
+      border-radius: 25px;
+      transition: transform 0.1s ease-in-out;
+      z-index: 98;
     box-shadow: ${BoxStyle.boxShadow};
     &.active {
       z-index: 99;

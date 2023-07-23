@@ -31,8 +31,14 @@ const Prefix = styled.span`
   display: inline-block;
   margin-right: 0.2rem;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3rem;
 
+  @media ${device.sm} {
+    font-size: 3.3rem;
+  }
+  @media ${device.md} {
+    font-size: 4rem;
+  }
   @media ${device.lg} {
     font-size: 4.5rem;
   }

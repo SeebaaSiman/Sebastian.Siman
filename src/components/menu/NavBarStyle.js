@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { device } from "../../style/StyleGlobal";
 const showIn = keyframes`
   0% {
 transform:scale(0.8);
@@ -22,12 +23,18 @@ export const NavContainer = styled.nav`
     display: flex;
     list-style: none;
     gap: 0.8rem;
-    font-size: calc(1em + 1vw);
+    font-size: 1.1rem;
+    @media ${device.sm}{
+font-size: 1.3rem;
+    }
+    @media ${device.lg}{
+font-size: 1.5rem;
+    }
   }
 
   li {
     position: relative;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue',sans-serif;
     color: #000;
     filter:drop-shadow(1px 1px 1px #e2dfdd);
     transition: color 0.8s;

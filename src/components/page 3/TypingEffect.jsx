@@ -32,17 +32,20 @@ const show = keyframes`
 `;
 const Text = styled.span`
   background: transparent;
-  font-size: calc(1em + 1vw);
+  font-size: 1rem;
   font-family: "Oxygen", sans-serif;
   animation: ${show} 1s ease-in-out forwards;
   &:first-letter {
     font-weight: bold;
   }
 
+  @media ${device.sm} {
+    font-size: 1.6rem;
+  }
   @media ${device.md} {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   @media ${device.lg} {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 `;
