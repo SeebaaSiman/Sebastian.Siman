@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { device } from "../../style/StyleGlobal";
 
-export const HomeContainer = styled.div`
+export const HomeContainer = styled.header`
   position:relative;
   height: 100vh;
   width: 100%;

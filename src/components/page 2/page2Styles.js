@@ -25,13 +25,13 @@ opacity: 0;
 width: 100%;
 margin-top:1rem;
 margin-left:0.5rem;
-font-size: 1.2rem;
+font-size: 1.3rem;
   font-family: "Oxygen",sans-serif;
 &:first-letter {
   font-weight:bold;
 }
 @media ${device.sm} {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 @media ${device.md} {
   font-size: 2rem;

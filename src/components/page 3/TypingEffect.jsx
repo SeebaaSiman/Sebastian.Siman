@@ -32,7 +32,7 @@ const show = keyframes`
 `;
 const Text = styled.span`
   background: transparent;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "Oxygen", sans-serif;
   animation: ${show} 1s ease-in-out forwards;
   &:first-letter {
@@ -40,7 +40,7 @@ const Text = styled.span`
   }
 
   @media ${device.sm} {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   @media ${device.md} {
     font-size: 2rem;

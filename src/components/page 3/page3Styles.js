@@ -6,18 +6,23 @@ const bounceLeft = keyframes`
 100%{transform:scale(1);opacity:1;transform-origin:top left}`;
 
 export const ContainerPage3 = styled.article`
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   /* flex-direction: row; */
   justify-content: center;
   align-items: center;
+  @media ${device.sm}{
+    height: 100vh;
+  }
   `;
 //títulos 2rem
 export const TypingContainer = styled.div`
-&:nth-child(1){
+height: 50vh;
   margin-bottom: 10px;
+&:nth-child(1){
+  margin-top: 10px;
 }
 @media ${device.sm}{
   margin: 1rem ;
@@ -54,5 +59,6 @@ export const styleIcon = {
 export const iconSize = `5rem`;
 
 export const LeftContainer = styled.div`
-width:calc(100% - 6rem)
+width:calc(100% - 6rem);
+height:100%;
 `
