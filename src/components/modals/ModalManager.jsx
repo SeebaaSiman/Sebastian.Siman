@@ -26,7 +26,6 @@ export const ModalManager = ({ children }) => {
     setModalItem(item);
     setModalClass(description);
   };
-
   const closeModal = () => {
     setClousing("close");
     setTimeout(() => {
@@ -45,6 +44,7 @@ export const ModalManager = ({ children }) => {
     clousing,
     closeModal,
   };
+    console.log(modalClass)
   return (
     <ModalContext.Provider value={contextValue}>
       {children}

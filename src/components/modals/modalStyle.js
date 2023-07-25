@@ -41,26 +41,14 @@ export const ModalContainer = styled.div`
   display: flex;
   box-shadow: ${BoxStyle.boxShadow};
 
-  background-color: ${props =>
-    props.variant === 'Projects' || props.variant === 'Proyectos'
-      ? '#fff'
-      : props.variant === 'Contact' || props.variant === 'Contacto'
-        ? '#1e1e1e'
-        : ''};
-animation: ${props =>
-    props.variant === 'Projects' || props.variant === 'Proyectos'
-      ? projectInLeft
-      : props.variant === 'Contact' || props.variant === 'Contacto'
-        ? contactInRight
-        : ''} 0.8s ease-in-out forwards;
+  background-color:${props => props.variant === 'Projects' ? '#ffff' : '#1e1e1e'};
+animation: ${props => props.variant === 'Projects' ? projectInLeft
+    : contactInRight
+  } 0.8s ease-in-out forwards;
 
 
   &.close{
     animation: ${props =>
-    props.variant === 'Projects' || props.variant === 'Proyectos'
-      ? projectOutLeft
-      : props.variant === 'Contact' || props.variant === 'Contacto'
-        ? contactOutLeft
-        : ''} 0.8s ease-in-out forwards;
+    props.variant === 'Projects' ? projectOutLeft : contactOutLeft} 0.8s ease-in-out forwards;
 }
 `;

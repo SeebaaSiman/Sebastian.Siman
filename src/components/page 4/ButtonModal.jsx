@@ -2,11 +2,14 @@ import { useContext } from "react";
 import styled from "styled-components";
 import { CursorContext } from "../cursor/CustomManager";
 import { device } from "../../style/StyleGlobal";
+import { useLanguage } from "../../language/LanguageContext";
 
 export const ButtonModal = ({ onClose, modalClass }) => {
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
+  const { texts } = useLanguage();
 
-  const text = "-Volver";
+  const text = `${texts.buttonModal}`;
+  console.log(modalClass)
   return (
     <Back
       className={modalClass}

@@ -25,12 +25,14 @@ export const Page4 = () => {
       description: `${texts.descriptionProject}`,
       children: <ListProjectsEffect />,
       modalText: `${texts.modalTextProject}`,
+      toggleClass: "Project",
     },
     {
       backgroundVideo: video2,
       description: `${texts.descriptionContact}`,
       children: <IconsEffect />,
       modalText: `${texts.modalTextContact}`,
+      toggleClass: "Contact",
     },
   ];
 
@@ -48,7 +50,7 @@ export const Page4 = () => {
               <OpenModal
                 children={item.children}
                 text={item.modalText}
-                toggleClass={item.description}
+                toggleClass={item.toggleClass}
               />
             </ContentWrapper>
           </ImageWrapperComponent>
