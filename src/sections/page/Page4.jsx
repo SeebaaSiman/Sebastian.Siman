@@ -11,31 +11,32 @@ import {
   NavBarContext,
 } from "../../components";
 import useDeviceType from "../../hook/useDeviceType";
+import { useLanguage } from "../../language/LanguageContext";
 import video1 from "../../assets/code.mp4";
 import video2 from "../../assets/contact2.mp4";
 
 export const Page4 = () => {
   const { page4Ref } = useContext(NavBarContext);
   const deviceType = useDeviceType();
+  const { texts } = useLanguage();
   const dataPage4 = [
     {
       backgroundVideo: video1,
-      description: "Projects",
+      description: `${texts.descriptionProject}`,
       children: <ListProjectsEffect />,
-      modalText: "ir a proyectos",
+      modalText: `${texts.modalTextProject}`,
     },
     {
       backgroundVideo: video2,
-      description: "Contact",
+      description: `${texts.descriptionContact}`,
       children: <IconsEffect />,
-      modalText: "Contáctame",
+      modalText: `${texts.modalTextContact}`,
     },
   ];
 
   return (
     <ContainerPage4 ref={page4Ref}>
-      {
-      dataPage4.map((item, index) => {
+      {dataPage4.map((item, index) => {
         const ImageWrapperComponent =
           deviceType === "desktop" ? ImageWrapperDesktop : ImageWrapperMobile;
 
@@ -52,10 +53,7 @@ export const Page4 = () => {
             </ContentWrapper>
           </ImageWrapperComponent>
         );
-        
-      })
-
-      }
+      })}
     </ContainerPage4>
   );
 };

@@ -4,6 +4,7 @@ import { CursorContext } from "../cursor/CustomManager";
 import { NavContainer } from "./NavBarStyle";
 import { ModalContext } from "../modals";
 import { IconsEffect, ListProjectsEffect } from "../page 4";
+import { useLanguage } from "../../language/LanguageContext";
 
 export const NavBar = () => {
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
@@ -29,7 +30,7 @@ export const NavBar = () => {
       scrollToSection(page1Ref);
     }, 500);
   };
-
+  const { texts } = useLanguage();
   return (
     <NavContainer>
       <ul>
@@ -48,21 +49,21 @@ export const NavBar = () => {
             onMouseLeave={handleCursorSmall}
             onClick={() => scrollToSection(aboutRef)}
           >
-            About
+            {texts.about}
           </li>
           <li
             onMouseEnter={handleCursorXs}
             onMouseLeave={handleCursorSmall}
             onClick={handleProjectModal}
           >
-            Projects
+            {texts.project}
           </li>
           <li
             onMouseEnter={handleCursorXs}
             onMouseLeave={handleCursorSmall}
             onClick={handleContactModal}
           >
-            Contact
+            {texts.contact}
           </li>
         </ul>
       )}

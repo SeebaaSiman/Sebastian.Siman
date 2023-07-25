@@ -37,17 +37,30 @@ export const ModalContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 100%; */
   min-height: 100vh;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   box-shadow: ${BoxStyle.boxShadow};
 
-  background-color:${props => props.variant === 'Projects' ? '#ffff' : '#1e1e1e'};
-  animation: ${props => props.variant === 'Projects' ? projectInLeft : contactInRight} 0.8s ease-in-out forwards;
+  background-color: ${props =>
+    props.variant === 'Projects' || props.variant === 'Proyectos'
+      ? '#fff'
+      : props.variant === 'Contact' || props.variant === 'Contacto'
+        ? '#1e1e1e'
+        : ''};
+animation: ${props =>
+    props.variant === 'Projects' || props.variant === 'Proyectos'
+      ? projectInLeft
+      : props.variant === 'Contact' || props.variant === 'Contacto'
+        ? contactInRight
+        : ''} 0.8s ease-in-out forwards;
+
 
   &.close{
-animation: ${props => props.variant === 'Projects' ? projectOutLeft : contactOutLeft} 0.8s ease-in-out forwards;
+    animation: ${props =>
+    props.variant === 'Projects' || props.variant === 'Proyectos'
+      ? projectOutLeft
+      : props.variant === 'Contact' || props.variant === 'Contacto'
+        ? contactOutLeft
+        : ''} 0.8s ease-in-out forwards;
 }
-  `;
+`;

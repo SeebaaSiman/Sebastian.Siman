@@ -20,12 +20,8 @@ export const ContainerPage3 = styled.article`
 //títulos 2rem
 export const TypingContainer = styled.div`
 height: 50vh;
-  margin-bottom: 10px;
-&:nth-child(1){
-  margin-top: 10px;
-}
-@media ${device.sm}{
-  margin: 1rem ;
+ &:nth-child(1){
+  margin-top: 22px;
 }
   `;
 export const IconContainer = styled.div`
@@ -60,5 +56,9 @@ export const iconSize = `5rem`;
 
 export const LeftContainer = styled.div`
 width:calc(100% - 6rem);
-height:100%;
+height:100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 `

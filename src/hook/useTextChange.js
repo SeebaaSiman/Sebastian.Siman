@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useLanguage } from "../language/LanguageContext";
 
 export const useTextChange = () => {
-    const prefix = "Soy";
-    const options = ["Sebastián Siman", "web developer"];
+
+    const { texts } = useLanguage();
+
+    const prefix = `${texts.prefix}`;
+    const options = ["Sebastián Siman", `${texts.options}`];
 
     //Este estado será el index que se usará para options
     const [index, setIndex] = useState(0);
@@ -24,5 +27,5 @@ export const useTextChange = () => {
         setSuffix(options[index]);
     }, [index, options]);
 
-    return {prefix,suffix,}
+    return { prefix, suffix, }
 }

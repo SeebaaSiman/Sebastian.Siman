@@ -20,9 +20,10 @@ to {
   transform: translateX(0%);
   }
     `;
+
 const ContainerText = styled.div`
   width: 98%;
-  height: 90%;
+  height: 95%;
   animation: ${showInLeft} 0.8s ease-in-out;
 `;
 const Prefix = styled.span`
@@ -34,7 +35,7 @@ const Prefix = styled.span`
   font-size: 3rem;
 
   @media ${device.sm} {
-    font-size: 3.3rem;
+    font-size: 3.2rem;
   }
   @media ${device.md} {
     font-size: 4rem;

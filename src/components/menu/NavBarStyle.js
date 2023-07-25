@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { device } from "../../style/StyleGlobal";
-const showIn = keyframes`
+export const showIn = keyframes`
   0% {
 transform:scale(0.8);
 opacity: 0;
@@ -15,7 +15,7 @@ export const NavContainer = styled.nav`
   display: flex;
   width: 98%;
   align-items: center;
-  margin: 3px;
+  margin: 5px;
   z-index: 800;
   justify-content: space-between;
 

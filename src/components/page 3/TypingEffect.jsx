@@ -40,7 +40,7 @@ const Text = styled.span`
   }
 
   @media ${device.sm} {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   @media ${device.md} {
     font-size: 2rem;

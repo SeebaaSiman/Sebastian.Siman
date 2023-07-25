@@ -5,12 +5,11 @@ import {
   NavBarContext,
   Text,
   Title,
-  speech,
-  speech2,
   Row,
   VideoParallax,
   VideoParallax2,
 } from "../../components";
+import { useLanguage } from "../../language/LanguageContext";
 export const Page2 = () => {
   //Creo referencias a los textos para usar el hook observer, al ser observados cambian su class css y hacen animación
   const refText = useRef();
@@ -32,21 +31,19 @@ export const Page2 = () => {
       inNavBar();
     }
   }, [isIntersecting4]);
-
+  const { texts } = useLanguage();
   return (
     <AboutContainer ref={aboutRef}>
-      
       <Row ref={img1Ref}>
-      <Title ref={refText} className={`${isIntersecting && "visible"}`}>
-        {speech}
-      </Title>
+        <Title ref={refText} className={`${isIntersecting && "visible"}`}>
+          {texts.speech1}
+        </Title>
         <VideoParallax2 />
       </Row>
-
-        <Text ref={refText2} className={`${isIntersecting2 && "visible"}`}>
-          {speech2}
-        </Text>
-      <VideoParallax  />
+      <Text ref={refText2} className={`${isIntersecting2 && "visible"}`}>
+        {texts.speech2}
+      </Text>
+      <VideoParallax />
     </AboutContainer>
   );
 };
