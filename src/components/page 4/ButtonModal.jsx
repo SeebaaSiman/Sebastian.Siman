@@ -9,7 +9,6 @@ export const ButtonModal = ({ onClose, modalClass }) => {
   const { texts } = useLanguage();
 
   const text = `${texts.buttonModal}`;
-  console.log(modalClass)
   return (
     <Back
       className={modalClass}

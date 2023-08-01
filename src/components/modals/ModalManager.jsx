@@ -44,7 +44,6 @@ export const ModalManager = ({ children }) => {
     clousing,
     closeModal,
   };
-    console.log(modalClass)
   return (
     <ModalContext.Provider value={contextValue}>
       {children}
