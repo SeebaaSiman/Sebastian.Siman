@@ -6,14 +6,7 @@ export const device = {
   lg: `(min-width: 1024px)`,
   xl: `(min-width: 1200px)`,
 };
-//! Aplicación de device
-/* h1 {
-    font-size: 2rem;
-    ${device.md} {
-      font-size: 3rem;
-    }
-  } */
-export const BoxStyle = {
+export const Style = {
   boxShadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,' +
     'rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,' +
     'rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,' +
@@ -45,5 +38,6 @@ html{
     * {
       cursor: none;
     }
+
     `}
 `

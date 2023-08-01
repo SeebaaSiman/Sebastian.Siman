@@ -1,5 +1,5 @@
-import styled, {  keyframes } from "styled-components";
-import { BoxStyle, device } from "../../style/StyleGlobal";
+import styled, { keyframes } from "styled-components";
+import { device } from "../../style/StyleGlobal";
 export const ContainerPage4 = styled.div`
   height: 100vh;
   display: flex;

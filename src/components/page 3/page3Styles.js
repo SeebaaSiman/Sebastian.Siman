@@ -1,4 +1,3 @@
-import * as Unicons from "@iconscout/react-unicons";
 import styled, { keyframes } from "styled-components";
 import { device } from "../../style/StyleGlobal";
 const bounceLeft = keyframes`
@@ -48,11 +47,11 @@ span{
   }
 }
 `
-export const styleIcon = {
-  filter: " drop-shadow(5px 5px 5px #222)",
-  borderRadius: "16px"
-};
-export const iconSize = `5rem`;
+// export const styleIcon = {
+//   filter: " drop-shadow(5px 5px 5px #222)",
+//   borderRadius: "16px"
+// };
+// export const iconSize = `5rem`;
 
 export const LeftContainer = styled.div`
 width:calc(100% - 6rem);

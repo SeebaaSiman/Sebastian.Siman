@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BoxStyle } from "../../../style/StyleGlobal";
+import { Style } from "../../../style/StyleGlobal";
 export const ContainerIcon = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ export const SocialBtnDesktop = styled.a`
   height: calc(5.2rem + 2vw);
   width: calc(5.2rem + 2vw);
   border-radius: 1rem;
-  box-shadow: ${BoxStyle.boxShadow};
+  box-shadow: ${Style.boxShadow};
 
   margin: 0.8rem;
   color: #444444;
@@ -55,7 +55,7 @@ display: flex;
     props.isActive ? "calc(14rem + 1vw)" : " calc(5rem + 2vw)"};
   height: calc(5.2rem + 2vw);
   border-radius: 1rem;
-  box-shadow: ${BoxStyle.boxShadow};
+  box-shadow: ${Style.boxShadow};
   margin: 0.8rem;
   color: #444444;
   background: #FFFFFF;

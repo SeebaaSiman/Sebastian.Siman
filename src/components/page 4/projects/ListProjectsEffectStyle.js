@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { BoxStyle } from "../../../style/StyleGlobal";
+import { Style } from "../../../style/StyleGlobal";
 const showInLeft = keyframes`
 from {
   transform: translateX(-100%);
@@ -46,7 +46,7 @@ export const ContainerImage = styled.div`
       border-radius: 25px;
       transition: transform 0.1s ease-in-out;
       z-index: 98;
-    box-shadow: ${BoxStyle.boxShadow};
+    box-shadow: ${Style.boxShadow};
     &.active {
       z-index: 99;
     }

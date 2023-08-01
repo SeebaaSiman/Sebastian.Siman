@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { BoxStyle } from "../../style/StyleGlobal";
+import { Style } from "../../style/StyleGlobal";
 const projectOutLeft = keyframes`
 from {
     transform: translateY(0%);
@@ -39,7 +39,7 @@ export const ModalContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
-  box-shadow: ${BoxStyle.boxShadow};
+  box-shadow: ${Style.boxShadow};
 
   background-color:${props => props.variant === 'Projects' ? '#ffff' : '#1e1e1e'};
 animation: ${props => props.variant === 'Projects' ? projectInLeft

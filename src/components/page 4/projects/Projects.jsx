@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import * as Unicons from "@iconscout/react-unicons";
 import styled from "styled-components";
 
 import { CursorContext } from "../../cursor/CustomManager";
 import useDeviceType from "../../../hook/useDeviceType";
-import { BoxStyle, device } from "../../../style/StyleGlobal";
+import { device } from "../../../style/StyleGlobal";
+import { IconLinkExternal, iconSizeLink } from "../../../style/icons";
 export const Projects = ({
   url,
   title,
@@ -29,12 +29,6 @@ export const Projects = ({
     setRotation(index);
   };
 
-  const styleIcon = {
-    filter: " drop-shadow(1px 1px 1px #333)",
-    color: "#000",
-    marginLeft: "4px",
-  };
-  const iconSize = "10vw";
   return (
     <>
       {deviceType === "desktop" ? (
@@ -50,7 +44,7 @@ export const Projects = ({
           <h1 className="menu-title clone">▪ {title}</h1>
           {isCloneActive && activeIndex === index && (
             <Link href={url} target="_blank">
-              <Unicons.UilExternalLinkAlt style={styleIcon} size={iconSize} />
+              <IconLinkExternal size={iconSizeLink} />
             </Link>
           )}
         </Clone>

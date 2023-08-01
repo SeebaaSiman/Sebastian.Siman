@@ -1,7 +1,13 @@
-import * as Unicons from "@iconscout/react-unicons";
 import { useRef } from "react";
-import { IconContainer, iconSize, styleIcon } from "./page3Styles";
+import { IconContainer } from "./page3Styles";
 import useIntersectionObserver from "../../hook/useIntersectionObserver";
+import {
+  IconCss,
+  IconHtml,
+  IconJavaScript,
+  IconReact,
+  iconSize,
+} from "../../style/icons";
 
 export const IconsLanguages = () => {
   const ref2 = useRef();
@@ -18,24 +24,16 @@ export const IconsLanguages = () => {
   return (
     <IconContainer>
       <span ref={ref2} className={`${isIntersecting2 && "visible"}`}>
-        <Unicons.UilHtml5 style={styleIcon} color="#f24400" size={iconSize} />
+        <IconHtml size={iconSize} />
       </span>
       <span ref={ref3} className={`${isIntersecting3 && "visible"}`}>
-        <Unicons.UilCss3Simple
-          style={styleIcon}
-          color="#006cb0"
-          size={iconSize}
-        />
+        <IconCss size={iconSize} />
       </span>
       <span ref={ref4} className={`${isIntersecting4 && "visible"}`}>
-        <Unicons.UilJavaScript
-          style={styleIcon}
-          color="#f1d222"
-          size={iconSize}
-        />
+        <IconJavaScript size={iconSize} />
       </span>
       <span ref={ref5} className={`${isIntersecting5 && "visible"}`}>
-        <Unicons.UilReact style={styleIcon} color="#00d1f0" size={iconSize} />
+        <IconReact size={iconSize} />
       </span>
     </IconContainer>
   );

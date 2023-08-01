@@ -1,5 +1,5 @@
-import * as Unicons from "@iconscout/react-unicons";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import cv from "./../../../assets/sebastian siman cv.pdf";
 import {
   ContainerIcon,
   SocialBtnDesktop,
@@ -7,30 +7,34 @@ import {
 } from "./IconsStyles";
 import { CursorContext } from "../../cursor/CustomManager";
 import useDeviceType from "../../../hook/useDeviceType";
-import { useState } from "react";
-import cv from "./../../../assets/sebastian siman cv.pdf";
+import {
+  IconCV,
+  IconEmail,
+  IconGithub,
+  IconLinkedin,
+} from "../../../style/icons";
 export const IconsEffect = () => {
   const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
   const iconSize = "calc(2rem + 2vw)";
   const info = [
     {
       to: "mailto:seebaasiman@gmail.com",
-      icon: <Unicons.UilAt color="#f1d222" size={iconSize} />,
+      icon: <IconEmail size={iconSize} />,
       text: "seebaasiman@",
     },
     {
       to: "https://www.linkedin.com/in/sebasti%C3%A1nsiman/",
-      icon: <Unicons.UilLinkedinAlt color="#0e76a8" size={iconSize} />,
+      icon: <IconLinkedin size={iconSize} />,
       text: "sebastiansiman",
     },
     {
       to: "https://github.com/SeebaaSiman",
-      icon: <Unicons.UilGithubAlt color="#333" size={iconSize} />,
+      icon: <IconGithub size={iconSize} />,
       text: "seebaasiman",
     },
     {
       to: cv,
-      icon: <Unicons.UilFileDownload color="#24aa24" size={iconSize} />,
+      icon: <IconCV size={iconSize} />,
       text: "Sebastián Siman cv",
     },
   ];
