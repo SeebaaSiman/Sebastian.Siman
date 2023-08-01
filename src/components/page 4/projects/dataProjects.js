@@ -4,6 +4,9 @@ import expensesimg from "@/assets/projects/expenses.jpg"
 import HeroesApp from "@/assets/projects/HeroesApp.jpg"
 import CelestialChronicle from "@/assets/projects/celestial-chronicle.jpg"
 import chatNonContact from "@/assets/projects/Chat-non-contact-whatsapp.jpg"
+import journal from "@/assets/projects/journal.jpg"
+
+
 export const dataProjects = [
   {
     img: calculatorimg,
@@ -34,6 +37,11 @@ export const dataProjects = [
     img: chatNonContact,
     title: "Chat-non-contact-whatsapp",
     url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/"
+  },
+  {
+    img: journal,
+    title: "Journal App Login",
+    url: "https://journal-app-eight-pi.vercel.app/"
   },
 
 ];
