@@ -1,15 +1,12 @@
 import { useRef } from "react";
 import styled from "styled-components";
-// import { useScrollHorizontal } from "@/hook";
-import useDeviceType from "../../hook/useDeviceType";
-import { Page3, Page4 } from "../page";
-import { useScrollHorizontal } from "../../hook/useScrollHorizontal";
+import { Page3, Page4 } from "@/components";
+import { useScrollHorizontal } from "@/hook";
 
 export const DesktopHorizontal = () => {
   //Creo las referencias del slider y cuantos paneles hay para pasarselo al useScrollHorizontal que usa gsap
   const slider = useRef();
   const panelCount = 2;
-  const deviceType = useDeviceType();
 
   useScrollHorizontal(slider, panelCount);
 

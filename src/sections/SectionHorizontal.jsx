@@ -1,4 +1,4 @@
-import useDeviceType from "./../hook/useDeviceType.js";
+import useDeviceType from "@/hook/useDeviceType";
 import { DesktopHorizontal } from "./horizontal-device/DesktopHorizontal";
 import { MobileAndTabletHorizon } from "./horizontal-device/MobileAndTabletHorizon";
 

@@ -1,5 +1,5 @@
 import { useRef, createContext, useState } from "react";
-import { useSmoothScroll } from "../../hook/useSmoothScroll";
+import { useSmoothScroll } from "@/hook";
 
 //Crear contexto y sus valores default
 export const NavBarContext = createContext({

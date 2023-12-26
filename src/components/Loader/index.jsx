@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { LoaderContent } from "./loaderStyle";
-import logo from "./../../assets/s-s.svg";
+import { LoaderContent } from "@/style/loaderStyle";
+import logo from "@/assets/s-s.svg";
 export const Loader = () => {
   const [visible, setVisible] = useState(true);
 

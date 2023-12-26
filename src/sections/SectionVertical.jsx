@@ -1,4 +1,4 @@
-import { Page1, Page2 } from ".";
+import { Page1, Page2 } from "@/components";
 export const SectionVertical = () => {
   return (
     <>

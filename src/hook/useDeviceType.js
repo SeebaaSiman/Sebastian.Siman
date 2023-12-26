@@ -15,7 +15,6 @@ const useDeviceType = () => {
    } else {
     type = "desktop";
    }
-
    setDeviceType(type);
   };
 

@@ -5,3 +5,5 @@ export * from './usePageVisibility';
 export * from './useScrollHorizontal';
 export * from './useSmoothScroll';
 export * from './useTextChange';
+export * from './useThemeMode';
+export * from './useReverseScroll';

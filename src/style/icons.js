@@ -1,11 +1,12 @@
+import styled, { css } from "styled-components";
 import { UilAt, UilLinkedinAlt, UilFileDownload, UilGithubAlt, UilExternalLinkAlt, UilHtml5, UilCss3Simple, UilReact, UilJavaScript } from "@iconscout/react-unicons";
-import styled from "styled-components";
 
-const IconStyle = {
- // filter: " drop-shadow(1px 1px 1px #222)",
- filter: " drop-shadow(5px 5px 5px #222)",
- borderRadius: "16px"
-};
+const IconStyle = css`
+    filter:  drop-shadow(1px 1px 1px ${(props) => props.theme.textColor});
+    border-radius: 16px;
+    transition: all .5s ease-in-out;
+    `
+
 export const iconSize = `5rem`;
 
 export const IconHtml = styled(UilHtml5)`
@@ -32,14 +33,21 @@ export const IconLinkExternal = styled(UilExternalLinkAlt)`
     margin-left: 4px;
     `
 
-export const IconEmail = styled(UilAt)`color:#f1d222;`
-export const IconLinkedin = styled(UilLinkedinAlt)`color:#0e76a8;
-
-
+//Contact
+const IconContact = css`
+filter:drop-shadow(1px 1px 1px #333);
+    transition: all .5s ease-in-out;
+    `
+export const IconEmail = styled(UilAt)`
+${IconContact};
+color:#f1d222;`
+export const IconLinkedin = styled(UilLinkedinAlt)`
+${IconContact};
+color:#0e76a8;
 `
 export const IconGithub = styled(UilGithubAlt)`
-
-color:#333;`
+ ${IconContact};
+ color:#333;`
 export const IconCV = styled(UilFileDownload)`
-
-color:#24aa24;`
+ ${IconContact};
+ color:#24aa24;`

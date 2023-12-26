@@ -1,8 +1,8 @@
 export * from './cursor';
-export * from './loader';
+export * from './Loader';
 export * from './menu';
-export * from './modals';
-export * from './page 1';
-export * from './page 2';
-export * from './page 3';
-export * from './page 4';
+export * from './Modal';
+export * from './Page1';
+export * from './Page2';
+export * from './Page3';
+export * from './Page4';

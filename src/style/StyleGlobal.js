@@ -20,24 +20,19 @@ export const StyleGlobal = createGlobalStyle`
     box-sizing: border-box;
     user-select:none;
     overflow-x: hidden;
-
 }
 html{
-    background-color: #e2dfdd;
-    color: #000;
+  background-color: ${(props) => props.theme.bgApp};
+    color: ${(props) => props.theme.textColor};
     font-family: "Oxygen" ,'Bebas Neue',sans-serif;
 }
-
 ::-webkit-scrollbar {
     width: 0;
     display: none;
   }
-
-
   ${props => props.deviceType === "desktop" && `
     * {
       cursor: none;
     }
-
     `}
 `

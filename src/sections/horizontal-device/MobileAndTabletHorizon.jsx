@@ -1,4 +1,4 @@
-import { Page3, Page4 } from "../page";
+import { Page3, Page4 } from "@/components";
 
 export const MobileAndTabletHorizon = () => {
   return (
