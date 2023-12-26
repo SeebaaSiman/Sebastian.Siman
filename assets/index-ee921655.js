@@ -655,7 +655,7 @@ margin-top:0;
   display: flex;
 `,vy=re.div`
   position: absolute;
-  /* width: 50%; */
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
