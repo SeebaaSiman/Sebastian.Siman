@@ -655,7 +655,7 @@ margin-top:0;
   display: flex;
 `,vy=re.div`
   position: absolute;
-  width: 50%;
+  /* width: 50%; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -670,13 +670,14 @@ margin-top:0;
 `,W4=re(vy)`
   top: -200vh;
   right: 0;
+  width: 50%;
+
 `,X4=re(vy)`
   top: 0;
   left: 0;
 `,Ua=re.p`
 opacity: 0;
 width: 98%;
-padding: 1rem;
 height: 100vh;
 display: flex;
 place-items: center;
@@ -687,6 +688,7 @@ color:${t=>t.theme.textColor};
   font-weight:bold;
 }
 @media ${Be.sm} {
+  padding: 1rem;
   font-size: 1.5rem;
 }
 @media ${Be.md} {
