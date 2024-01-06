@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { device } from "./StyleGlobal";
 import { bounceIn } from "./animation";
+import { BoxShadow } from "./effect";
 
 export const ContainerPage4 = styled.div`
   height: 100vh;
@@ -19,6 +20,7 @@ export const ContainerPage4 = styled.div`
     }
   }
 `;
+
 export const ImageWrapperDesktop = styled.div`
   overflow: hidden;
   flex-grow: 1;
@@ -135,7 +137,6 @@ overflow: hidden;
     transition: all 800ms;
     animation: ${bounceIn} 1200ms;
     transform: scale(1);
-
   }
   `
 export const ContentWrapper = styled.div`

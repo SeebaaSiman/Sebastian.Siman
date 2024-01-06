@@ -1,32 +1,28 @@
-import { useState } from "react";
-import useDeviceType from "@/hook/useDeviceType";
-import { ContainerImage, ContainerProject } from "@/style/projects.style";
-import { dataProjects } from "./dataProjects";
+import { Fragment } from "react";
+import {
+  ContainerImage,
+  ContainerProject,
+  ListProjectContainer,
+  ContainerInfoProject,
+} from "@/style/projects.style";
+import { dataProjects } from "@/data/dataProjects";
 import { ImageProjects } from "./ImageProjects";
 import { Projects } from ".";
+import { useProjectAnimation } from "@/hook/useProjectAnimation";
 
 export const ListProjectsEffect = () => {
-  //El useState será un array con una longitud igual a la cantidad de elementos en la variable "dataProjects" y con fill todos los elementos se inicializan en 0
-  const [rotationPosition, setRotation] = useState(
-    new Array(dataProjects.length).fill(0)
-  );
-  const [activeIndex, setActiveIndex] = useState(-1);
-
-  //efecto de rotación de las imágenes
-  const handleSetRotation = (itemIndex) => {
-    // Random between -7 and 7
-    const newRotation =
-      Math.random() * 7 * (Math.round(Math.random()) ? 1 : -1);
-
-    const tempState = [...rotationPosition];
-    tempState[itemIndex] = newRotation;
-    setRotation(tempState);
-    setActiveIndex(itemIndex);
-  };
-  const deviceType = useDeviceType();
+  const {
+    handleSetRotation,
+    activeIndex,
+    setActiveIndex,
+    handleActiveLink,
+    isLinkActive,
+    rotationPosition,
+    handleDesactiveLink,
+  } = useProjectAnimation(dataProjects);
 
   return (
-    <>
+    <ListProjectContainer>
       <ContainerProject>
         {dataProjects.map(({ title, url }, index) => (
           <Projects
@@ -37,11 +33,13 @@ export const ListProjectsEffect = () => {
             setRotation={handleSetRotation}
             setIndex={setActiveIndex}
             activeIndex={activeIndex}
+            handleActiveLink={handleActiveLink}
+            isLinkActive={isLinkActive}
           />
         ))}
       </ContainerProject>
 
-      <ContainerImage deviceType={deviceType}>
+      <ContainerImage onClick={handleDesactiveLink}>
         {dataProjects.map(({ img }, index) => (
           <ImageProjects
             key={index}
@@ -50,7 +48,19 @@ export const ListProjectsEffect = () => {
             rotationPosition={rotationPosition[index]}
           />
         ))}
+
+        {/* <>
+          {dataProjects.map(({ tech }, index) => (
+            <Fragment key={index}>
+              {activeIndex === index && (
+                <ContainerInfoProject>
+                  <p>{tech}</p>
+                </ContainerInfoProject>
+              )}
+            </Fragment>
+          ))}
+        </> */}
       </ContainerImage>
-    </>
+    </ListProjectContainer>
   );
 };

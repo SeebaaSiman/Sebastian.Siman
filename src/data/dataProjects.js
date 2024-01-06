@@ -11,36 +11,37 @@ export const dataProjects = [
   {
     img: calculatorimg,
     title: "Calculator",
+    tech: "React useReducer",
     url: "https://seebaasiman.github.io/Calculator-useReducer/"
   },
   {
     img: f1img,
-    title: "F1-fan",
+    title: "F1-fan", tech: "Api 'gerg', ",
     url: "https://f1-fan.vercel.app/"
   },
   {
     img: expensesimg,
-    title: "Expenses calculate",
+    title: "Expenses calculate", tech: "Tecnologías que se usó en el proyecto como use, redux etc",
     url: "https://seebaasiman.github.io/Expenses-App/"
   },
   {
     img: HeroesApp,
-    title: "Heroes App",
+    title: "Heroes App", tech: "Tecnologías que se usó en el proyecto como use, redux etc",
     url: "https://heroes-app-beige.vercel.app"
   },
   {
     img: CelestialChronicle,
-    title: "celestial Chronicle",
+    title: "celestial Chronicle", tech: "Tecnologías que se usó en el proyecto como use, redux etc",
     url: "https://celestial-chronicle.vercel.app/"
   },
   {
     img: chatNonContact,
-    title: "Chat-non-contact-whatsapp",
+    title: "Chat-non-contact-whatsapp", tech: "Tecnologías que se usó en el proyecto como use, redux etc",
     url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/"
   },
   {
     img: journal,
-    title: "Journal App Login",
+    title: "Journal App Login", tech: "Tecnologías que se usó en el proyecto como use, redux etc",
     url: "https://journal-app-eight-pi.vercel.app/"
   },
 ];

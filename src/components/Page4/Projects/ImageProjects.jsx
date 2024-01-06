@@ -4,7 +4,7 @@ export const ImageProjects = ({ img, active, rotationPosition }) => {
       className={`${active && "active"}`}
       style={{
         transform: active
-          ? `scale(1.1) rotate(${rotationPosition}deg)`
+          ? `scale(1.05) rotate(${rotationPosition}deg)`
           : `rotate(${rotationPosition}deg)`,
       }}
       src={img}

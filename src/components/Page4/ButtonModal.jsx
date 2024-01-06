@@ -24,24 +24,21 @@ export const ButtonModal = ({ onClose, modalClass }) => {
 
 const Back = styled.p`
   position: absolute;
+
   left: 0;
   top: 0;
-  margin: 0.1rem;
+  margin: 5px;
   z-index: 900;
   border: none;
   background-color: transparent;
   font-family: "bebas neue", sans-serif;
-  font-size: 1.1rem;
-  /* font-weight: bold; */
+  font-size: 1.5rem;
   text-decoration: none;
   transition: 0.2s ease-in-out;
   color: ${(props) => (props.variantt === "Contact" ? "#fff" : "#000")};
 
-  @media ${device.sm} {
-    font-size: 1.3rem;
-  }
   @media ${device.lg} {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   &::before {

@@ -68,22 +68,42 @@ export const bounceIn = keyframes`
   `;
 // ListProjectsEffect
 export const showInLeft = keyframes`
-from {
-  transform: translateX(-100%);
+  0%{opacity:1;
+  transform: translateX(-12%)}
+  25%{opacity:1;
+  transform: translateX(12%)}
+  50%{opacity:1;
+  transform: translateX(-6%)}
+  75%{opacity:1;
+  transform: translateX(6%)}
+  99%{opacity:1;
+  transform:translateX(0%)}
+  100%{opacity:1;
+  transform: translateX(0%)}
+`
+export const showModalInfo = keyframes`
+  0%{opacity:1;
+  transform: translateX(10%)
 }
-to {
-  transform: translateX(0%);
-  }
+  33%{opacity:1;
+  transform: translateX(0%)
+}
+  66%{opacity:1;
+  transform: translateX(6%)
+}
+  100%{opacity:1;
+  transform: translateX(0%)
+}
 `
 export const showScale = keyframes`
 from {
   transform: scale(0);
-
 }
 to {
   transform: scale(1);
   }
   `
+
 // NavBar
 export const showInNavItem = keyframes`
   0% {

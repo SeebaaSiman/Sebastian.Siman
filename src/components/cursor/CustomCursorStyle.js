@@ -26,12 +26,12 @@ export const SecondaryCursor = styled.div`
     height: 6rem;
   }
   &.regular {
-    width: 12rem;
-    height: 12rem;
+    width: 8rem;
+    height: 8rem;
   }
   &.xs {
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.5rem;
+    height: 0.5rem;
   }
   /* @media screen {
 display:none;

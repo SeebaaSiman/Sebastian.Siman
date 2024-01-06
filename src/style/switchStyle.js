@@ -4,34 +4,30 @@ import { NavItem } from "./effect";
 
 export const SwitchContainer = styled.ul`
 display: flex;
-font-size: 1.1rem;
-gap: 0.8rem;
+font-size: 1.5rem;
+gap:1rem;
 list-style: none;
 position:absolute;
-right: 0%;
+right: 1%;
 top:0%;
 z-index: 800;
-margin:5px;
-    @media ${device.sm}{
-font-size: 1.3rem;
-    }
-    @media ${device.lg}{
-font-size: 1.5rem;
-    }
+margin:6px;
+
+@media ${device.lg} {
+    font-size: 1.8rem;
+  }
 
   li {
     display: flex;
   justify-content: center;
   align-items: center;
-  gap:5px;
+  gap:6px;
 ${NavItem}
      }
     img{
-  height: 1.1rem;
-    @media ${device.sm}{
-height: 1.3rem;
-    }
+height: 1.8rem;
     @media ${device.lg}{
-height: 1.5rem;
-    }}
+height: 2.2rem;
+    }
+    }
 `

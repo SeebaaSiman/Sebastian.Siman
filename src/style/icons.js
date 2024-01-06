@@ -25,13 +25,6 @@ export const IconReact = styled(UilReact)`
 ${IconStyle}
 color:#00d1f0;
 `
-export const iconSizeLink = "10vw";
-
-export const IconLinkExternal = styled(UilExternalLinkAlt)`
- filter:drop-shadow(1px 1px 1px #333);
-    color: #000;
-    margin-left: 4px;
-    `
 
 //Contact
 const IconContact = css`

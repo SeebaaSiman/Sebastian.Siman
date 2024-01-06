@@ -36,11 +36,9 @@ export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
+  width: 100vw;
+  height: 100vh;
   box-shadow: ${Style.boxShadow};
-
   background-color:${props => props.variant === 'Projects' ? '#ffff' : '#1e1e1e'};
 animation: ${props => props.variant === 'Projects' ? projectInLeft
     : contactInRight

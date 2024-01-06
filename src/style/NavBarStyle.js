@@ -7,23 +7,19 @@ export const NavContainer = styled.nav`
   display: flex;
   width: 98%;
   align-items: center;
-  margin: 5px;
+  margin: 6px;
   z-index: 800;
   justify-content: space-between;
 transition: all .4 ease-in-out;
   ul {
     display: flex;
     list-style: none;
-    gap: 0.8rem;
-    font-size: 1.1rem;
-    @media ${device.sm}{
-font-size: 1.3rem;
-    }
-    @media ${device.lg}{
-font-size: 1.5rem;
-    }
+    gap: 1rem;
+    font-size: 1.5rem;
+    @media ${device.lg} {
+    font-size: 1.8rem;
   }
-
+  }
   li {
     ${NavItem}
 }

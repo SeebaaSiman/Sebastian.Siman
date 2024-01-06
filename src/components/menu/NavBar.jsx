@@ -15,25 +15,6 @@ export const NavBar = () => {
 
   const { onOpenModal, TextModal } = useContext(ModalContext);
 
-  // const handleProjectModal = () => {
-  //   const item = <ListProjectsEffect />;
-  //   const description = "Projects";
-  //   onOpenModal(item, String(description));
-  //   setTimeout(() => {
-  //     handleCursorSmall();
-  //     scrollToSection(page1Ref);
-  //   }, 500);
-  // };
-  // const handleContactModal = () => {
-  //   const item = <Contact />;
-  //   const description = "Contact";
-  //   onOpenModal(item, String(description));
-  //   setTimeout(() => {
-  //     handleCursorSmall();
-  //     scrollToSection(page1Ref);
-  //   }, 500);
-  // };
-
   const handleModal = (description) => {
     let item;
     if (description === TextModal.PROJECT) {

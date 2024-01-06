@@ -27,6 +27,8 @@ const ColumnDefault = styled.div`
 export const ColumnRight = styled(ColumnDefault)`
   top: -200vh;
   right: 0;
+  width: 50%;
+
 `;
 export const ColumnLeft = styled(ColumnDefault)`
   top: 0;
@@ -36,8 +38,8 @@ export const ColumnLeft = styled(ColumnDefault)`
 export const Text = styled.p`
 opacity: 0;
 width: 98%;
-padding: 1rem;
 height: 100vh;
+padding: 4px;
 display: flex;
 place-items: center;
 font-size: 1.3rem;
@@ -47,6 +49,7 @@ color:${(props) => props.theme.textColor};
   font-weight:bold;
 }
 @media ${device.sm} {
+  padding: 1rem;
   font-size: 1.5rem;
 }
 @media ${device.md} {

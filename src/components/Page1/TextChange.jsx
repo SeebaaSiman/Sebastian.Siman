@@ -14,15 +14,18 @@ export const TextChange = () => {
 };
 
 const ContainerText = styled.div`
-  width: 98%;
-  height: 95%;
+  padding: .2rem;
   animation: ${showInLeft} 0.8s ease-in-out;
+  @media ${device.sm} {
+    height: 50%;
+    width: 100%;
+  }
 `;
 const Prefix = styled.span`
   color: ${(props) => props.theme.textShadow};
   text-shadow: 1px 2px 1px ${(props) => props.theme.textColor};
   display: inline-block;
-  margin-right: 0.2rem;
+  margin-right: 6px;
   font-weight: 400;
   font-size: 3rem;
 
@@ -36,12 +39,12 @@ const Prefix = styled.span`
     font-size: 4.5rem;
   }
   @media ${device.xl} {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 `;
 
 const Suffix = styled(Prefix)`
-  margin-left: 0.2rem;
+  margin-right: 0px;
   color: ${(props) => props.theme.textColor};
   text-shadow: 1px 2px 1px ${(props) => props.theme.textShadow};
 `;
