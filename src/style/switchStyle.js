@@ -16,7 +16,6 @@ margin:6px;
 @media ${device.lg} {
     font-size: 1.8rem;
   }
-
   li {
     display: flex;
   justify-content: center;
@@ -31,3 +30,4 @@ height: 2.2rem;
     }
     }
 `
+

@@ -6,15 +6,15 @@ export const HoverVideo = ({ src }) => {
   const deviceType = useDeviceType();
 
   const videoRef = useRef(null);
-  function handleMouseEnter() {
+  
+  const handleMouseEnter = () => {
     setIsPlaying(true);
     videoRef.current.play();
-  }
-
-  function handleMouseLeave() {
+  };
+  const handleMouseLeave = () => {
     setIsPlaying(false);
     videoRef.current.pause();
-  }
+  };
 
   return (
     <video

@@ -39,7 +39,7 @@ export const SwitchLanguage = () => {
         onClick={() => setLanguage("en")}
         style={eeuuSelect}
       >
-        <img src={eeuu} alt="eeuu flag" />
+        <img src={eeuu} alt="eeuu flag" loading="lazy" />
         {texts.english}
       </li>
       <li
@@ -48,7 +48,7 @@ export const SwitchLanguage = () => {
         onClick={() => setLanguage("es")}
         style={spainSelect}
       >
-        <img src={spain} alt="spain flag" />
+        <img src={spain} alt="spain flag" loading="lazy" />
         {texts.spain}
       </li>
     </SwitchContainer>

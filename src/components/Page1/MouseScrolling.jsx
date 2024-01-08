@@ -12,7 +12,6 @@ const Mouse = styled.div`
   position: relative;
   width: 2em;
   height: 4em;
-  color: #222;
   border: 0.15em solid ${(props) => props.theme.textColor};
   border-radius: 2em;
   animation: ${showInDown} 1s ease-in-out forwards;

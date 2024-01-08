@@ -1,10 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import avatar from "@/assets/perfil.jpg";
-import {
-  ContainerBanner,
-  ContainerMouse,
-  HomeContainer,
-} from "@/style";
+import { ContainerBanner, ContainerMouse, HomeContainer } from "@/style";
 import useIntersectionObserver from "@/hook/useIntersectionObserver";
 import { ScrollArrowIndicator } from "./ScrollArrowIndicator";
 import { SwitchLanguage } from "@/language/SwitchLanguage";
@@ -36,7 +32,7 @@ export const Page1 = () => {
       <SwitchLanguage />
       <ContainerBanner ref={HomeRef}>
         <TextChange />
-        <img src={avatar} />
+        <img src={avatar} alt="photo perfil" loading="lazy" />
       </ContainerBanner>
       <ContainerMouse>
         {loading ? (

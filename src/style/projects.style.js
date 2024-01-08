@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Style, device } from "@/style/StyleGlobal";
-import { showScale, showInLeft, showModalInfo } from "./animation";
+import { showInLeft, showInImgProject, showModalInfoLeft, showModalInfoBottom } from "./animation";
 
 //* Project
 const BtnDefault = styled.a`
@@ -65,7 +65,6 @@ export const ListProjectContainer = styled.div`
 position:relative;
 width: 100vw;
 height: 100vh;
-/* background-color: blue; */
 display: flex;
 flex-direction: column;
 @media ${device.md}{
@@ -73,7 +72,6 @@ flex-direction: row;
 }
 `
 export const ContainerProject = styled.div`
-/* background-color: green; */
   padding:2rem;
   display: flex;
   flex: 0 0 auto;
@@ -92,8 +90,8 @@ export const ContainerProject = styled.div`
   gap:1.5rem;
 }
 `;
+
 export const ContainerImage = styled.div`
-/* background-color: grey; */
 position:relative;
 padding:2rem;
 overflow: visible;
@@ -101,15 +99,13 @@ display: flex;
 flex: 1 1 auto;
 justify-content: center;
 align-items: center;
-z-index: 40;
-animation: ${showScale} 0.8s ease-in-out forwards;
 img {
     position: absolute;
     height: 90%;
     width: auto;
     border-radius: 25px;
-    transition: transform 0.1s ease-in-out;
-    z-index: 98;
+    transition: all 0.1s ease;
+    animation: ${showInImgProject} 0.8s ease-in-out;
     box-shadow: ${Style.boxShadow};
     &.active {
       z-index: 99;
@@ -121,26 +117,37 @@ img {
  }
  }
 `;
-
-
 export const ContainerInfoProject = styled.div`
-background-color: blue;
+background-color: #CCD0CF;
 display:flex;
-place-items: center;
-width:20%;
-min-height: 30%;
-max-height: 75%;
+flex-direction: column;
+place-items: start;
 position: absolute;
-bottom:50%;
-right: 0;
-transform: translateY(50%);
 z-index: 499;
-padding:6px ;
-border-radius:1rem 0 0 1rem;
+padding:6px;
+color: #06141B;
 box-shadow: ${Style.boxShadow};
 opacity: 0;
-animation: ${showModalInfo} 0.4s ease-in-out forwards;
+
+min-width:20%;
+max-width:25%;
+min-height: 30%;
+max-height: 100%;
+bottom:20%;
+right: 0;
+border-radius:1rem 0 0 1rem;
+animation: ${showModalInfoLeft} 0.4s ease-in-out forwards;
+
+@media ${device.md}{
+  border-radius:1rem 1rem 0 0;
+  width:100%;
+  min-height: 10%;
+  max-height: 100%;
+  right: 0%;
+  bottom:0;
+  animation: ${showModalInfoBottom} 0.4s ease-in-out forwards;
+}
 @media ${device.lg}{
-  width:25%;
+  width:75%;
 }
 `

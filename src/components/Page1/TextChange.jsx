@@ -14,8 +14,10 @@ export const TextChange = () => {
 };
 
 const ContainerText = styled.div`
-  padding: .2rem;
-  animation: ${showInLeft} 0.8s ease-in-out;
+  padding: 0.2rem;
+  opacity: 0;
+  animation: ${showInLeft} 0.8s ease-in-out forwards;
+  animation-delay: 2s;
   @media ${device.sm} {
     height: 50%;
     width: 100%;

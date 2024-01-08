@@ -3,12 +3,12 @@ import {
   ContainerImage,
   ContainerProject,
   ListProjectContainer,
-  ContainerInfoProject,
 } from "@/style/projects.style";
 import { dataProjects } from "@/data/dataProjects";
-import { ImageProjects } from "./ImageProjects";
-import { Projects } from ".";
 import { useProjectAnimation } from "@/hook/useProjectAnimation";
+import { ImageProjects } from "./ImageProjects";
+import { InfoProject } from "./InfoProject";
+import { Projects } from ".";
 
 export const ListProjectsEffect = () => {
   const {
@@ -21,10 +21,12 @@ export const ListProjectsEffect = () => {
     handleDesactiveLink,
   } = useProjectAnimation(dataProjects);
 
+  // creo un array que excluye el último elemento de dataProjects. De esta manera muestro los links y la info, excepto del úlimo elemento que será la "portada" de containerImage (que si hace el mapeo de dataProject) cuando no hay un enlace hover o seleccionado
+  const depurDataProject = dataProjects.slice(0, -1);
   return (
     <ListProjectContainer>
       <ContainerProject>
-        {dataProjects.map(({ title, url }, index) => (
+        {depurDataProject.map(({ title, url }, index) => (
           <Projects
             key={index}
             title={title}
@@ -44,22 +46,20 @@ export const ListProjectsEffect = () => {
           <ImageProjects
             key={index}
             img={img}
+            index={index}
             active={activeIndex === index}
             rotationPosition={rotationPosition[index]}
+            loading="lazy"
           />
         ))}
 
-        {/* <>
-          {dataProjects.map(({ tech }, index) => (
+        <>
+          {depurDataProject.map(({ tech }, index) => (
             <Fragment key={index}>
-              {activeIndex === index && (
-                <ContainerInfoProject>
-                  <p>{tech}</p>
-                </ContainerInfoProject>
-              )}
+              {activeIndex === index && <InfoProject tech={tech} />}
             </Fragment>
           ))}
-        </> */}
+        </>
       </ContainerImage>
     </ListProjectContainer>
   );

@@ -14,17 +14,11 @@ export const Loader = () => {
     return (
       <LoaderContent>
         SEBASTIÁN SIMAN | PORTFOLIO &copy;{new Date().getFullYear()}
-        <img src={logo} />
+        <img src={logo} alt="logo" loading="lazy" />
       </LoaderContent>
     );
   }
   if (!visible) {
     return null;
   }
-
-  // return visible ? (
-  //   <LoaderContent>
-  //     <Img src={"/src/assets/ss.png"} />
-  //   </LoaderContent>
-  // ) : null;
 };

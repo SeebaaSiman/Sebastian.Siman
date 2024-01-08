@@ -8,3 +8,5 @@ export * from './useTextChange';
 export * from './useThemeMode';
 export * from './useReverseScroll';
 export * from './useProjectAnimation';
+export * from './useClipboard';
+export * from './useContact';

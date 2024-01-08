@@ -7,7 +7,7 @@ import {
 } from "@/style";
 import useDeviceType from "@/hook/useDeviceType";
 import video1 from "@/assets/code.mp4";
-import video2 from "@/assets/contact2.mp4";
+import video2 from "@/assets/text-contact.mp4";
 import { useLanguage } from "@/language/LanguageContext";
 import { HoverVideo } from "@/components/Page4/HoverVideo";
 import { ListProjectsEffect } from "@/components/Page4/Projects/ListProjectsEffect";
@@ -21,6 +21,7 @@ export const Page4 = () => {
   const { TextModal } = useContext(ModalContext);
   const deviceType = useDeviceType();
   const { texts } = useLanguage();
+
   const dataPage4 = [
     {
       backgroundVideo: video1,
@@ -46,13 +47,13 @@ export const Page4 = () => {
 
         return (
           <ImageWrapperComponent key={index}>
-            <HoverVideo src={item.backgroundVideo} />
+            <HoverVideo src={item?.backgroundVideo} />
             <ContentWrapper>
-              <h2>{item.description}</h2>
+              <h2>{item?.description}</h2>
               <OpenModal
-                children={item.children}
-                text={item.modalText}
-                toggleClass={item.toggleClass}
+                children={item?.children}
+                text={item?.modalText}
+                toggleClass={item?.toggleClass}
               />
             </ContentWrapper>
           </ImageWrapperComponent>

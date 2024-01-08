@@ -41,17 +41,17 @@ export const Page2 = () => {
         <Text ref={refText} className={`${isIntersecting && "visible"}`}>
           {texts.speech1}
         </Text>
-        <img src={code} alt="" />
+        <img src={code} alt="code" loading="lazy" />
         <Text ref={refText2} className={`${isIntersecting2 && "visible"}`}>
           {texts.speech2}
         </Text>
       </ColumnLeft>
       <ColumnRight ref={ColumnRigthRef}>
-        <img src={ginasia} alt="" />
+        <img src={ginasia} alt="grass" loading="lazy" />
         <Text ref={refText3} className={`${isIntersecting3 && "visible"}`}>
           {texts.speech3}
         </Text>
-        <img src={setup} alt="" />
+        <img src={setup} alt="setup" loading="lazy" />
       </ColumnRight>
     </AboutContainer>
   );

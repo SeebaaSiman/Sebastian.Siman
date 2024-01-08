@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { UilAt, UilLinkedinAlt, UilFileDownload, UilGithubAlt, UilExternalLinkAlt, UilHtml5, UilCss3Simple, UilReact, UilJavaScript } from "@iconscout/react-unicons";
+import { UilAt, UilLinkedinAlt, UilChatBubbleUser, UilFileDownload, UilGithubAlt, UilCopy, UilHtml5, UilCss3Simple, UilReact, UilJavaScript } from "@iconscout/react-unicons";
 
 const IconStyle = css`
     filter:  drop-shadow(1px 1px 1px ${(props) => props.theme.textColor});
@@ -38,9 +38,15 @@ export const IconLinkedin = styled(UilLinkedinAlt)`
 ${IconContact};
 color:#0e76a8;
 `
+export const IconCV = styled(UilChatBubbleUser)`
+${IconContact};
+color:#24aa24;`
 export const IconGithub = styled(UilGithubAlt)`
  ${IconContact};
  color:#333;`
-export const IconCV = styled(UilFileDownload)`
+export const IconCVDownload = styled(UilFileDownload)`
  ${IconContact};
  color:#24aa24;`
+export const IconCopy = styled(UilCopy)`
+ ${IconContact};
+ color:#000;`

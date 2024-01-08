@@ -10,6 +10,7 @@ export const HomeContainer = styled.header`
    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
 `;
 
 export const ContainerBanner = styled.div`
@@ -23,7 +24,9 @@ export const ContainerBanner = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding:2rem;
   }
+
   div{
     @media ${device.sm}{
       display: flex;
@@ -37,7 +40,8 @@ export const ContainerBanner = styled.div`
     height: calc(5rem +1vw);
     object-fit: cover;
     border-radius: 50%;
-    animation: ${showInRight} 0.8s ease-in-out;
+    opacity: 0;
+    animation: ${showInRight} 0.8s ease-in-out forwards;
     &:hover{
       filter:drop-shadow(1px 2px 3px ${(props) => props.theme.mouse});
 transition: all .4s ease-in-out;

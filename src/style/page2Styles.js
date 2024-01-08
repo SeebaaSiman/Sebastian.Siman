@@ -22,13 +22,12 @@ const ColumnDefault = styled.div`
     height: 100vh;
     width: 100%;
     object-fit: cover;
-  }
+     }
 `;
 export const ColumnRight = styled(ColumnDefault)`
   top: -200vh;
   right: 0;
   width: 50%;
-
 `;
 export const ColumnLeft = styled(ColumnDefault)`
   top: 0;

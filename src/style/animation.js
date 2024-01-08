@@ -29,14 +29,15 @@ export const sweep = keyframes`
 // page 1
 export const showInRight = keyframes`
 from {
+opacity:1;
   transform: translateX(100%);
 
 }
 to {
+opacity:1;
   transform: translateX(0%);
   }
     `;
-
 //page 2
 export const scaleUpTopLeft = keyframes`
 0% { transform: translateX(-48px); animation-timing-function: ease-in; opacity: 1; }
@@ -66,7 +67,7 @@ export const bounceIn = keyframes`
     transform: scale(1);
   }
   `;
-// ListProjectsEffect
+// ListProjectsEffect y page1
 export const showInLeft = keyframes`
   0%{opacity:1;
   transform: translateX(-12%)}
@@ -81,7 +82,7 @@ export const showInLeft = keyframes`
   100%{opacity:1;
   transform: translateX(0%)}
 `
-export const showModalInfo = keyframes`
+export const showModalInfoLeft = keyframes`
   0%{opacity:1;
   transform: translateX(10%)
 }
@@ -95,15 +96,28 @@ export const showModalInfo = keyframes`
   transform: translateX(0%)
 }
 `
-export const showScale = keyframes`
-from {
-  transform: scale(0);
+export const showModalInfoBottom = keyframes`
+  0%{opacity:1;
+  transform: translateY(10%)
+}
+  33%{opacity:1;
+  transform: translateY(0%)
+}
+  66%{opacity:1;
+  transform: translateY(6%)
+}
+  100%{opacity:1;
+  transform: translateY(0%)
+}
+`
+export const showInImgProject = keyframes`
+ from {
+  transform: translate(100%, 100%);
 }
 to {
-  transform: scale(1);
+    transform: translate(0%, 0%);
   }
   `
-
 // NavBar
 export const showInNavItem = keyframes`
   0% {
@@ -115,7 +129,6 @@ opacity: 0;
     opacity: 1;
   }
 `;
-
 // Mouse
 export const showInDown = keyframes`
     from {
@@ -144,3 +157,14 @@ export const bounce = keyframes`
     transform: translateY(-50%);
   }
 `;
+// Contact
+export const showContact = keyframes`
+to{
+  rotate: -360deg;
+  scale:0.8;
+}
+from{
+  rotate: 0deg;
+  scale:1;
+}
+`
