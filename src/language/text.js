@@ -6,13 +6,13 @@ export const enTexts = {
  contact: 'contact',
  //swichLanguage
  english: "english",
- spain: "spain",
+ spain: "spanish",
  //useTextChange
  prefix: "I'm",
  options: "a web developer",
  //page2
- speech1: "My name is Sebastián Siman and I am a web developer. I'm especially passionate about front-end development, and I especially enjoy working with JavaScript to create interactive and dynamic web experiences.",
- speech2: "Ever since I discovered programming, I haven't stopped learning and improving my skills ever since. When I'm not at the computer creating or exploring new web experiences, I'm probably playing or watching soccer or basketball.",
+ speech1: "My name is Sebastián Siman and I am a web developer. I'm particularly passionate about front-end development, and I especially enjoy working with JavaScript to create interactive and dynamic web experiences.",
+ speech2: "Ever since I discovered programming, I haven't stopped learning and improving my skills. When I'm not at the computer creating or exploring new web experiences, I'm probably playing or watching soccer or basketball.",
  speech3: "For me, each project is an opportunity to gain new knowledge in various fields, from arts and mathematics to physics. I like to learn and expand my skills while working on creative solutions to complex problems.",
  //page3
  speech4: "My experience is focused on languages and frameworks such as HTML, CSS, JavaScript and React. As a web developer, my short-term goal is to challenge myself and create projects where I can apply and improve my skills.",

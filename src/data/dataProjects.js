@@ -36,7 +36,7 @@ export const dataProjects = [
   },
   {
     img: expensesimg,
-    title: "expenses calculate",
+    title: "expenses calculator",
     tech: {
       icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
       text: ["Reduxjs/toolkit", " animate.css", "react-router-dom", "sweetalert2", "styled-components", "boostrap", "customHooks: useCostPerson, useForm"]
@@ -94,3 +94,4 @@ export const dataProjects = [
     img: last,
   }
 ];
+export const ListProjects = [] // serán 3 o 4. Grabador de pantalla, acortador de url, useForm Customize y extensión de vscode

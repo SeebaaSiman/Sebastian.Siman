@@ -21,9 +21,7 @@ export const SwitchLanguage = () => {
   };
 
   const refText = useRef();
-  const options = {
-    threshold: 1,
-  };
+  const options = { threshold: 0.9 };
   const isIntersecting = useIntersectionObserver(refText, options);
   const showAnimation = {
     opacity: isIntersecting ? "1" : "0",
