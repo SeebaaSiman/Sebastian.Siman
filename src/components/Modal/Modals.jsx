@@ -1,16 +1,15 @@
 import ReactDOM from "react-dom";
-import { useContext } from "react";
-import { ModalContainer } from "./modalStyle";
-import { CursorContext } from "@/components/cursor/CustomManager";
-import { ButtonModal } from "@/components/Page4/ButtonModal";
-import { ModalContext } from "./ModalManager";
-import { NavBarContext } from "../menu/NavBarManager";
+import { ModalContainer } from "../../style/modalStyle";
 
-export const Modal = () => {
-  const { handleCursorSmall } = useContext(CursorContext);
-  const { scrollToSection, page1Ref } = useContext(NavBarContext);
+import { ButtonModal } from "./ButtonModal";
+import { useCustomCursorContext, useNavBarContext, useModalContext } from "/src/hook";
+
+export const Modals = () => {
+  const { handleCursorSmall } = useCustomCursorContext();
+  const { scrollToSection, page1Ref } = useNavBarContext();
   const { modalItem, modalClass, clousing, showModal, closeModal } =
-    useContext(ModalContext);
+    useModalContext();
+
   const onClose = () => {
     scrollToSection(page1Ref);
     handleCursorSmall();

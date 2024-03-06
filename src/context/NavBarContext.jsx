@@ -10,8 +10,8 @@ export const NavBarContext = createContext({
   scrollToSection: () => {},
 });
 
-// Crear el manager que es el provider y sus estados y funciones que quiero mandar al contexto
-export const NavBarManager = ({ children }) => {
+// Crear el Provider que es el provider y sus estados y funciones que quiero mandar al contexto
+export const NavBarProvider = ({ children }) => {
   //Estado para mostrar o no la segunda parte del navbar
   const [showNavBar, setShowNavBar] = useState(false);
   const inNavBar = () => setShowNavBar(true);

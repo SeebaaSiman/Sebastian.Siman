@@ -8,7 +8,8 @@ export const CursorContext = createContext({
   handleCursorSmall: () => {},
   handleCursorXs: () => {},
 });
-export default function CursorManager({ children }) {
+
+export const CursorProvider = ({ children }) => {
   const [size, setSize] = useState("small");
   const handleCursorMedium = () => {
     setSize("medium");
@@ -36,9 +37,8 @@ export default function CursorManager({ children }) {
       {children}
     </CursorContext.Provider>
   );
-}
+};
 
 //Importar en la parte más alta de la app. Es un provider
 
 // Importar fx y efectos
-// const { handleCursorRegular, handleCursorMedium } = useContext(CursorContext);

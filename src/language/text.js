@@ -21,8 +21,11 @@ export const enTexts = {
  descriptionContact: "contact",
  modalTextProject: "go to projects",
  modalTextContact: "contact me",
- //ButtonModal
- buttonModal: "-Back"
+ //Button
+ buttonModal: "-Back to home",
+ buttonProjectInfo: "-Back to projects",
+ buttonVerticalTop: "Recommended projects",
+ buttonVerticalMore: "Other projects",
 };
 
 
@@ -49,6 +52,9 @@ export const esTexts = {
  descriptionContact: "contactos",
  modalTextProject: "ir a proyectos",
  modalTextContact: "contáctame",
- //ButtonModal
- buttonModal: "-Volver"
+ //Button
+ buttonModal: "-Volver al inicio",
+ buttonProjectInfo: "-Volver a proyectos",
+ buttonVerticalTop: "Proyectos recomendados",
+ buttonVerticalMore: "Otros proyectos",
 };

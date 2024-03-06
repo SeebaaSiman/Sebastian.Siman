@@ -1,24 +1,25 @@
-import { useContext } from "react";
-import { NavBarContext } from "./NavBarManager";
 import { NavContainer } from "@/style/NavBarStyle";
 import { Contact } from "@/components/Page4/contact";
-import { useLanguage } from "@/language/LanguageContext";
-import { CursorContext } from "../cursor/CustomManager";
-import { ListProjectsEffect } from "../Page4/Projects/ListProjectsEffect";
-import { ModalContext } from "../Modal/ModalManager";
+import { SectionsProjects } from "../Page4/Projects/SectionsProjects";
+import {
+  useCustomCursorContext,
+  useLanguage,
+  useNavBarContext,
+  useModalContext,
+} from "/src/hook";
 
 export const NavBar = () => {
-  const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
+  const { handleCursorXs, handleCursorSmall } = useCustomCursorContext();
 
   const { showNavBar, scrollToSection, page1Ref, aboutRef } =
-    useContext(NavBarContext);
+    useNavBarContext();
 
-  const { onOpenModal, TextModal } = useContext(ModalContext);
+  const { onOpenModal, TextModal } = useModalContext();
 
   const handleModal = (description) => {
     let item;
     if (description === TextModal.PROJECT) {
-      item = <ListProjectsEffect />;
+      item = <SectionsProjects />;
     } else if (description === TextModal.CONTACT) {
       item = <Contact />;
     }

@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import {
   ContainerPage4,
   ImageWrapperDesktop,
@@ -8,17 +7,16 @@ import {
 import useDeviceType from "@/hook/useDeviceType";
 import video1 from "@/assets/code.mp4";
 import video2 from "@/assets/text-contact.mp4";
-import { useLanguage } from "@/language/LanguageContext";
+
 import { HoverVideo } from "@/components/Page4/HoverVideo";
-import { ListProjectsEffect } from "@/components/Page4/Projects/ListProjectsEffect";
 import { Contact } from "@/components/Page4/Contact";
-import { NavBarContext } from "@/components/menu/NavBarManager";
 import { OpenModal } from "@/components/Modal/OpenModal";
-import { ModalContext } from "../Modal/ModalManager";
+import { SectionsProjects } from "./Projects";
+import { useModalContext, useNavBarContext, useLanguage } from "/src/hook";
 
 export const Page4 = () => {
-  const { page4Ref } = useContext(NavBarContext);
-  const { TextModal } = useContext(ModalContext);
+  const { page4Ref } = useNavBarContext();
+  const { TextModal } = useModalContext();
   const deviceType = useDeviceType();
   const { texts } = useLanguage();
 
@@ -26,7 +24,7 @@ export const Page4 = () => {
     {
       backgroundVideo: video1,
       description: `${texts.descriptionProject}`,
-      children: <ListProjectsEffect />,
+      children: <SectionsProjects />,
       modalText: `${texts.modalTextProject}`,
       toggleClass: TextModal.PROJECT,
     },

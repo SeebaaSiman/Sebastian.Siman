@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "@/style/StyleGlobal";
-import { NavItem } from "./effect";
+import { UnderlineHover } from "./effect";
 
 export const SwitchContainer = styled.ul`
 display: flex;
@@ -21,7 +21,7 @@ margin:6px;
   justify-content: center;
   align-items: center;
   gap:6px;
-${NavItem}
+${UnderlineHover}
      }
     img{
 height: 1.8rem;

@@ -1,5 +1,6 @@
 import { css } from "styled-components";
 import { showInNavItem } from "./animation";
+import { device } from "./StyleGlobal";
 
 export const BoxShadow = css`
 box-shadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,' +
@@ -10,13 +11,17 @@ box-shadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,' +
 `;
 
 
-export const NavItem = css`
-position: relative;
-    font-family: 'Bebas Neue',sans-serif;
-    color: ${(props) => props.theme.textColor};
-    filter:drop-shadow(1px 1px 1px ${(props) => props.theme.textShadow});
-    transition: color 0.8s;
-    animation: ${showInNavItem} 0.5s ease-in-out forwards;
+export const UnderlineHover = css`
+font-family: 'Bebas Neue',sans-serif;
+color: ${(props) => props.theme.textColor};
+filter:drop-shadow(1px 1px 1px ${(props) => props.theme.textShadow});
+transition: color 0.8s;
+animation: ${showInNavItem} 0.5s ease-in-out forwards;
+font-size: 1.5rem;
+@media ${device.lg} {
+    font-size: 1.8rem;
+  }
+
     &::before {
       content: "";
       position: absolute;
@@ -26,7 +31,7 @@ position: relative;
       height: 2px;
       background-color: ${(props) => props.theme.textShadow};
       border-radius: 4px;
-      scale: 0.1;
+      scale: 0;
       transform-origin: left;
       transition: scale 0.8s;
     }

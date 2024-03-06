@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/language/LanguageContext";
+import { useLanguage } from "/src/hook";
 
 export const useTextChange = () => {
 

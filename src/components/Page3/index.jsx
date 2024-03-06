@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import useIntersectionObserver from "@/hook/useIntersectionObserver";
 import { ContainerPage3, Text } from "@/style";
-import { useLanguage } from "@/language/LanguageContext";
+import { useLanguage } from "/src/hook";
 import { IconsLanguages } from "./IconsLanguages";
 export const Page3 = () => {
   const ref = useRef();

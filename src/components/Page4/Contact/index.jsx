@@ -1,5 +1,6 @@
-import { useContext, useEffect } from "react";
-import cv from "@/assets/sebastian siman cv.pdf";
+import useDeviceType from "@/hook/useDeviceType";
+import { useClipboard, useContact, useCustomCursorContext } from "@/hook";
+import { dataContact, infoContact } from "/src/data/dataContact";
 import {
   ContainerIcon,
   SocialBtnDesktop,
@@ -7,48 +8,17 @@ import {
   RowIcon,
   CopyBtn,
   Tooltip,
-} from "@/style/contact.style";
-import { CursorContext } from "@/components/cursor/CustomManager";
-import useDeviceType from "@/hook/useDeviceType";
-import { useClipboard, useContact } from "@/hook";
-import {
   IconCV,
+  IconCopy,
   IconEmail,
   IconGithub,
   IconLinkedin,
-  IconCopy,
   IconCVDownload,
-} from "@/style/icons";
+} from "@/style";
+
 
 export const Contact = () => {
-  const { handleCursorXs, handleCursorSmall } = useContext(CursorContext);
-
-  const info = [
-    {
-      to: "mailto:seebaasiman@gmail.com",
-      icon: <IconEmail size={"calc(2rem + 2vw)"} />,
-      text: "seebaasiman@",
-      copy: "seebaasiman@gmail.com",
-    },
-    {
-      to: "https://www.linkedin.com/in/sebasti%C3%A1nsiman/",
-      icon: <IconLinkedin size={"calc(2rem + 2vw)"} />,
-      text: "sebastiansiman",
-      copy: "https://www.linkedin.com/in/sebastiánsiman/",
-    },
-    {
-      to: "https://github.com/SeebaaSiman",
-      icon: <IconGithub size={"calc(2rem + 2vw)"} />,
-      text: "seebaasiman",
-      copy: "https://github.com/SeebaaSiman",
-    },
-    {
-      to: cv,
-      icon: <IconCVDownload size={"calc(2rem + 2vw)"} />,
-      text: "Sebastián Siman cv",
-      copy: cv,
-    },
-  ];
+  const { handleCursorXs, handleCursorSmall } = useCustomCursorContext();
 
   const deviceType = useDeviceType();
   const { onActiveIcon, onActiveCopy, openPdf, isActiveIcon, isActiveCopy } =
@@ -59,9 +29,16 @@ export const Contact = () => {
     onActiveCopy(index);
   };
 
+  const iconMapping = {
+    [infoContact.MAIL]: <IconEmail size={"calc(2rem + 2vw)"} />,
+    [infoContact.LINKEDIN]: <IconLinkedin size={"calc(2rem + 2vw)"} />,
+    [infoContact.GITHUB]: <IconGithub size={"calc(2rem + 2vw)"} />,
+    [infoContact.DOWNLOAD]: <IconCVDownload size={"calc(2rem + 2vw)"} />,
+  };
+
   return (
     <ContainerIcon>
-      {info?.map((item, index) => {
+      {dataContact?.map((item, index) => {
         const SocialBtn =
           deviceType === "desktop" ? SocialBtnDesktop : SocialBtnMobile;
         return (
@@ -78,7 +55,7 @@ export const Contact = () => {
               rel="noopener noreferrer"
               download
             >
-              <>{item.icon}</>
+              <>{iconMapping[item.icon]}</>
               <span>
                 {deviceType === "desktop" ? (
                   `${item.text}`

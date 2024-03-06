@@ -29,9 +29,9 @@ export const usePageVisibility = (message) => {
 //     usePageVisibility("¡No te vayas! ¡Vuelve!");
 
 //     return (
-//         <CursorManager>
+//         <CursorProvider>
 //             <StyleGlobal />
 //             <Loading />
-//         </CursorManager>
+//         </CursorProvider>
 //     );
 // };

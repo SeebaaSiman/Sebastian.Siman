@@ -1,12 +1,12 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import avatar from "@/assets/perfil.jpg";
 import { ContainerBanner, ContainerMouse, HomeContainer } from "@/style";
 import useIntersectionObserver from "@/hook/useIntersectionObserver";
 import { ScrollArrowIndicator } from "./ScrollArrowIndicator";
 import { SwitchLanguage } from "@/language/SwitchLanguage";
 import { MouseScrolling } from "./MouseScrolling";
-import { NavBarContext } from "@/components/menu/NavBarManager";
 import { TextChange } from "./TextChange";
+import { useNavBarContext } from "/src/hook";
 
 export const Page1 = () => {
   //Estado para que aparezca el mouseScrolling
@@ -19,7 +19,7 @@ export const Page1 = () => {
 
   //Del contexto busco outNavBar para esconder la sección del navbar al estar en el viewport la sección container
   //También traigo del contexto la referencia page1Ref para usarla con el navbar
-  const { outNavBar, page1Ref } = useContext(NavBarContext);
+  const { outNavBar, page1Ref } = useNavBarContext();
   const HomeRef = useRef();
   const inView = useIntersectionObserver(HomeRef, { threshold: 1 });
   useEffect(() => {
@@ -27,6 +27,7 @@ export const Page1 = () => {
       outNavBar();
     }
   }, [inView]);
+
   return (
     <HomeContainer ref={page1Ref}>
       <SwitchLanguage />

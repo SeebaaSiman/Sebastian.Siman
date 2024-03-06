@@ -8,6 +8,7 @@ export * from './page1Styles';
 export * from './page2Styles';
 export * from './page3Styles';
 export * from './page4Styles';
-export * from './projects.style';
 export * from './StyleGlobal';
 export * from './switchStyle';
+export * from './modalStyle';
+export * from './CustomCursorStyle';

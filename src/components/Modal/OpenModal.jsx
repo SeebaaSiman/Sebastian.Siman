@@ -1,12 +1,10 @@
-import { useContext } from "react";
-import { CursorContext } from "@/components/cursor/CustomManager";
-import { Modal } from "./";
-import { ModalContext } from "./ModalManager";
+import { Modals } from "./";
+import { useCustomCursorContext, useModalContext } from "/src/hook";
 
 export const OpenModal = ({ children, text, toggleClass }) => {
-  const { handleCursorRegular, handleCursorSmall } = useContext(CursorContext);
+  const { handleCursorRegular, handleCursorSmall } = useCustomCursorContext();
 
-  const { onOpenModal } = useContext(ModalContext);
+  const { onOpenModal } = useModalContext();
 
   const handleOpenModal = () => {
     onOpenModal(children, toggleClass);
@@ -20,7 +18,7 @@ export const OpenModal = ({ children, text, toggleClass }) => {
       >
         {text}
       </button>
-      <Modal />
+      <Modals />
     </>
   );
 };

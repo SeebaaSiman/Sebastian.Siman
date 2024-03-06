@@ -1,14 +1,14 @@
-import { NavBar, NavBarManager } from "@/components/menu";
+import { NavBarProvider, ModalProvider } from "/src/context";
 import { SectionHorizontal, SectionVertical } from "./";
-import { ModalManager } from "@/components/Modal/ModalManager";
+import { NavBar } from "../components/NavBar";
 export const TotalSections = () => {
   return (
-    <ModalManager>
-      <NavBarManager>
+    <ModalProvider>
+      <NavBarProvider>
         <NavBar />
         <SectionVertical />
         <SectionHorizontal />
-      </NavBarManager>
-    </ModalManager>
+      </NavBarProvider>
+    </ModalProvider>
   );
 };

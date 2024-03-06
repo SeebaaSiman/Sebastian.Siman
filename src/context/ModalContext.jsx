@@ -14,8 +14,8 @@ export const ModalContext = createContext({
   closeModal: () => {},
 });
 
-// Crear el manager que es el provider y sus estados y funciones que quiero mandar al contexto
-export const ModalManager = ({ children }) => {
+// Crear el Provider que es el provider y sus estados y funciones que quiero mandar al contexto
+export const ModalProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
   const [modalItem, setModalItem] = useState([]);
   const [modalClass, setModalClass] = useState("");

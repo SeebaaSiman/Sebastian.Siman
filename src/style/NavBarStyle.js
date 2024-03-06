@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { device } from "@/style/StyleGlobal";
-import { NavItem } from "./effect";
+import { UnderlineHover } from "./effect";
 
 export const NavContainer = styled.nav`
   position: fixed;
@@ -15,12 +14,9 @@ transition: all .4 ease-in-out;
     display: flex;
     list-style: none;
     gap: 1rem;
-    font-size: 1.5rem;
-    @media ${device.lg} {
-    font-size: 1.8rem;
-  }
-  }
+   }
   li {
-    ${NavItem}
+    position: relative;
+    ${UnderlineHover}
 }
 `;

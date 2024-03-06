@@ -1,12 +1,11 @@
-import { useContext, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import useIntersectionObserver from "@/hook/useIntersectionObserver";
 import { AboutContainer, Text, ColumnRight, ColumnLeft } from "@/style";
-import { useLanguage } from "@/language/LanguageContext";
-import { NavBarContext } from "@/components/menu/NavBarManager";
 import setup from "@/assets/setup.jpg";
 import ginasia from "@/assets/ginasia.jpg";
 import code from "@/assets/code.jpg";
-import { useReverseScroll } from "@/hook";
+import { useReverseScroll, useLanguage, useNavBarContext } from "@/hook";
+
 export const Page2 = () => {
   //Creo referencias a los textos para usar el hook observer, al ser observados cambian su class css y hacen animación
   const refText = useRef();
@@ -23,7 +22,7 @@ export const Page2 = () => {
 
   //Hago visible la segunda porción del navbar con una fx inNavBar desde el context. Llamo a esa fx al ser visible en el viewport el isIntersecting (reutilizo la useRef) y uso el useEffect para llamar la fx
   //Traigo del contexto la referencia aboutRef para usarla con el navbar y navegar
-  const { inNavBar, aboutRef } = useContext(NavBarContext);
+  const { inNavBar, aboutRef } = useNavBarContext();
 
   // const isIntersecting4 = useIntersectionObserver(img1Ref, options);
   useEffect(() => {

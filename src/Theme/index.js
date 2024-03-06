@@ -1,5 +1,6 @@
 const lightTheme = {
  bgApp: "#e2dfdd",
+ bgProjectInfo: "#FFFFFF",
  textColor: '#001524',
  textShadow: "#9BA8AB",
  mouse: "#06141B",
@@ -7,6 +8,7 @@ const lightTheme = {
 
 const darkTheme = {
  bgApp: "#000",
+ bgProjectInfo: "#1e1e1e",
  textColor: '#CCD0CF',
  textShadow: "#4A5C6A",
  mouse: "#AFB3B7",

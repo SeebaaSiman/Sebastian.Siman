@@ -1,4 +1,4 @@
-import CursorManager from "@/components/cursor/CustomManager";
+import { CursorProvider } from "/src/context";
 import { StyleGlobal } from "@/style/StyleGlobal";
 import useDeviceType from "@/hook/useDeviceType";
 import { usePageVisibility } from "@/hook";
@@ -8,9 +8,9 @@ export const App = () => {
   usePageVisibility("¡No te vayas! ¡Vuelve!");
   const deviceType = useDeviceType();
   return (
-    <CursorManager>
+    <CursorProvider>
       <StyleGlobal deviceType={deviceType} />
       <Loading />
-    </CursorManager>
+    </CursorProvider>
   );
 };
