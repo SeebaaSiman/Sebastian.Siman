@@ -163,9 +163,6 @@ const ItemContainer = styled.a`
       /* animation: ${bounceAnimation} 1s ease-in-out; */
       animation: ${ShakeVertical} 0.8s linear both;
     }
-    ${SubTitle} {
-      color: ${(props) => props.theme.textColor};
-    }
     ${ImgProyect} {
       scale: 1;
       rotate: 12.5deg;
