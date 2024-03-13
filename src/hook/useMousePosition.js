@@ -8,7 +8,7 @@ export const useMousePosition = (ref) => {
    const mouseX = e.clientX;
    const mouseY = e.clientY;
 
-   const centerX = width / 3.5;
+   const centerX = width / 3;
    const centerY = height / 2;
 
    // Establece la posición del elemento para que esté centrado en el cursor
