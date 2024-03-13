@@ -7,6 +7,8 @@ export const ContainerPage4 = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
+  font-family: "Roboto",sans-serif;
+
 
   @media ${device.md} {
     flex-direction: row;
@@ -33,7 +35,6 @@ transition: all 1s ease-in-out;
 @media ${device.md} {
   height: 100vh;
   transform: skew(-8deg);
-  /* transition: all 1s ease-in-out; */
 
 }
 &:hover {
@@ -55,7 +56,7 @@ transition: all 1s ease-in-out;
 
 
     h2 {
-    font-family: sans-serif;
+
     font-size: calc(3rem + 2vw);
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     text-transform: uppercase;
@@ -72,10 +73,11 @@ transition: all 1s ease-in-out;
     }
 
     button {
-    font-family: sans-serif;
+      text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     font-size: 1.1rem;
     text-transform: uppercase;
     background: transparent;
+    font-weight: bold;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 6px;
@@ -114,7 +116,7 @@ overflow: hidden;
     width: 100%;
   }
   h2 {
-    font-family: sans-serif;
+
     font-size: 3rem;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     text-transform: uppercase;
@@ -126,7 +128,8 @@ overflow: hidden;
   }
 
   button {
-    font-family: sans-serif;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    font-weight: bold;
     font-size: 1.1rem;
     text-transform: uppercase;
     background: #000;

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import useIntersectionObserver from "@/hook/useIntersectionObserver";
 import { AboutContainer, Text, ColumnRight, ColumnLeft } from "@/style";
 import setup from "@/assets/setup.jpg";
@@ -20,16 +20,8 @@ export const Page2 = () => {
   const isIntersecting2 = useIntersectionObserver(refText2, options);
   const isIntersecting3 = useIntersectionObserver(refText3, options);
 
-  //Hago visible la segunda porción del navbar con una fx inNavBar desde el context. Llamo a esa fx al ser visible en el viewport el isIntersecting (reutilizo la useRef) y uso el useEffect para llamar la fx
   //Traigo del contexto la referencia aboutRef para usarla con el navbar y navegar
-  const { inNavBar, aboutRef } = useNavBarContext();
-
-  // const isIntersecting4 = useIntersectionObserver(img1Ref, options);
-  useEffect(() => {
-    if (isIntersecting) {
-      inNavBar();
-    }
-  }, [isIntersecting]);
+  const { aboutRef } = useNavBarContext();
 
   const { texts } = useLanguage();
   useReverseScroll(aboutRef, ColumnRigthRef);

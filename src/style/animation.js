@@ -26,6 +26,7 @@ export const sweep = keyframes`
     clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
   }
   `;
+
 // page 1
 export const showInRight = keyframes`
 from {
@@ -67,7 +68,7 @@ export const bounceIn = keyframes`
     transform: scale(1);
   }
   `;
-// ListProjectsEffect y page1
+// TextChange (page1)
 export const showInLeft = keyframes`
   0%{opacity:1;
   transform: translateX(-12%)}
@@ -82,43 +83,7 @@ export const showInLeft = keyframes`
   100%{opacity:1;
   transform: translateX(0%)}
 `
-export const showModalInfoLeft = keyframes`
-  0%{opacity:1;
-  transform: translateX(10%)
-}
-  33%{opacity:1;
-  transform: translateX(0%)
-}
-  66%{opacity:1;
-  transform: translateX(6%)
-}
-  100%{opacity:1;
-  transform: translateX(0%)
-}
-`
-export const showModalInfoBottom = keyframes`
-  0%{opacity:1;
-  transform: translateY(10%)
-}
-  33%{opacity:1;
-  transform: translateY(0%)
-}
-  66%{opacity:1;
-  transform: translateY(6%)
-}
-  100%{opacity:1;
-  transform: translateY(0%)
-}
-`
-export const showInImgProject = keyframes`
- from {
-  transform: translate(100%, 100%);
-}
-to {
-    transform: translate(0%, 0%);
-  }
-  `
-// NavBar
+//* underlineHover
 export const showInNavItem = keyframes`
   0% {
 transform:scale(0.8);
@@ -129,16 +94,16 @@ opacity: 0;
     opacity: 1;
   }
 `;
-// Mouse
+// (Mouse) mouseSCrolling y scrollArrowIndicator
 export const showInDown = keyframes`
     from {
       transform: translateY(100%);
-
     }
     to {
       transform: translateY(0%);
       }
         `;
+//mouseSCrolling
 export const showMouse = keyframes`
 0% {
         transform: translateY(0);
@@ -151,7 +116,7 @@ export const showMouse = keyframes`
         transform: translateY(50%);
         opacity: .5;
     }`;
-// ArrowMouse
+// scrollArrowIndicator
 export const bounce = keyframes`
  50% {
     transform: translateY(-50%);
@@ -168,3 +133,12 @@ from{
   scale:1;
 }
 `
+// ProjectItem (title)
+export const ShakeVertical = keyframes`
+0%{transform:scale3d(1,1,1)}
+30%{transform:scale3d(.75,1.25,1)}
+40%{transform:scale3d(1.25,.75,1)}
+50%{transform:scale3d(.85,1.15,1)}
+65%{transform:scale3d(1.05,.95,1)}
+75%{transform:scale3d(.95,1.05,1)}
+100%{transform:scale3d(1,1,1)}`;

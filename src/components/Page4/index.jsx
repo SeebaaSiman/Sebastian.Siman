@@ -5,8 +5,8 @@ import {
   ContentWrapper,
 } from "@/style";
 import useDeviceType from "@/hook/useDeviceType";
-import video1 from "@/assets/code.mp4";
-import video2 from "@/assets/text-contact.mp4";
+import video1 from "/src/assets/codevideo.mp4";
+import video2 from "/src/assets/contactvideo.webm";
 
 import { HoverVideo } from "@/components/Page4/HoverVideo";
 import { Contact } from "@/components/Page4/Contact";

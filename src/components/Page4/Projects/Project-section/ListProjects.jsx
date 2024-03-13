@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import { ProjectItem } from "./ProjectItem";
 import { ButtonVertical } from "../Horizontal-sections/ButtonVertical";
 import { useCustomCursorContext } from "/src/hook";
+import { SectionProject } from "/src/style/projects.style";
 export const ListProjects = ({
   listArray,
   setVerticalShow,
@@ -18,8 +18,6 @@ export const ListProjects = ({
           {listArray?.map((project, index) => (
             <ProjectItem
               key={index}
-              heading={project.title}
-              imgSrc={project.img}
               project={project}
               setInfoActive={setInfoActive}
               toggleSectionsHorizontal={toggleSectionsHorizontal}
@@ -45,8 +43,6 @@ export const ListProjects = ({
           {listArray?.map((project, index) => (
             <ProjectItem
               key={index}
-              heading={project.title}
-              imgSrc={project.img}
               project={project}
               setInfoActive={setInfoActive}
               toggleSectionsHorizontal={toggleSectionsHorizontal}
@@ -59,12 +55,3 @@ export const ListProjects = ({
     </SectionProject>
   );
 };
-
-const SectionProject = styled.section`
-  height: 100vh;
-  width: 100vw;
-  padding-top: ${(props) => (props.verticalShow ? "0rem" : "2rem")};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;

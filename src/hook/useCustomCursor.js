@@ -15,6 +15,7 @@ export const useCustomCursor = () => {
         distanceY: 0,
         key: -1,
     });
+    
     //Para asegurarme que el cursor está renderizado
     const [isCursorRendered, setIsCursorRendered] = useState(false);
     //se actualiza cuando el cursor se ha renderizado

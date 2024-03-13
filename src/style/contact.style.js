@@ -81,7 +81,7 @@ export const SocialBtnDesktop = styled.a`
     opacity: 0;
     background-color: transparent;
     transform: scale(0.6);
-    font-family: 'Oxygen',sans-serif;
+     font-family: "Roboto",sans-serif;
     font-size: calc(.8em + 1.2vw);
     text-align: center;
     width: 0px;
@@ -113,7 +113,7 @@ display: flex;
     max-width: ${(props) =>
     props.isActive ? "100%" : " 0px"};
     background-color: transparent;
-    font-family: 'Oxygen',sans-serif;
+     font-family: "Roboto",sans-serif;
     font-size: 1.1rem;
     text-align: center;
     overflow: hidden;

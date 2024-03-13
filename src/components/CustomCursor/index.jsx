@@ -3,6 +3,7 @@ import { useCustomCursorContext, useCustomCursor } from "/src/hook";
 
 export const CustomCursor = () => {
   const { size } = useCustomCursorContext();
+
   const { secondaryCursor, isMouseMoving } = useCustomCursor();
   //Si isMouseMoving es true, se agrega la clase css "active" , si es false no se mueve y se agrega "idle"
   return (

@@ -15,13 +15,14 @@ export const DesktopHorizontal = () => {
       <Panel className="panel">
         <Page3 />
       </Panel>
+
       <Panel className="panel">
         <Page4 />
       </Panel>
     </ContainerHorizontal>
   );
 };
-const ContainerHorizontal = styled.div`
+const ContainerHorizontal = styled.section`
   width: 200%;
   height: 100%;
   display: flex;

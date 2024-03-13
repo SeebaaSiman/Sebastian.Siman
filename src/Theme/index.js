@@ -1,6 +1,6 @@
 const lightTheme = {
  bgApp: "#e2dfdd",
- bgProjectInfo: "#FFFFFF",
+ bgProjectInfo: "#E6E4E2",
  textColor: '#001524',
  textShadow: "#9BA8AB",
  mouse: "#06141B",

@@ -21,7 +21,6 @@ font-size: 1.5rem;
 @media ${device.lg} {
     font-size: 1.8rem;
   }
-
     &::before {
       content: "";
       position: absolute;

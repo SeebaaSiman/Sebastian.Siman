@@ -10,6 +10,7 @@ export const Loading = () => {
     }, 3000); //3000
   }, []);
   const deviceType = useDeviceType();
+  
   return (
     <>
       {!Loaded ? (

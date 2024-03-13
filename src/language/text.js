@@ -26,6 +26,7 @@ export const enTexts = {
  buttonProjectInfo: "-Back to projects",
  buttonVerticalTop: "Recommended projects",
  buttonVerticalMore: "Other projects",
+ go: "Go"
 };
 
 
@@ -57,4 +58,5 @@ export const esTexts = {
  buttonProjectInfo: "-Volver a proyectos",
  buttonVerticalTop: "Proyectos recomendados",
  buttonVerticalMore: "Otros proyectos",
+ go: "Ir"
 };

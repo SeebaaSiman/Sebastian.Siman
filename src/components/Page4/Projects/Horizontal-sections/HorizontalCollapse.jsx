@@ -79,9 +79,7 @@ const InfoContainer = styled.div`
   top: 0;
   left: 0;
   height: 100vh;
-  background-color: ${(props) => props.theme.bgApp};
   width: 0;
-  /* width: 100vw; */
   z-index: 800;
   transform: translateX(0);
   opacity: 0;

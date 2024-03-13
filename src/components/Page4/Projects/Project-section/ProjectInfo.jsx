@@ -1,17 +1,16 @@
 import { Fragment } from "react";
-import styled from "styled-components";
 import useDeviceType from "/src/hook/useDeviceType";
 import {
   IconCss,
   IconHtml,
-  IconJavaScript,
   IconReact,
-  iconSize,
-  UnderlineHover,
+  InfoContainer,
+  ButtonBackProject,
 } from "@/style";
 import { BtnAnimatedDesktop } from "../Horizontal-sections/ButtonVertical";
 import { IconTech } from "/src/data/iconTech";
 import { useCustomCursorContext, useLanguage } from "/src/hook";
+import { Carousel } from "./Carousel";
 
 export const ProjectInfo = ({
   toggleSectionsHorizontal,
@@ -41,11 +40,10 @@ export const ProjectInfo = ({
       >
         {texts.buttonProjectInfo}
       </ButtonBackProject>
-      <p style={{ fontSize: "1.5rem" }}>{infoActive?.title}</p>
-      <p>{infoActive?.description}</p>
-      <div>
-        <img src={infoActive?.img} alt="" />
-      </div>
+      <p style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
+        {infoActive?.title}
+      </p>
+      <Carousel array={infoActive?.img} />
       <span>
         <p>Tech:</p>
         {infoActive?.tech?.icon?.map((techName, index) => (
@@ -58,51 +56,9 @@ export const ProjectInfo = ({
           onMouseEnter={deviceType === "desktop" ? handleCursorXs : null}
           onMouseLeave={deviceType === "desktop" ? handleCursorSmall : null}
         >
-          IR
+          {texts.go}
         </BtnAnimatedDesktop>
       </a>
     </InfoContainer>
   );
 };
-const ButtonBackProject = styled.span`
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 6px;
-  z-index: 900;
-  ${UnderlineHover}
-`;
-const InfoContainer = styled.div`
-  position: relative;
-  background-color: ${(props) => props.theme.bgProjectInfo};
-  color: ${(props) => props.theme.textColor};
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2.2rem;
-  padding-bottom: 1rem;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  p {
-    font-size: 1rem;
-  }
-  img {
-    border-radius: 22px;
-    filter: drop-shadow(2px 2px 3px black);
-    /* width: 80%; */
-    height: 250px;
-  }
-  span {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-self: start;
-    align-self: start;
-    gap: 6px;
-  }
-`;
-//! pequeño slider en donde están todas las imágenes rotadas y al hacer click adelante se escalan y al hacer click atras escala inverso
-// https://www.hover.dev/components/carousels

@@ -1,12 +1,12 @@
 import { useLanguage } from "/src/hook";
 
 import calculatorimg from "@/assets/projects/calculator.jpg";
-import f1img from "@/assets/projects/f1.jpg";
+// import f1img from "@/assets/projects/f1.jpg";
 import expensesimg from "@/assets/projects/expenses.jpg";
-import HeroesApp from "@/assets/projects/HeroesApp.jpg";
-import CelestialChronicle from "@/assets/projects/celestial-chronicle.jpg";
+// import HeroesApp from "@/assets/projects/HeroesApp.jpg";
+// import CelestialChronicle from "@/assets/projects/celestial-chronicle.jpg";
 import chatNonContact from "@/assets/projects/Chat-non-contact-whatsapp.jpg";
-import journal from "@/assets/projects/journal.jpg";
+// import journal from "@/assets/projects/journal.jpg";
 import { IconTech } from "./iconTech";
 
 export const dataProject = () => {
@@ -14,7 +14,13 @@ export const dataProject = () => {
 
   const projects = [
     {
-      img: CelestialChronicle,
+      img: [
+        "/src/assets/projects/celestial-chronicle.jpg",
+        "/src/assets/projects/celestial-chronicle2.jpg",
+        "/src/assets/projects/celestial-chronicle3.jpg",
+        "/src/assets/projects/celestial-chronicle4.jpg",
+        "/src/assets/projects/celestial-chronicle5.jpg",
+      ],
       title: "celestial chronicle",
       description: "",
       tech: {
@@ -24,7 +30,7 @@ export const dataProject = () => {
       url: "https://celestial-chronicle.vercel.app/",
     },
     {
-      img: chatNonContact,
+      img: [chatNonContact],
       title: "chat-non-contact-whatsapp",
       description: "",
       tech: {
@@ -34,7 +40,13 @@ export const dataProject = () => {
       url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/",
     },
     {
-      img: HeroesApp,
+      img: [
+        "/src/assets/projects/HeroesApp.jpg",
+        "/src/assets/projects/HeroesApp2.jpg",
+        "/src/assets/projects/HeroesApp3.jpg",
+        "/src/assets/projects/HeroesApp4.jpg",
+        "/src/assets/projects/HeroesApp5.jpg",
+      ],
       title: "heroes app",
       description: "",
       tech: {
@@ -44,7 +56,7 @@ export const dataProject = () => {
       url: "https://heroes-app-beige.vercel.app",
     },
     {
-      img: calculatorimg,
+      img: [calculatorimg],
       title: "calculator",
       description: texts?.speech1,
       tech: {
@@ -54,7 +66,12 @@ export const dataProject = () => {
       url: "https://seebaasiman.github.io/Calculator-useReducer/",
     },
     {
-      img: f1img,
+      img: [
+        "/src/assets/projects/f1.jpg",
+        "/src/assets/projects/f12.jpg",
+        "/src/assets/projects/f13.jpg",
+        "/src/assets/projects/f14.jpg",
+      ],
       title: "f1-fan",
       description: texts?.speech2,
       tech: {
@@ -64,7 +81,7 @@ export const dataProject = () => {
       url: "https://f1-fan.vercel.app/",
     },
     {
-      img: expensesimg,
+      img: [expensesimg],
       title: "expenses calculator",
       description: texts?.speech3,
       tech: {
@@ -75,7 +92,11 @@ export const dataProject = () => {
     },
 
     {
-      img: journal,
+      img: [
+        "/src/assets/projects/journal.jpg",
+        "/src/assets/projects/journal2.jpg",
+        "/src/assets/projects/journal3.jpg",
+      ],
       title: "journal app",
       description: "",
       tech: {
