@@ -1,12 +1,25 @@
 import { useLanguage } from "/src/hook";
 
 import calculatorimg from "@/assets/projects/calculator.jpg";
-// import f1img from "@/assets/projects/f1.jpg";
+import f1img from "@/assets/projects/f1.jpg";
+import f1img2 from "@/assets/projects/f12.jpg";
+import f1img3 from "@/assets/projects/f13.jpg";
+import f1img4 from "@/assets/projects/f14.jpg";
 import expensesimg from "@/assets/projects/expenses.jpg";
-// import HeroesApp from "@/assets/projects/HeroesApp.jpg";
-// import CelestialChronicle from "@/assets/projects/celestial-chronicle.jpg";
+import HeroesApp from "@/assets/projects/HeroesApp.jpg";
+import HeroesApp2 from "@/assets/projects/HeroesApp2.jpg";
+import HeroesApp3 from "@/assets/projects/HeroesApp3.jpg";
+import HeroesApp4 from "@/assets/projects/HeroesApp4.jpg";
+import HeroesApp5 from "@/assets/projects/HeroesApp5.jpg";
+import CelestialChronicle from "@/assets/projects/celestial-chronicle.jpg";
+import CelestialChronicle2 from "@/assets/projects/celestial-chronicle2.jpg";
+import CelestialChronicle3 from "@/assets/projects/celestial-chronicle3.jpg";
+import CelestialChronicle4 from "@/assets/projects/celestial-chronicle4.jpg";
+import CelestialChronicle5 from "@/assets/projects/celestial-chronicle5.jpg";
 import chatNonContact from "@/assets/projects/Chat-non-contact-whatsapp.jpg";
-// import journal from "@/assets/projects/journal.jpg";
+import journal from "@/assets/projects/journal.jpg";
+import journal2 from "@/assets/projects/journal2.jpg";
+import journal3 from "@/assets/projects/journal3.jpg";
 import { IconTech } from "./iconTech";
 
 export const dataProject = () => {
@@ -15,11 +28,11 @@ export const dataProject = () => {
   const projects = [
     {
       img: [
-        "/src/assets/projects/celestial-chronicle.jpg",
-        "/src/assets/projects/celestial-chronicle2.jpg",
-        "/src/assets/projects/celestial-chronicle3.jpg",
-        "/src/assets/projects/celestial-chronicle4.jpg",
-        "/src/assets/projects/celestial-chronicle5.jpg",
+        CelestialChronicle,
+        CelestialChronicle2,
+        CelestialChronicle3,
+        CelestialChronicle4,
+        CelestialChronicle5,
       ],
       title: "celestial chronicle",
       description: "",
@@ -40,13 +53,7 @@ export const dataProject = () => {
       url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/",
     },
     {
-      img: [
-        "/src/assets/projects/HeroesApp.jpg",
-        "/src/assets/projects/HeroesApp2.jpg",
-        "/src/assets/projects/HeroesApp3.jpg",
-        "/src/assets/projects/HeroesApp4.jpg",
-        "/src/assets/projects/HeroesApp5.jpg",
-      ],
+      img: [HeroesApp, HeroesApp2, HeroesApp3, HeroesApp4, HeroesApp5],
       title: "heroes app",
       description: "",
       tech: {
@@ -66,12 +73,7 @@ export const dataProject = () => {
       url: "https://seebaasiman.github.io/Calculator-useReducer/",
     },
     {
-      img: [
-        "/src/assets/projects/f1.jpg",
-        "/src/assets/projects/f12.jpg",
-        "/src/assets/projects/f13.jpg",
-        "/src/assets/projects/f14.jpg",
-      ],
+      img: [f1img, f1img2, f1img3, f1img4],
       title: "f1-fan",
       description: texts?.speech2,
       tech: {
@@ -92,11 +94,7 @@ export const dataProject = () => {
     },
 
     {
-      img: [
-        "/src/assets/projects/journal.jpg",
-        "/src/assets/projects/journal2.jpg",
-        "/src/assets/projects/journal3.jpg",
-      ],
+      img: [journal, journal2, journal3],
       title: "journal app",
       description: "",
       tech: {
