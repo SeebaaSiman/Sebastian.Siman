@@ -22,6 +22,13 @@ import journal2 from "@/assets/projects/journal2.jpg";
 import journal3 from "@/assets/projects/journal3.jpg";
 import { IconTech } from "./iconTech";
 
+import celestialicon from "@/assets/projects/icons/celestial.png";
+import calculatoricon from "@/assets/projects/icons/calculator.ico";
+import expensesicon from "@/assets/projects/icons/expenses.png";
+import f1icon from "@/assets/projects/icons/f1.png";
+import journalicon from "@/assets/projects/icons/journal.png";
+import nonchaticon from "@/assets/projects/icons/nonchat.png";
+import heroesicon from "@/assets/projects/icons/heroes.png";
 export const dataProject = () => {
   const { texts } = useLanguage();
 
@@ -34,6 +41,7 @@ export const dataProject = () => {
         CelestialChronicle4,
         CelestialChronicle5,
       ],
+      icon: celestialicon,
       title: "celestial chronicle",
       description: "",
       tech: {
@@ -44,8 +52,9 @@ export const dataProject = () => {
     },
     {
       img: [chatNonContact],
-      title: "chat-non-contact-whatsapp",
+      title: "chat non contact whatsapp",
       description: "",
+      icon: nonchaticon,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "styled-components, CustomHook: useForm",
@@ -56,6 +65,7 @@ export const dataProject = () => {
       img: [HeroesApp, HeroesApp2, HeroesApp3, HeroesApp4, HeroesApp5],
       title: "heroes app",
       description: "",
+      icon: heroesicon,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "query-string, react-router-dom (private routes and public routes), API 'superheroapi', styled-components, useContext (Auth), useReducer, customHooks: useCardEffect, useForm, useGetHeroPage, useGetPublisher,useBagInvetory, useDragDice, useWindowResize",
@@ -65,6 +75,7 @@ export const dataProject = () => {
     {
       img: [calculatorimg],
       title: "calculator",
+      icon: calculatoricon,
       description: texts?.speech1,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
@@ -75,6 +86,7 @@ export const dataProject = () => {
     {
       img: [f1img, f1img2, f1img3, f1img4],
       title: "f1-fan",
+      icon: f1icon,
       description: texts?.speech2,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
@@ -85,17 +97,19 @@ export const dataProject = () => {
     {
       img: [expensesimg],
       title: "expenses calculator",
+      icon: expensesicon,
       description: texts?.speech3,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "Reduxjs/toolkit, animate.css, react-router-dom, sweetalert2,styled-components, boostrap, customHooks: useCostPerson, useForm",
       },
-      url: "https://seebaasiman.github.io/Expenses-App/",
+      url: "https://expenses-app-alpha-hazel.vercel.app/",
     },
 
     {
       img: [journal, journal2, journal3],
       title: "journal app",
+      icon: journalicon,
       description: "",
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],

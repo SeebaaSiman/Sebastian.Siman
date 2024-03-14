@@ -24,6 +24,7 @@ export const ProjectItem = (props) => {
   return (
     <ItemContainer ref={ref} isDesktop={deviceType === "desktop"}>
       <Title>
+        <img src={props.project.icon} />
         {props.project?.title?.split("").map((char, index) => (
           <Fragment key={index}>
             {char !== " " ? ( // Verifica si el carácter actual no es un espacio en blanco

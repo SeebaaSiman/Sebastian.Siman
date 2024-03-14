@@ -6,6 +6,7 @@ import {
   IconReact,
   InfoContainer,
   ButtonBackProject,
+  TextInfo,
 } from "@/style";
 import { BtnAnimatedDesktop } from "../Horizontal-sections/ButtonVertical";
 import { IconTech } from "/src/data/iconTech";
@@ -40,17 +41,20 @@ export const ProjectInfo = ({
       >
         {texts.buttonProjectInfo}
       </ButtonBackProject>
-      <p style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
-        {infoActive?.title}
-      </p>
+      <TextInfo header>
+        <img src={infoActive?.icon} />
+        <p style={{ fontSize: "1.8rem", fontWeight: "bold" }} header>
+          {infoActive?.title}
+        </p>
+      </TextInfo>
       <Carousel array={infoActive?.img} />
-      <span>
+      <TextInfo>
         <p>Tech:</p>
         {infoActive?.tech?.icon?.map((techName, index) => (
           <Fragment key={index}>{iconMapping[techName]}</Fragment>
         ))}
-      </span>
-      <span>{infoActive?.tech?.text}</span>
+      </TextInfo>
+      <TextInfo>{infoActive?.tech?.text}</TextInfo>
       <a href={infoActive?.url} target="_blank">
         <BtnAnimatedDesktop
           onMouseEnter={deviceType === "desktop" ? handleCursorXs : null}

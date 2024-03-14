@@ -27,7 +27,7 @@ export const InfoContainer = styled.div`
   color: ${(props) => props.theme.textColor};
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 2.2rem;
+  padding-top: 2.3rem;
   padding-bottom: 1rem;
   width: 100vw;
   height: 100vh;
@@ -35,18 +35,26 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  p {
-    font-size: 1rem;
-  }
-  span {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-self: start;
-    align-self: start;
-    gap: 6px;
-  }
 `;
+export const TextInfo = styled.span`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: ${(props) => (props.header && "center")};
+align-items: ${(props) => (props.header && "center")};
+font-weight: ${(props) => (props.header && "bold")};
+justify-self: ${(props) => (props.header ? "center" : "start")};
+align-self: ${(props) => (props.header ? "center" : "start")};
+gap: 6px;
+p {
+    font-size: ${(props) => (props.header ? "1.9rem" : "1.2rem")};
+  }
+img{
+height: 2rem;
+object-fit: contain;
+ }
+ `
+
 //*ProjectItem
 
 export const ArrowContainer = styled.div`
@@ -77,7 +85,8 @@ export const Title = styled.span`
   font-weight: bold;
   transform: translateX(0%);
   transition: all 0.5s ease-in-out;
-  z-index: 2;
+  z-index: 3;
+
   p {
     display: inline-block;
     position: relative;
@@ -86,6 +95,12 @@ export const Title = styled.span`
       1px -1px 0 ${(props) => props.theme.textShadow},
       -1px 1px 0 ${(props) => props.theme.textShadow},
       1px 1px 0 ${(props) => props.theme.textShadow};
+  }
+  img{
+    height: 2.5rem;
+    margin-right: 6px;
+    object-fit: contain;
+    filter: grayscale(1);
   }
 `;
 export const ItemContainer = styled.span`
@@ -117,6 +132,9 @@ export const ItemContainer = styled.span`
       text-shadow: -1px -1px 0 transparent, 1px -1px 0 transparent,
         -1px 1px 0 transparent, 1px 1px 0 transparent;
       animation: ${ShakeVertical} 0.8s linear both;
+    }
+    ${Title} img {
+      filter:  grayscale(0);
     }
     ${ImgProyect} {
       scale: ${(props) => (props.isDesktop ? "1" : "0.8")};
