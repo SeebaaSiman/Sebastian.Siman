@@ -6,7 +6,7 @@ export * from './useContextProvider';
 export * from './useCustomCursor';
 export * from './useDeviceType';
 export * from './useIntersectionObserver';
-export * from './useMousePosition';
+export * from './useModalScrollLock';
 export * from './usePageVisibility';
 export * from './useReverseScroll';
 export * from './useScrollHorizontal';

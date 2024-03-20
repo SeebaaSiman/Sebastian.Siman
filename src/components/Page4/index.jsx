@@ -5,6 +5,7 @@ import {
   ContentWrapper,
 } from "@/style";
 import useDeviceType from "@/hook/useDeviceType";
+
 import video1 from "/src/assets/codevideo.mp4";
 import video2 from "/src/assets/contactvideo.webm";
 
@@ -14,7 +15,7 @@ import { OpenModal } from "@/components/Modal/OpenModal";
 import { SectionsProjects } from "./Projects";
 import { useModalContext, useNavBarContext, useLanguage } from "/src/hook";
 
-export const Page4 = () => {
+const Page4 = () => {
   const { page4Ref } = useNavBarContext();
   const { TextModal } = useModalContext();
   const deviceType = useDeviceType();
@@ -60,3 +61,4 @@ export const Page4 = () => {
     </ContainerPage4>
   );
 };
+export default Page4;

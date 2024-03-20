@@ -1,7 +1,7 @@
 import { CursorWrapper, SecondaryCursor } from "/src/style";
 import { useCustomCursorContext, useCustomCursor } from "/src/hook";
 
-export const CustomCursor = () => {
+const CustomCursor = () => {
   const { size } = useCustomCursorContext();
 
   const { secondaryCursor, isMouseMoving } = useCustomCursor();
@@ -15,5 +15,5 @@ export const CustomCursor = () => {
     </CursorWrapper>
   );
 };
-
+export default CustomCursor;
 // Importar como componente. Por ejemplo luego de un loader.

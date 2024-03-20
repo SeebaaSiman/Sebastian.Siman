@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
-import { Loader, CustomCursor } from "@/components";
+import { lazy, useEffect, useState, Suspense } from "react";
+import { Loader } from "@/components";
 import { TotalSections } from "./TotalSections";
 import useDeviceType from "@/hook/useDeviceType";
+
+const CustomCursor = lazy(() => import("@/components/CustomCursor"));
+
 export const Loading = () => {
   const [Loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -10,14 +13,18 @@ export const Loading = () => {
     }, 3000); //3000
   }, []);
   const deviceType = useDeviceType();
-  
+
   return (
     <>
       {!Loaded ? (
         <Loader />
       ) : (
         <>
-          {deviceType === "desktop" && <CustomCursor />}
+          {deviceType === "desktop" && (
+            <Suspense fallback={null}>
+              <CustomCursor />
+            </Suspense>
+          )}
           <TotalSections />
         </>
       )}

@@ -10,6 +10,7 @@ export const ContainerIcon = styled.div`
   gap:.5rem;
   width:100%;
   height: 100vh;
+  overflow: hidden;
 `;
 export const RowIcon = styled.div`
 padding:1rem;

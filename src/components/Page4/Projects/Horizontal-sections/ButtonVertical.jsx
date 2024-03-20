@@ -15,7 +15,11 @@ export const ButtonVertical = ({
     handleCursorSmall();
   };
   return (
-    <ButtonContainer>
+    <ButtonContainer
+      style={{
+        justifyContent: deviceType === "desktop" ? "center" : "end",
+      }}
+    >
       <BtnAnimatedDesktop
         onMouseEnter={deviceType === "desktop" ? handleCursorXs : null}
         onMouseLeave={deviceType === "desktop" ? handleCursorSmall : null}
@@ -29,7 +33,6 @@ export const ButtonVertical = ({
 const ButtonContainer = styled.div`
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 10px;
   overflow: hidden;

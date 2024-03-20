@@ -18,12 +18,14 @@ export const NavBarProvider = ({ children }) => {
   const outNavBar = () => setShowNavBar(false);
   //Referencias mandadas al hook para desplazarse a la sección que se ponga la referencia al hacer click en el navbar
   const page1Ref = useRef();
-  useSmoothScroll(page1Ref);
   const aboutRef = useRef();
-  useSmoothScroll(aboutRef);
   const page4Ref = useRef();
-  // Fx del navbar que disparará el desplazamiento
+
+  useSmoothScroll(page1Ref);
+  useSmoothScroll(aboutRef);
   useSmoothScroll(page4Ref);
+
+  // Fx del navbar que disparará el desplazamiento
   const scrollToSection = (ref) => {
     ref?.current?.scrollIntoView({ behavior: "smooth" });
   };

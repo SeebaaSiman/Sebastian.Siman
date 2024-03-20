@@ -1,13 +1,20 @@
 import { Modals } from "./";
-import { useCustomCursorContext, useModalContext } from "/src/hook";
+import {
+  useCustomCursorContext,
+  useModalContext,
+  useNavBarContext,
+} from "/src/hook";
 
 export const OpenModal = ({ children, text, toggleClass }) => {
   const { handleCursorRegular, handleCursorSmall } = useCustomCursorContext();
-
   const { onOpenModal } = useModalContext();
+  const { scrollToSection, page1Ref } = useNavBarContext();
 
   const handleOpenModal = () => {
     onOpenModal(children, toggleClass);
+    setTimeout(() => {
+      scrollToSection(page1Ref);
+    }, 800);
   };
   return (
     <>

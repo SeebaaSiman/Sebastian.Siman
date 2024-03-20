@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "@/sections/App";
-import { LanguageProvider, CursorProvider } from "/src/context";
+import {
+  LanguageProvider,
+  CursorProvider,
+  NavBarProvider,
+  ModalProvider,
+} from "/src/context";
 import { ThemeStyleProvider } from "@/Theme/ThemeStyleProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -9,8 +14,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ThemeStyleProvider>
       <LanguageProvider>
         <CursorProvider>
-          
-          <App />
+          <ModalProvider>
+            <NavBarProvider>
+              <App />
+            </NavBarProvider>
+          </ModalProvider>
         </CursorProvider>
       </LanguageProvider>
     </ThemeStyleProvider>

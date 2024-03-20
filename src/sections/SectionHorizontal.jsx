@@ -1,13 +1,22 @@
+import { Suspense, lazy } from "react";
 import useDeviceType from "@/hook/useDeviceType";
-import { DesktopHorizontal } from "./horizontal-device/DesktopHorizontal";
-import { MobileAndTabletHorizon } from "./horizontal-device/MobileAndTabletHorizon";
 
+const DesktopHorizontal = lazy(() =>
+  import("./horizontal-device/DesktopHorizontal")
+);
+const MobileAndTabletHorizon = lazy(() =>
+  import("./horizontal-device/MobileAndTabletHorizon")
+);
 export const SectionHorizontal = () => {
   const deviceType = useDeviceType();
 
-  if (deviceType === "desktop") {
-    return <DesktopHorizontal />;
-  } else {
-    return <MobileAndTabletHorizon />;
-  }
+  return (
+    <Suspense fallback={null}>
+      {deviceType === "desktop" ? (
+        <DesktopHorizontal />
+      ) : (
+        <MobileAndTabletHorizon />
+      )}
+    </Suspense>
+  );
 };

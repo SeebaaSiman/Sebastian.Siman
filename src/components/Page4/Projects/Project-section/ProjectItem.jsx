@@ -1,6 +1,6 @@
 import { useRef, Fragment } from "react";
 import useDeviceType from "/src/hook/useDeviceType";
-import { useMousePosition, useContainerHeight } from "/src/hook";
+import { useContainerHeight } from "/src/hook";
 import {
   ItemContainer,
   Title,
@@ -9,10 +9,8 @@ import {
 } from "/src/style/projects.style";
 
 export const ProjectItem = (props) => {
-  const ref = useRef(null);
-
   const deviceType = useDeviceType();
-  const { x, y } = useMousePosition(ref);
+  const ref = useRef(null);
   const { containerHeight } = useContainerHeight(ref);
 
   const onInfoProject = () => {
@@ -22,7 +20,7 @@ export const ProjectItem = (props) => {
   };
 
   return (
-    <ItemContainer ref={ref} isDesktop={deviceType === "desktop"}>
+    <ItemContainer ref={ref}>
       <Title>
         <img src={props.project.icon} />
         {props.project?.title?.split("").map((char, index) => (
@@ -38,11 +36,8 @@ export const ProjectItem = (props) => {
       <ImgProyect
         src={props.project.img[0]}
         alt={`Image representing a link for ${props.project?.title}`}
-        isDesktop={deviceType === "desktop"}
         style={{
-          transform:
-            deviceType === "desktop" ? `translate(${x}px, ${y}px) ` : "",
-          height: containerHeight,
+          height: `${containerHeight + 10}px`,
         }}
       />
       <ArrowContainer

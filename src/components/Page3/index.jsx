@@ -3,7 +3,7 @@ import useIntersectionObserver from "@/hook/useIntersectionObserver";
 import { ContainerPage3, Text } from "@/style";
 import { useLanguage } from "/src/hook";
 import { IconsLanguages } from "./IconsLanguages";
-export const Page3 = () => {
+const Page3 = () => {
   const ref = useRef();
   const options = {
     threshold: 0.3,
@@ -19,3 +19,4 @@ export const Page3 = () => {
     </ContainerPage3>
   );
 };
+export default Page3;

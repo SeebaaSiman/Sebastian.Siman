@@ -7,6 +7,7 @@ import {
   InfoContainer,
   ButtonBackProject,
   TextInfo,
+  TextHeader,
 } from "@/style";
 import { BtnAnimatedDesktop } from "../Horizontal-sections/ButtonVertical";
 import { IconTech } from "/src/data/iconTech";
@@ -41,12 +42,10 @@ export const ProjectInfo = ({
       >
         {texts.buttonProjectInfo}
       </ButtonBackProject>
-      <TextInfo header>
+      <TextHeader>
         <img src={infoActive?.icon} />
-        <p style={{ fontSize: "1.8rem", fontWeight: "bold" }} header>
-          {infoActive?.title}
-        </p>
-      </TextInfo>
+        <p>{infoActive?.title}</p>
+      </TextHeader>
       <Carousel array={infoActive?.img} />
       <TextInfo>
         <p>Tech:</p>

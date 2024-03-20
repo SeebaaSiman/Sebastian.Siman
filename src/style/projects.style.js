@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { UnderlineHover, device, ShakeVertical } from "/src/style";
 //* ListProject
 export const SectionProject = styled.section`
@@ -40,20 +40,28 @@ export const TextInfo = styled.span`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: ${(props) => (props.header && "center")};
-align-items: ${(props) => (props.header && "center")};
-font-weight: ${(props) => (props.header && "bold")};
-justify-self: ${(props) => (props.header ? "center" : "start")};
-align-self: ${(props) => (props.header ? "center" : "start")};
+justify-self: start;
+align-self: start;
 gap: 6px;
 p {
-    font-size: ${(props) => (props.header ? "1.9rem" : "1.2rem")};
+    font-size: 1.2rem;
   }
 img{
 height: 2rem;
 object-fit: contain;
  }
  `
+export const TextHeader = styled(TextInfo)`
+justify-content: center;
+align-items: center;
+font-weight: bold;
+justify-self: center;
+align-self: center;
+p {
+    font-size:1.8rem;
+  }
+`
+
 
 //*ProjectItem
 
@@ -65,15 +73,20 @@ export const ArrowContainer = styled.div`
   color: ${(props) => props.theme.textColor};
   transition: all 0.5s ease-in-out;
 `;
+const ShowImgMoveLoop = keyframes`
+0%{transform:translateY(-5%)}
+50%{transform:translateY(5%)}
+100%{transform:translateY(-5%)}
+`
 export const ImgProyect = styled.img`
-  z-index: 800;
-  position: ${(props) => (props.isDesktop ? "absolute" : "relative")};
-  top: ${(props) => (props.isDesktop ? "0%" : "")};
-  left: ${(props) => (props.isDesktop ? "50%" : "")};
-  transform: ${(props) => (props.isDesktop ? "translate(-50%, -50%)" : " ")};
-  border-radius: 10px;
+
+  z-index: 999;
+  position: absolute;
+  /* top:20%; */
+  left:-50%;
+ border-radius: 10px;
   box-shadow: 1px 2px 3px black;
-  object-fit: cover;
+  object-fit: contain;
   scale: 0;
   rotate: -12.5deg;
   transition: all 0.5s ease-in-out;
@@ -100,7 +113,8 @@ export const Title = styled.span`
     height: 2.5rem;
     margin-right: 6px;
     object-fit: contain;
-    filter: grayscale(1);
+    filter: grayscale(1) blur(2px);
+    transition: all 0.5s ease-in-out;
   }
 `;
 export const ItemContainer = styled.span`
@@ -117,7 +131,7 @@ export const ItemContainer = styled.span`
   font-size: 2rem;
   z-index: 2;
   overflow: hidden;
-  transition: all 500ms;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
     border-bottom: solid 3px ${(props) => props.theme.textColor};
@@ -134,12 +148,14 @@ export const ItemContainer = styled.span`
       animation: ${ShakeVertical} 0.8s linear both;
     }
     ${Title} img {
-      filter:  grayscale(0);
+      filter:  grayscale(0)blur(0);
     }
     ${ImgProyect} {
-      scale: ${(props) => (props.isDesktop ? "1" : "0.8")};
-      rotate: ${(props) => (props.isDesktop ? "12.5deg" : "0deg")};
-      transform: translateX(${(props) => (props.isDesktop ? "0" : "-25px")});
+      left:50%;
+      scale: 1;
+      rotate: 12.5deg;
+      animation: ${ShowImgMoveLoop} 3s ease-in-out infinite;
+      animation-delay: .3s;
     }
     ${ArrowContainer} {
       opacity: 1;
