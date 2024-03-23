@@ -20,6 +20,11 @@ import chatNonContact from "@/assets/projects/Chat-non-contact-whatsapp.jpg";
 import journal from "@/assets/projects/journal.jpg";
 import journal2 from "@/assets/projects/journal2.jpg";
 import journal3 from "@/assets/projects/journal3.jpg";
+import screen from "@/assets/projects/screen.png";
+import screen2 from "@/assets/projects/screen2.png";
+import screen3 from "@/assets/projects/screen3.png";
+import screen4 from "@/assets/projects/screen4.png";
+import screen5 from "@/assets/projects/screen5.png";
 import { IconTech } from "./iconTech";
 
 import celestialicon from "@/assets/projects/icons/celestial.png";
@@ -29,6 +34,7 @@ import f1icon from "@/assets/projects/icons/f1.png";
 import journalicon from "@/assets/projects/icons/journal.png";
 import nonchaticon from "@/assets/projects/icons/nonchat.png";
 import heroesicon from "@/assets/projects/icons/heroes.png";
+import cassette from "@/assets/projects/icons/cassette.svg";
 export const dataProject = () => {
   const { texts } = useLanguage();
 
@@ -60,6 +66,17 @@ export const dataProject = () => {
         text: "styled-components, CustomHook: useForm",
       },
       url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/",
+    },
+    {
+      img: [screen, screen2, screen3, screen4, screen5],
+      title: "Screen capture X",
+      description: "",
+      icon: cassette,
+      tech: {
+        icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
+        text: "navigator.mediaDevices.getDisplayMedia, MediaRecorder and Blob",
+      },
+      url: "https://screen-capture-x.vercel.app/",
     },
     {
       img: [HeroesApp, HeroesApp2, HeroesApp3, HeroesApp4, HeroesApp5],
