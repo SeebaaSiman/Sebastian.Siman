@@ -40,6 +40,17 @@ export const dataProject = () => {
 
   const projects = [
     {
+      img: [screen, screen2, screen3, screen4, screen5],
+      title: "Screen capture X",
+      description: "",
+      icon: cassette,
+      tech: {
+        icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
+        text: "navigator.mediaDevices.getDisplayMedia, MediaRecorder and Blob",
+      },
+      url: "https://screen-capture-x.vercel.app/",
+    },
+    {
       img: [
         CelestialChronicle,
         CelestialChronicle2,
@@ -66,17 +77,6 @@ export const dataProject = () => {
         text: "styled-components, CustomHook: useForm",
       },
       url: "https://seebaasiman.github.io/Chat-non-contact-whatsapp/",
-    },
-    {
-      img: [screen, screen2, screen3, screen4, screen5],
-      title: "Screen capture X",
-      description: "",
-      icon: cassette,
-      tech: {
-        icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
-        text: "navigator.mediaDevices.getDisplayMedia, MediaRecorder and Blob",
-      },
-      url: "https://screen-capture-x.vercel.app/",
     },
     {
       img: [HeroesApp, HeroesApp2, HeroesApp3, HeroesApp4, HeroesApp5],

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { LoaderContent } from "@/style/loaderStyle";
 import logo from "@/assets/s-s.svg";
-export const Loader = () => {
+const Loader = () => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(false);
-    }, 4000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
   if (visible) {
@@ -22,3 +22,4 @@ export const Loader = () => {
     return null;
   }
 };
+export default Loader;

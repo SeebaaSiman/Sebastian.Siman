@@ -6,7 +6,7 @@ import ginasia from "@/assets/ginasia.jpg";
 import code from "@/assets/code.jpg";
 import { useReverseScroll, useLanguage, useNavBarContext } from "@/hook";
 
-export const Page2 = () => {
+const Page2 = () => {
   //Creo referencias a los textos para usar el hook observer, al ser observados cambian su class css y hacen animación
   const refText = useRef();
   const refText2 = useRef();
@@ -37,6 +37,7 @@ export const Page2 = () => {
           {texts.speech2}
         </Text>
       </ColumnLeft>
+
       <ColumnRight ref={ColumnRigthRef}>
         <img src={ginasia} alt="grass" loading="lazy" />
         <Text ref={refText3} className={`${isIntersecting3 && "visible"}`}>
@@ -47,3 +48,4 @@ export const Page2 = () => {
     </AboutContainer>
   );
 };
+export default Page2;

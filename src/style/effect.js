@@ -12,7 +12,7 @@ box-shadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,' +
 
 
 export const UnderlineHover = css`
-font-family: 'Bebas Neue',sans-serif;
+font-family: 'Bebas Neue';
 color: ${(props) => props.theme.textColor};
 filter:drop-shadow(1px 1px 1px ${(props) => props.theme.textShadow});
 transition: color 0.8s;

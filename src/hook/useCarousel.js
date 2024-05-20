@@ -6,13 +6,14 @@ export const useCarousel = (autoplay, intervalo, array, sensitivity, swipe) => {
  const [startX, setStartX] = useState(0);
  const [isDragging, setIsDragging] = useState(false);
  const [deltaX, setDeltaX] = useState(0);
- const InnerRef = useRef(null);
  const intervaloSlideshow = useRef(null);
+ const InnerRef = useRef(null);
  const InnerWidth = `${array?.length}00vw`;
 
  const tamañoSlide =
   InnerRef?.current?.children?.length > 0 &&
   InnerRef?.current?.offsetWidth / InnerRef?.current?.children?.length;
+
  //*Reset Carousel
  useEffect(() => {
   setActiveIndex(0)
@@ -41,6 +42,7 @@ export const useCarousel = (autoplay, intervalo, array, sensitivity, swipe) => {
    }
   };
  }, [autoplay, array, intervalo, updateIndex]);
+
  //* fx pausar autoplay
  const autoplayPause = () => {
   if (autoplay && intervaloSlideshow.current) {
@@ -55,39 +57,30 @@ export const useCarousel = (autoplay, intervalo, array, sensitivity, swipe) => {
    }, intervalo);
   }
  }
- //* eventos mouse
 
+ //* eventos mouse
  const handleMouseEnter = () => {
   autoplayPause();
  };
-
  const handleMouseLeave = () => {
   autoplayRestart();
  };
-
  const handleMouseDown = (e) => {
   if (!swipe) return;
-
   setStartX(e.clientX);
   setIsDragging(true);
  };
-
  const handleMouseMove = (e) => {
   if (!swipe) return;
   if (!isDragging) return;
-
   const currentX = e.clientX;
   const newDeltaX = currentX - startX;
-
-  setDeltaX(newDeltaX);
+ setDeltaX(newDeltaX);
  };
-
  const handleMouseUp = () => {
   if (!swipe) return;
   if (!isDragging) return;
-
   setIsDragging(false);
-
   if (Math.abs(deltaX) > tamañoSlide * sensitivity) {
    if (deltaX > 0) {
     updateIndex(activeIndex - 1);
@@ -97,43 +90,34 @@ export const useCarousel = (autoplay, intervalo, array, sensitivity, swipe) => {
   }
   setDeltaX(0);
  };
-
  const onMouseLeaveAndMouseUp = () => {
   handleMouseLeave();
   handleMouseUp();
  };
 
-
-
  //* Eventos touch
  const handleTouchStart = (e) => {
   autoplayPause();
-
   if (!swipe) {
    return
   } else {
    setStartX(e.touches[0].clientX);
    setIsDragging(true);
   }
-
  };
-
  const handleTouchMove = (e) => {
   if (!swipe) return;
   if (!isDragging) return;
-
   const currentX = e.touches[0].clientX;
   const newDeltaX = currentX - startX;
   setDeltaX(newDeltaX);
  };
-
  const handleTouchEnd = () => {
   autoplayRestart();
   if (!swipe || !isDragging) {
    return
   } else {
    setIsDragging(false);
-
    if (deltaX > tamañoSlide * sensitivity) {
     updateIndex(activeIndex - 1);
    } else if (deltaX < -tamañoSlide * sensitivity) {
@@ -141,7 +125,6 @@ export const useCarousel = (autoplay, intervalo, array, sensitivity, swipe) => {
    }
    setDeltaX(0);
   }
-
  };
 
  return {

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "@/sections/App";
+import { App } from "/src/views/App";
 import {
   LanguageProvider,
   CursorProvider,

@@ -8,10 +8,10 @@ import {
   useModalContext,
 } from "/src/hook";
 
-export const NavBar = () => {
+const NavBar = ({ scrollValue }) => {
   const { handleCursorXs, handleCursorSmall } = useCustomCursorContext();
 
-  const { showNavBar, scrollToSection, page1Ref, aboutRef } =
+  const {  scrollToSection, page1Ref, aboutRef } =
     useNavBarContext();
 
   const { onOpenModal, TextModal } = useModalContext();
@@ -31,6 +31,7 @@ export const NavBar = () => {
   };
 
   const { texts } = useLanguage();
+
   return (
     <NavContainer>
       <ul>
@@ -42,7 +43,8 @@ export const NavBar = () => {
           SEBASTIÁN SIMAN
         </li>
       </ul>
-      {showNavBar && (
+  
+      {scrollValue > 100 && (
         <ul>
           <li
             onMouseEnter={handleCursorXs}
@@ -70,3 +72,4 @@ export const NavBar = () => {
     </NavContainer>
   );
 };
+export default NavBar;

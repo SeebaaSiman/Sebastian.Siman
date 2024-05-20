@@ -25,7 +25,7 @@ export const ButtonVertical = ({
         onMouseLeave={deviceType === "desktop" ? handleCursorSmall : null}
         onClick={onShowVertical}
       >
-        {!verticalShow ? texts.buttonVerticalTop : texts.buttonVerticalMore}
+        {!verticalShow ? texts.buttonVerticalMore : texts.buttonVerticalTop}
       </BtnAnimatedDesktop>
     </ButtonContainer>
   );

@@ -20,12 +20,10 @@ export const ContainerBanner = styled.div`
   flex-direction:column-reverse;
   justify-content: space-around;
   align-items: center;
-
   @media ${device.lg}{
     flex-direction: row;
     padding:2rem;
   }
-
   img {
     max-width: 200px;
     max-height: 200px;
@@ -58,6 +56,7 @@ export const ContainerText = styled.div`
   width: 100vw;
   padding: 0.2rem;
   opacity: 0;
+  font-family: "Oxygen";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,12 +74,13 @@ export const Prefix = styled.h1`
   font-weight: 400;
   font-size: 10vw;
   white-space: nowrap;
-
+  font-family: "Oxygen";
   @media ${device.lg} {
     font-size: 6vw;
   }
 `;
 export const Suffix = styled(Prefix)`
+  font-family: "Oxygen";
   color: ${(props) => props.theme.textColor};
   text-shadow: 1px 2px 1px ${(props) => props.theme.textShadow};
 `;

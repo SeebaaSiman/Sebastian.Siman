@@ -10,6 +10,7 @@ export * from './useModalScrollLock';
 export * from './usePageVisibility';
 export * from './useReverseScroll';
 export * from './useScrollHorizontal';
+export * from './useScrollTop';
 export * from './useSmoothScroll';
 export * from './useTextChange';
 export * from './useThemeMode';

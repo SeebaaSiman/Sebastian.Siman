@@ -1,6 +1,6 @@
 export * from './CustomCursor';
-export * from './Loader';
-export * from './NavBar';
+// export * from './Loader';
+// export * from './NavBar';
 export * from './Modal';
 export * from './Page1';
 export * from './Page2';

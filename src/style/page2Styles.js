@@ -43,7 +43,8 @@ display: flex;
 place-items: center;
 font-size: 1.3rem;
 color:${(props) => props.theme.textColor};
-  font-family: "Oxygen",sans-serif;
+  font-family: "Bebas Neue",sans-serif;
+  /* font-family: "Oxygen",sans-serif; */
 &:first-letter {
   font-weight:bold;
 }

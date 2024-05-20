@@ -7,7 +7,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
- bgApp: "#000",
+ bgApp: "#040404",
  bgProjectInfo: "#1e1e1e",
  textColor: '#CCD0CF',
  textShadow: "#4A5C6A",

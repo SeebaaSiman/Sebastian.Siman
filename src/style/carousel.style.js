@@ -68,6 +68,5 @@ export const Slide = styled.div`
       scale: 1;
       filter: drop-shadow(2px 2px 3px black) grayscale(0);
     }
-
   }
 `;

@@ -2,8 +2,9 @@ import { useRef } from "react";
 import styled from "styled-components";
 
 import { useScrollHorizontal } from "@/hook";
-import Page3 from "../../components/Page3";
-import Page4 from "../../components/Page4";
+
+import Page3 from "/src/components/Page3";
+import Page4 from "/src/components/Page4";
 
 const DesktopHorizontal = () => {
   //Creo las referencias del slider y cuantos paneles hay para pasarselo al useScrollHorizontal que usa gsap
