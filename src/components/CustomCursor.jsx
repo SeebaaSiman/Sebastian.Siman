@@ -1,5 +1,5 @@
-import { CursorWrapper, SecondaryCursor } from "/src/style";
-import { useCustomCursorContext, useCustomCursor } from "/src/hook";
+import { useCustomCursorContext } from "../hook/useContextProvider";
+import { useCustomCursor } from "../hook/useCustomCursor";
 
 const CustomCursor = () => {
   const { size } = useCustomCursorContext();
@@ -7,12 +7,9 @@ const CustomCursor = () => {
   const { secondaryCursor, isMouseMoving } = useCustomCursor();
   //Si isMouseMoving es true, se agrega la clase css "active" , si es false no se mueve y se agrega "idle"
   return (
-    <CursorWrapper className={`  ${isMouseMoving ? "active" : "idle"}`}>
-      <SecondaryCursor
-        className={`${size}`}
-        ref={secondaryCursor}
-      ></SecondaryCursor>
-    </CursorWrapper>
+    <div className={` cursor-wrapper ${isMouseMoving ? "active" : "idle"}`}>
+      <div className={`second-cursor ${size}`} ref={secondaryCursor}></div>
+    </div>
   );
 };
 export default CustomCursor;

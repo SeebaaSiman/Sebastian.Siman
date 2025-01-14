@@ -1,26 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { App } from "/src/views/App";
-import {
-  LanguageProvider,
-  CursorProvider,
-  NavBarProvider,
-  ModalProvider,
-} from "/src/context";
-import { ThemeStyleProvider } from "@/Theme/ThemeStyleProvider";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/global-style.css";
+import App from "./App.jsx";
+import { LanguageProvider } from "./services/context/LanguageContext.jsx";
+import { CursorProvider } from "./services/context/CursorContext.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ThemeStyleProvider>
-      <LanguageProvider>
-        <CursorProvider>
-          <ModalProvider>
-            <NavBarProvider>
-              <App />
-            </NavBarProvider>
-          </ModalProvider>
-        </CursorProvider>
-      </LanguageProvider>
-    </ThemeStyleProvider>
-  </React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <LanguageProvider>
+      <CursorProvider>
+        <App />
+      </CursorProvider>
+    </LanguageProvider>
+  </StrictMode>
 );

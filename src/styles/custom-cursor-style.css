@@ -1,0 +1,40 @@
+.cursor-wrapper.idle {
+  display: none;
+}
+
+.second-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  background: white;
+  mix-blend-mode: difference;
+  border: 3px solid transparent;
+  transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+  transform-origin: center;
+}
+
+.second-cursor.not-size {
+  width: 0;
+  height: 0;
+}
+.second-cursor.small {
+  /* width: calc(2.2em + 1.8vw); */
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.second-cursor.medium {
+  width: 6rem;
+  height: 6rem;
+}
+.second-cursor.regular {
+  width: 8rem;
+  height: 8rem;
+}
+.second-cursor.xs {
+  width: 0.5rem;
+  height: 0.5rem;
+}

@@ -1,0 +1,67 @@
+.switch-language-container {
+  font-family: "Bebas Neue", sans-serif;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  font-size: 1.2rem;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-option {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+@keyframes showin {
+  from {
+    scale: 0.3;
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes showout {
+  from {
+    scale: 1;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    scale: 0.3;
+    opacity: 0;
+    transform: translateX(80px);
+  }
+}
+.language-option.hidden {
+  pointer-events: none;
+  animation: showout 0.5s ease-in-out forwards;
+}
+
+.language-option.visible {
+  pointer-events: auto;
+  animation: showin 0.5s ease-in-out forwards;
+}
+
+.switch-language-container img {
+  border-radius: 0rem;
+  width: 1rem;
+  object-fit: contain;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}

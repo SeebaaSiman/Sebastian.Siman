@@ -1,0 +1,37 @@
+@import "./about-style.css";
+@import "./buttons.css";
+@import "./cards.css";
+@import "./custom-cursor-style.css";
+@import "./flip-links-style.css";
+@import "./freelancer-style.css";
+@import "./home.css";
+@import "./loader-style.css";
+@import "./modal.css";
+@import "./split.css";
+@import "./switch-language-style.css";
+@import "./typewriterEffect.css";
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./font/BebasNeue-Regular.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("./font/Oxygen-Light.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  position: relative;
+  font-family: "Oxygen", "Bebas Neue", sans-serif;
+}
