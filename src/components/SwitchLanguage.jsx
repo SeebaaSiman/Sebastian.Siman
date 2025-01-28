@@ -15,7 +15,7 @@ export const SwitchLanguage = () => {
         onClick={() => setLanguage("en")}
         aria-label='Switch to English'
       >
-        <img src={eeuu} alt='eeuu flag' loading='lazy' />
+        <img src={eeuu} alt='eeuu flag' loading='lazy' className="flag-language"/>
         {texts.english}
       </li>
       <li
@@ -25,7 +25,7 @@ export const SwitchLanguage = () => {
         onClick={() => setLanguage("es")}
         aria-label='Cambiar a español'
       >
-        <img src={spain} alt='spain flag' loading='lazy' />
+        <img src={spain} alt='spain flag' loading='lazy' className="flag-language"/>
         {texts.spain}
       </li>
     </ul>

@@ -9,6 +9,7 @@
   }
   @media (min-width: 800px) {
     width: 50%;
+    font-size: 28px;
   }
 }
 

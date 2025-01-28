@@ -1,11 +1,11 @@
 import { useFlipLink } from "../hook/useFlipLink";
 
-const FlipLink = ({ children, fn }) => {
+const FlipLink = ({ children, fn, textclass }) => {
   const { mouseEnter, mouseLeave, dimensions, textLayerRef, hovered } = useFlipLink();
   return (
     <button
       onClick={fn}
-      className={`flip-link`}
+      className={`flip-link ${textclass}`}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       style={{

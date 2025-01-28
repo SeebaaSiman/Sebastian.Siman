@@ -1,7 +1,7 @@
 export const enTexts = {
  //swichLanguage
  english: "english",
- spain: "spanish",
+ spain: "español",
  //Freelancer
  freelance: "freelancer availability",
  freelanceLimit: "limited",
@@ -28,7 +28,7 @@ export const enTexts = {
 // es.js
 export const esTexts = {
  //swichLanguage
- english: "inglés",
+ english: "english",
  spain: "español",
  //Freelancer
  freelance: "Disponibilidad freelance",

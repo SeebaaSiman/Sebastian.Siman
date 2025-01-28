@@ -19,13 +19,19 @@ const Home = ({ deviceType }) => {
       <section className='split-content-top'>
         <Freelancer text1={texts.freelance} text2={texts.freelanceLimit} />
       </section>
-      <section className='split-content-middle'>
+      <section className='split-content-middle left'>
         <TypewriterEffect developer={texts.developer} />
       </section>
-      <FlipLink fn={() => handleSectionClick("about")}>{texts.buttonAbout}</FlipLink>
+      <FlipLink textclass='left' fn={() => handleSectionClick("about")}>
+        {texts.buttonAbout}
+      </FlipLink>
       <section className='split-content-bottom left-content'>
         <hr />
-        <button className='btn-underline' onMouseEnter={handleCursorXs} onMouseLeave={handleCursorSmall}>
+        <button
+          className='btn-underline scale-up-bottom-left '
+          onMouseEnter={handleCursorXs}
+          onMouseLeave={handleCursorSmall}
+        >
           E-mail
         </button>
       </section>
@@ -36,19 +42,27 @@ const Home = ({ deviceType }) => {
       <section className='split-content-top right-content '>
         <SwitchLanguage />
       </section>
-      <section className='split-content-middle '>
+      <section className='split-content-middle right'>
         <img src={image} alt='perfil image' className='image-home' />
       </section>
-      <FlipLink fn={() => handleSectionClick("project")} text={"text"}>
+      <FlipLink textclass='right' fn={() => handleSectionClick("project")} text={"text"}>
         {texts.buttonProject}
       </FlipLink>
       <section className='split-content-bottom'>
         <hr />
         <div>
-          <button className='btn-underline' onMouseEnter={handleCursorXs} onMouseLeave={handleCursorSmall}>
+          <button
+            className='btn-underline scale-up-bottom'
+            onMouseEnter={handleCursorXs}
+            onMouseLeave={handleCursorSmall}
+          >
             linkedin
           </button>
-          <button className='btn-underline' onMouseEnter={handleCursorXs} onMouseLeave={handleCursorSmall}>
+          <button
+            className='btn-underline scale-up-bottom-right'
+            onMouseEnter={handleCursorXs}
+            onMouseLeave={handleCursorSmall}
+          >
             github
           </button>
         </div>

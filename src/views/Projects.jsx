@@ -1,3 +1,5 @@
+import "../styles/modal.css";
+import "../styles/cards.css";
 import { useLanguage } from "../hook/useContextProvider";
 import { useSwipeCards } from "../hook/useSwipeCards";
 import { dataProject } from "../services/data/dataProject";
@@ -15,10 +17,19 @@ const Projects = () => {
     handleDragEnd,
     closeModal,
     isDragging,
+    handleKeyDown,
+    handleFocus,
   } = useSwipeCards({ projects });
 
   return (
-    <div className='cards-wrapper'>
+    <div
+      className='cards-wrapper'
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+      onFocus={handleFocus}
+      role='group'
+      aria-label='Tarjetas de proyectos'
+    >
       <aside className='aside-cards-info-container'>
         <h4>{texts.buttonProject}</h4>
         {projects.map((project) => (
@@ -30,7 +41,33 @@ const Projects = () => {
       <SwipeCards
         {...{ currentProjects, selectedProject, cardRef, handleDragStart, handleDragMove, handleDragEnd, closeModal }}
       />
-      <aside className={`aside-bottom-project-info ${isDragging ? "show" : "hidden"}`}>
+      <aside className={`aside-project-swipe left ${isDragging ? "show" : "hidden"}`}>
+        <div className='aside-project-swipe-text'>
+          {" "}
+          <svg width='25px' height='25px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              fillRule='evenodd'
+              clipRule='evenodd'
+              d='M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3165 19.0976 14.6834 19.0976 14.2929 18.7071L8.46963 12.8839C7.98148 12.3957 7.98148 11.6043 8.46963 11.1161L14.2929 5.29289C14.6834 4.90237 15.3165 4.90237 15.7071 5.29289Z'
+              fill='#0F1729'
+            />
+          </svg>
+        </div>
+      </aside>
+      <aside className={`aside-project-swipe right ${isDragging ? "show" : "hidden"}`}>
+        <div className='aside-project-swipe-text'>
+          <svg width='25px' height='25px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              fillRule='evenodd'
+              clipRule='evenodd'
+              d='M8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.5303 11.1161C16.0185 11.6043 16.0185 12.3957 15.5303 12.8839L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z'
+              fill='#0F1729'
+            />
+          </svg>
+        </div>
+      </aside>
+
+      <aside className={`aside-project-swipe bottom ${isDragging ? "show" : "hidden"}`}>
         <p>{texts.modalDrag}</p>
         <svg width='40px' height='40px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
           <path

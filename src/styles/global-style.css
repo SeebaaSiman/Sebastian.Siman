@@ -1,15 +1,13 @@
-@import "./about-style.css";
 @import "./buttons.css";
-@import "./cards.css";
 @import "./custom-cursor-style.css";
 @import "./flip-links-style.css";
 @import "./freelancer-style.css";
 @import "./home.css";
 @import "./loader-style.css";
-@import "./modal.css";
-@import "./split.css";
 @import "./switch-language-style.css";
 @import "./typewriterEffect.css";
+@import "./split.css";
+ 
 
 @font-face {
   font-family: "Bebas Neue";
