@@ -1,4 +1,4 @@
-import calculatorimg from "../../assets/projects/calculator.jpg";
+import nephara from "../../assets/projects/nephara.jpg";
 import f1img from "../../assets/projects/f1.jpg";
 import f1img2 from "../../assets/projects/f12.jpg";
 import f1img3 from "../../assets/projects/f13.jpg";
@@ -31,7 +31,7 @@ import esmarthy5 from "../../assets/projects/e-smarthy2.png";
 import esmarthy6 from "../../assets/projects/e-smarthy.png";
 
 import celestialicon from "../../assets/projects/icons/celestial.png";
-import calculatoricon from "../../assets/projects/icons/calculator.ico";
+
 import expensesicon from "../../assets/projects/icons/expenses.png";
 import f1icon from "../../assets/projects/icons/f1.png";
 import journalicon from "../../assets/projects/icons/journal.png";
@@ -40,16 +40,17 @@ import heroesicon from "../../assets/projects/icons/heroes.png";
 import cassette from "../../assets/projects/icons/cassette.svg";
 import smiley from "../../assets/projects/icons/smiley.png";
 import { IconTech } from "../../styles/icon";
+import { useLanguage } from "../../hook/useContextProvider";
 
 export const dataProject = () => {
-  // const { texts } = useLanguage();
+  const { texts } = useLanguage();
 
   const projects = [
     {
       id: 1,
       img: [screen, screen2, screen3, screen4, screen5],
       title: "Screen capture X",
-      description: "",
+      description: texts.projectScreenX,
       icon: cassette,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
@@ -62,7 +63,7 @@ export const dataProject = () => {
       img: [esmarthy, esmarthy2, esmarthy3, esmarthy4, esmarthy5, esmarthy6],
       title: "E-Smarthy",
       icon: smiley,
-      description: "",
+      description: texts.projectEsmarthy,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.JAVASCRIPT],
         text: "firebase, react-router-dom, @reduxjs/toolkit, styled-components, sweetalert2, customHooks: useCheckAuth, useDraggable, useForm, useNoteView, useThemeMode",
@@ -73,7 +74,7 @@ export const dataProject = () => {
       id: 3,
       img: [chatNonContact],
       title: "chat non contact whatsapp",
-      description: "",
+      description: texts.projectChat,
       icon: nonchaticon,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
@@ -85,7 +86,7 @@ export const dataProject = () => {
       id: 4,
       img: [HeroesApp, HeroesApp2, HeroesApp3, HeroesApp4, HeroesApp5],
       title: "heroes app",
-      description: "",
+      description: texts.projectHeroes,
       icon: heroesicon,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
@@ -98,7 +99,7 @@ export const dataProject = () => {
       img: [CelestialChronicle, CelestialChronicle2, CelestialChronicle3, CelestialChronicle4, CelestialChronicle5],
       icon: celestialicon,
       title: "celestial chronicle",
-      description: "",
+      description: texts.projectCelestial,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "intersection-observer, react-router-dom, styled-components, customHooks: useCardPlanet, useCountDownTimer, useFetch, useLocalStorage",
@@ -111,7 +112,7 @@ export const dataProject = () => {
       img: [f1img, f1img2, f1img3, f1img4],
       title: "f1-fan",
       icon: f1icon,
-      description: "",
+      description: texts.projectF1,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "axios, react-router-dom, react-twitter-embed, Styled-components, API'ergast', customHooks: useCalendar, useCountdown, useDeviceType)",
@@ -123,7 +124,7 @@ export const dataProject = () => {
       img: [expensesimg],
       title: "expenses calculator",
       icon: expensesicon,
-      description: "",
+      description: texts.projectExpenses,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "Reduxjs/toolkit, animate.css, react-router-dom, sweetalert2,styled-components, boostrap, customHooks: useCostPerson, useForm",
@@ -135,7 +136,7 @@ export const dataProject = () => {
       img: [journal, journal2, journal3],
       title: "journal app",
       icon: journalicon,
-      description: "",
+      description: texts.projectJournal,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
         text: "firebase, react-router-dom, @reduxjs/toolkit, styled-components, sweetalert2, customHooks: useCheckAuth, useDraggable, useForm, useNoteView, useThemeMode",
@@ -145,15 +146,15 @@ export const dataProject = () => {
 
     {
       id: 9,
-      img: [calculatorimg],
-      title: "calculator",
-      icon: calculatoricon,
-      description: "",
+      img: [nephara],
+      title: "The voice of Nephara",
+      icon: "",
+      description: texts.projectNephara,
       tech: {
         icon: [IconTech.HTML, IconTech.CSS, IconTech.REACT],
-        text: "useReducer, styled-components",
+        text: "useReducer",
       },
-      url: "https://seebaasiman.github.io/Calculator-useReducer/",
+      url: "",
     },
   ];
   return projects;

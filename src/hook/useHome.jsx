@@ -1,8 +1,8 @@
 import { lazy, useState } from "react";
-// import Projects from "../views/Projects";
-// import About from "../views/About";
+
 const Projects = lazy(() => import("../views/Projects"));
 const About = lazy(() => import("../views/About"));
+
 export const useHome = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);

@@ -37,6 +37,7 @@
   font-family: "Bebas Neue", sans-serif;
   appearance: none;
   border: none;
+  text-decoration: none;
   color: white;
   background-color: transparent;
   filter: drop-shadow(1px 1px 1px black);

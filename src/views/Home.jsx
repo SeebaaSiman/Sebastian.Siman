@@ -27,13 +27,14 @@ const Home = ({ deviceType }) => {
       </FlipLink>
       <section className='split-content-bottom left-content'>
         <hr />
-        <button
+        <a
+          href='mailto:seebaasiman@gmail.com'
           className='btn-underline scale-up-bottom-left '
           onMouseEnter={handleCursorXs}
           onMouseLeave={handleCursorSmall}
         >
-          E-mail
-        </button>
+          Email
+        </a>
       </section>
     </>
   );
@@ -51,20 +52,26 @@ const Home = ({ deviceType }) => {
       <section className='split-content-bottom'>
         <hr />
         <div>
-          <button
+          <a
             className='btn-underline scale-up-bottom'
             onMouseEnter={handleCursorXs}
             onMouseLeave={handleCursorSmall}
+            href='https://www.linkedin.com/in/sebasti%C3%A1nsiman/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             linkedin
-          </button>
-          <button
+          </a>
+          <a
             className='btn-underline scale-up-bottom-right'
             onMouseEnter={handleCursorXs}
             onMouseLeave={handleCursorSmall}
+            href='https://github.com/SeebaaSiman'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             github
-          </button>
+          </a>
         </div>
       </section>
     </>

@@ -13,9 +13,10 @@
 .home-back {
   position: relative;
   scale: 2;
-   transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .home-back.active {
+  position: relative;
   scale: 1;
-   transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }

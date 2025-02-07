@@ -85,12 +85,12 @@ const ProjectModal = ({ project, onClose, handleCursorNotSize, handleCursorSmall
         </div>
         <div className='modal-content'>
           <h2>{project?.title}</h2>
-          {project?.description && (
-            <span>
-              <p>{texts.modalDescription}:</p>
-              <p>{project?.description}</p>
-            </span>
-          )}
+
+          <span>
+            <p>{texts.modalDescription}:</p>
+            <p>{project?.description}</p>
+          </span>
+
           <div className='modal-tech-icons'>
             <p> {texts.modalTech}:</p>
             <>
