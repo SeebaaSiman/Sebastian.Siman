@@ -1,33 +1,42 @@
-import { lazy, useState } from "react";
-
-const Projects = lazy(() => import("../views/Projects"));
-const About = lazy(() => import("../views/About"));
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useHorizontalSectionProvider, useLanguage } from "./useContextProvider";
 
 export const useHome = () => {
-  const [activeSection, setActiveSection] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const { handleScroll } = useHorizontalSectionProvider();
+  const { texts } = useLanguage();
+  const location = useLocation().pathname;
+  const navigate = useNavigate();
 
-  const handleSectionClick = (sectionId) => {
+  useEffect(() => {
+    if (location === "/Sebastian.Siman/") {
+      setIsAnimating(false);
+    } else setIsAnimating(true);
+  }, []);
+
+  const handleSectionClick = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setActiveSection(sectionId);
   };
+
   const handleBack = () => {
+    if (location.startsWith("/Sebastian.Siman/projects/")) {
+      handleScroll(-50);
+      navigate("/Sebastian.Siman/projects");
+      return;
+    }
     if (!isAnimating) return;
     setIsAnimating(false);
   };
 
-  const sections = [
-    { id: "about", component: About },
-    { id: "project", component: Projects },
-  ];
-
-  const renderSection = () => {
-    const section = sections.find((s) => s.id === activeSection);
-    const SectionComponent = section ? section.component : null;
-
-    return SectionComponent ? <SectionComponent /> : <div>Loader...</div>;
+  const handleTransitionEnd = () => {
+    if (!isAnimating && location !== "/Sebastian.Siman/") {
+      navigate("/Sebastian.Siman/");
+    }
   };
-
-  return { activeSection, isAnimating, handleSectionClick, handleBack, renderSection };
+  const isProjectDetail =
+    location.startsWith("/Sebastian.Siman/projects/") && location.length > "/Sebastian.Siman/projects/".length;
+  const textButton = isProjectDetail ? texts.buttonBack : texts.buttonHome;
+  return { isAnimating, handleSectionClick, handleBack, handleTransitionEnd, textButton };
 };

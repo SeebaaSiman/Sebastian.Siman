@@ -19,7 +19,7 @@ export const enTexts = {
  buttonHome: "Home",
  buttonAbout: "about-me",
  buttonProject: "Projects",
- buttonModal: "Back",
+ buttonBack: "Back",
  buttonVisit: "Visited web",
  // Project description
 
@@ -31,8 +31,11 @@ export const enTexts = {
  projectF1: "A web application that allows viewing information about the current Formula 1 season. You can see details about drivers, teams, and circuits for the current season. The data is loaded from the 'Ergast Developer API'.",
  projectExpenses: "A web application for managing group expenses. It allows adding, editing, and deleting expenses and viewing the total expenses for each user. The data is stored in real-time in Local Storage.",
  projectJournal: "A web application for managing notes with user authentication and real-time storage in Firebase.",
- projectNephara: "A video game that runs in the browser. The game is immersive and takes place on a spaceship adrift in space, the Nephara. It is a resource and crew management game with decision-making and battle strategy. The goal is to survive as long as possible."
-
+ projectNephara: "A video game that runs in the browser. The game is immersive and takes place on a spaceship adrift in space, the Nephara. It is a resource and crew management game with decision-making and battle strategy. The goal is to survive as long as possible.",
+ //error
+ titleError: "Not Found",
+ subtitleError: "Sorry, there is nothing at shis URL.",
+ buttonError: "Go back home"
 };
 
 
@@ -57,7 +60,7 @@ export const esTexts = {
  modalDrag: "Arrastra hacia abajo para abrir detalles del proyecto",
  //Button
  buttonHome: "Inicio",
- buttonModal: "Volver",
+ buttonBack: "Volver",
  buttonAbout: "Sobre-mi",
  buttonProject: "Proyectos",
  buttonVisit: "Visitar web",
@@ -71,4 +74,8 @@ export const esTexts = {
  projectExpenses: "Aplicación web de gestión de gastos grupales. Permite agregar, editar y eliminar gastos y ver el total de gastos de cada usuario. Los datos son almacenados en tiempo real en Local storage",
  projectJournal: "Aplicación web de gestión notas con autenticación de usuario y almacenamiento en tiempo real en Firebase.",
  projectNephara: "Video juego que corre en el navegador. El juego es inmersivo y ocurre en una nave espacial que está a la deriba por el espacio, el Nephara. Es un juego de gestión de recursos y tripulación, toma de decisón y estrategia de batallas. El objetivo es sobrevivir el mayor tiempo posible.",
+ //error
+ titleError: "No Encontrado",
+ subtitleError: "Lo sentimos, no hay nada en esta URL.",
+ buttonError: "Volver a inicio"
 };

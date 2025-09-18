@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 //Lógica del customCursor.jsx , addEventListener para que el nuevo cursor siga al mouse
 export const useCustomCursor = () => {
 
-    const secondaryCursor = useRef(null); // ref del cursor secundario
+    const secondaryCursor = useRef(null);
+    const shadowCursor = useRef(null);
     //*Hacer que se esconda el cursor por inactividad de movimiento del mouse (2 segundos)
     const [isMouseMoving, setIsMouseMoving] = useState(true); //estado toggle si se mueve el mouse
     //position de referencia para luego comparar con la posición actual del mouse y que sean iguales para posicionar el secundary cursor
@@ -86,6 +87,13 @@ export const useCustomCursor = () => {
             if (secondaryCursor.current) {
                 secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
             }
+            if (shadowCursor.current) {
+                // Centra el shadow respecto al secondaryCursor
+                const shadowSize = shadowCursor.current.offsetWidth || 0;
+                const secondarySize = secondaryCursor.current?.offsetWidth || 0;
+                const offset = (shadowSize - secondarySize) / 2;
+                shadowCursor.current.style.transform = `translate3d(${destinationX - offset}px, ${destinationY - offset}px, 0)`;
+            }
         };
 
         followMouse();
@@ -114,5 +122,5 @@ export const useCustomCursor = () => {
 
         };
     }, []);
-    return { isMouseMoving, secondaryCursor }
+    return { isMouseMoving, secondaryCursor, shadowCursor }
 }

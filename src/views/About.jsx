@@ -1,7 +1,6 @@
 import setup from "../assets/bg/setup.jpg";
 import ginasia from "../assets/bg/ginasia.jpg";
 import code from "../assets/bg/code.jpg";
-import "../styles/about-style.css";
 import { useMemo } from "react";
 
 import { useLanguage } from "../hook/useContextProvider";

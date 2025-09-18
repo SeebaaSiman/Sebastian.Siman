@@ -43,7 +43,3 @@ export const CursorProvider = ({ children }) => {
     </CursorContext.Provider>
   );
 };
-
-//Importar en la parte más alta de la app. Es un provider
-
-// Importar fx y efectos
