@@ -1,23 +1,27 @@
 import { createGlobalStyle } from 'styled-components';
+import BebasNeue from "/src/styles/font/BebasNeue-Regular.woff2";
+import Boska from "/src/styles/font/Boska-Medium.woff2"
+import Zodiak from "/src/styles/font/Zodiak-Regular.woff2"
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: "Bebas Neue";
-  src: url("/src/styles/font/BebasNeue-Regular.woff2") format("woff2");
+ src: url(${BebasNeue}) format("woff2");
+
   font-weight: 400;
   font-style: normal;
       font-display: swap;
 }
 @font-face {
   font-family: "Boska";
-  src: url("/src/styles/font/Boska-Medium.woff2") format("woff2");
+   src: url(${Boska}) format("woff2");
   font-weight: 400;
   font-style: normal;
       font-display: swap;
 }
 @font-face {
   font-family: "Zodiak";
-  src: url("/src/styles/font/Zodiak-Regular.woff2") format("woff2");
+ src: url(${Zodiak}) format("woff2");
   font-weight: 400;
   font-style: normal;
       font-display: swap;

@@ -6,7 +6,8 @@ position: relative;
   height: 90dvh;
   overflow: hidden;
   touch-action: none;
-  display: flex;
+  display: flex;  will-change: transform;
+
   `
 export const AboutColumnsContent = styled.div`
   will-change: transform;
@@ -26,6 +27,7 @@ export const AboutSections = styled.div`
   font-size: 2rem;
   font-weight: bold;
   background: #e0e5ec;
+  will-change: transform;
 
   img {
     height: 100vh;
