@@ -1,0 +1,1 @@
+const a="/Sebastian.Siman/assets/html-7ff8d452.svg",c="/Sebastian.Siman/assets/css-31afbff7.svg",n="/Sebastian.Siman/assets/react-55ca3f6b.svg",t="/Sebastian.Siman/assets/javascript-4e6c3bbb.svg",s={HTML:"HTML",CSS:"CSS",REACT:"REACT",JAVASCRIPT:"JAVASCRIPT"},S={[s.HTML]:a,[s.CSS]:c,[s.REACT]:n,[s.JAVASCRIPT]:t};export{s as I,S as i};
