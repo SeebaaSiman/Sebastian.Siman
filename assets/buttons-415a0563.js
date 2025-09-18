@@ -1,4 +1,4 @@
-import{d as o}from"./index-7fb03883.js";import{d as n,e}from"./animations-c735709b.js";const s=o.a`
+import{d as o}from"./index-a383438f.js";import{d as n,e}from"./animations-d7bb6466.js";const s=o.a`
 font-family: "Bebas Neue", sans-serif;
   appearance: none;
   border: none;

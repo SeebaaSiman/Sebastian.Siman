@@ -1,1 +1,0 @@
-import{h as e,j as a}from"./index-7fb03883.js";import p from"./ProjectDetail-f890d32f.js";import{d as s}from"./dataProject-a6fc8f7c.js";import"./animations-c735709b.js";import"./device-de05c3c0.js";import"./icon-b74de6e1.js";const u=()=>{const{projectName:r}=e(),t=s().find(o=>o.title===r);return t?a(p,{project:t}):null};export{u as default};
